@@ -2,11 +2,25 @@
     {
         "SectionId": "1",
         "SectionType": "Dialogue",
-        "ChapterIndex": "1"
+        "ChapterIndex": "1",
+        "R_SectionDesc": ""
     },
     {
         "SectionId": "2",
         "SectionType": "MiniTrack",
-        "ChapterIndex": "1"
+        "ChapterIndex": "1",
+        "R_SectionDesc": ""
+    },
+    {
+        "SectionId": "3",
+        "SectionType": "Dialogue",
+        "ChapterIndex": "1",
+        "R_SectionDesc": ""
+    },
+    {
+        "SectionId": "4",
+        "SectionType": "MainTrack",
+        "ChapterIndex": "1",
+        "R_SectionDesc": ""
     }
 ]

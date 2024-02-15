@@ -11,7 +11,11 @@ public class TableLoader : BaseManager<TableLoader>
 
 	public void Load()
 	{
-		GameFlowTable.Instance.Load("Table_GameFlow", "Table_Dialogue", "Table_MiniTrack");
+		GameFlowTable.Instance.Load("Table_GameFlow",
+			"Table_Dialogue",
+			"Table_MiniTrack",
+			"Table_MainTrack",
+			"Table_ObjectClickEvent");
 	}
 
 }

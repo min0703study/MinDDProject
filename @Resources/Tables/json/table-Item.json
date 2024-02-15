@@ -1,0 +1,9 @@
+﻿[
+    {
+        "ItemTextId": "cat_food",
+        "ItemName": "써니의 사료",
+        "ItemDesc": "써니의 사료",
+        "ItemImageAsset": "cat-food",
+        "SectionId": "4"
+    }
+]

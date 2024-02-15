@@ -1,0 +1,26 @@
+﻿[
+    {
+        "ObjectTextId": "sun_desktop",
+        "SectionId": "2",
+        "ObjectName": "선의 책상 위",
+        "EventType": "Text",
+        "Text": "책상에 전공책이 올려져 있다. 최악의 학점을 받은 전공. 재수강 할 생각을 하니 벌써 머리가 아프다.",
+        "ItemImageAsset": "Test"
+    },
+    {
+        "ObjectTextId": "sun_room_door",
+        "SectionId": "4",
+        "ObjectName": "선 방문",
+        "EventType": "Move",
+        "Text": "",
+        "ItemImageAsset": ""
+    },
+    {
+        "ObjectTextId": "living_room_water_bottle",
+        "SectionId": "4",
+        "ObjectName": "생수병",
+        "EventType": "Text",
+        "Text": "누가 물을 마셨지? 내가 마시다 남겨놨나?",
+        "ItemImageAsset": ""
+    }
+]

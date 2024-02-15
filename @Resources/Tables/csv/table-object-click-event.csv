@@ -1,2 +1,4 @@
-SectionId,ItemId,ItemName,EventType,Text,ItemImageAsset
-2,sun_desktop,선의 책상 위,Text,책상에 전공책이 올려져 있다. 최악의 학점을 받은 전공. 재수강 할 생각을 하니 벌써 머리가 아프다.,
+ObjectTextId,SectionId,ObjectName,EventType,Text,ItemImageAsset
+sun_desktop,2,선의 책상 위,Text,책상에 전공책이 올려져 있다. 최악의 학점을 받은 전공. 재수강 할 생각을 하니 벌써 머리가 아프다.,Test
+sun_room_door,4,선 방문,Move,,
+living_room_water_bottle,4,생수병,Text,누가 물을 마셨지? 내가 마시다 남겨놨나?,

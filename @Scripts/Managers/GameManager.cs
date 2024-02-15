@@ -13,6 +13,8 @@ public class GameManager : BaseManager<GameManager>
 
 	public UI_CoreLayerBase currentCoreLayer;
 
+	public HashSet<Item> Inventory { get; private set; }
+
 	public Action OnChangedStep;
 
 	protected override void init()
@@ -27,10 +29,10 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentSectionIndex = 1;
+		CurrentSectionIndex = 2;
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
-		currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_DialogueScript>();
 
+		StartSection();
 	}
 
 	public void ToNextStep()
@@ -52,6 +54,11 @@ public class GameManager : BaseManager<GameManager>
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
 
 		currentCoreLayer.Clear();
+		StartSection();
+	}
+
+	public void StartSection()
+	{
 		if (CurrentSection.SectionType == "Dialogue")
 		{
 			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_DialogueScript>();
@@ -60,6 +67,14 @@ public class GameManager : BaseManager<GameManager>
 		{
 			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MiniTrackBase>(CurrentSection.MiniTrack.MiniTrackAsset);
 		}
+		else if (CurrentSection.SectionType == "MainTrack")
+		{
+			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MainTrackBase>(CurrentSection.MainTrack.MainTrackAsset);
+		}
+	}
+
+	public void AddItem(string itemTextId)
+	{
 
 	}
 
