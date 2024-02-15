@@ -9,11 +9,12 @@ namespace TableData
 	{
 		public int SectionId { get; set; }
 		public string SectionType { get; set; }
-		public string ChapterId { get; set;}
-		
+		public string ChapterId { get; set; }
+
 		public List<Dialogue> Dialogues { get; set; }
+		public MiniTrack MiniTrack { get; set; }
 	}
-	
+
 	public class Dialogue
 	{
 		public int SectionId { get; set; }
@@ -22,51 +23,74 @@ namespace TableData
 		public string Text { get; set; }
 		public string CharacterImageAsset { get; set; }
 		public string RoomImageAsset { get; set; }
+		public string PopupImageAsset { get; set; }
 		public string SoundEffectAsset { get; set; }
 
 	}
+
+	public class MiniTrack
+	{
+		public int SectionId { get; set; }
+		public string MiniTrackAsset { get; set; }
+	}
 }
 
-public class GameFlowTable: BaseTable<GameFlowTable>
+public class GameFlowTable : BaseTable<GameFlowTable>
 {
-	public List<TableData.Section> Sections { get; private set;} = new List<TableData.Section>();
+	public List<TableData.Section> Sections { get; private set; } = new List<TableData.Section>();
 	public Dictionary<int, TableData.Section> SectionDict { get; private set; } = new Dictionary<int, TableData.Section>();
 
 	protected override void init()
 	{
 		base.init();
 	}
-	
-	public void Load(string sectionAssetLabel, string dialogueAssetLabel)
+
+	public void Load(string sectionAssetLabel, string dialogueAssetLabel, string miniTrackAssetLabel)
 	{
 		TextAsset textAsset = ResourceManager.Instance.Load<TextAsset>(sectionAssetLabel);
 		Sections = JsonConvert.DeserializeObject<List<TableData.Section>>(textAsset.text);
-		
+
 		TextAsset dialogueAsset = ResourceManager.Instance.Load<TextAsset>(dialogueAssetLabel);
 		var dialogues = JsonConvert.DeserializeObject<List<TableData.Dialogue>>(dialogueAsset.text);
-		
-		foreach (var section in Sections) 
+
+		TextAsset miniTrackAsset = ResourceManager.Instance.Load<TextAsset>(miniTrackAssetLabel);
+		var miniTracks = JsonConvert.DeserializeObject<List<TableData.MiniTrack>>(miniTrackAsset.text);
+
+		foreach (var section in Sections)
 		{
-			section.Dialogues = new List<TableData.Dialogue>();
-			foreach (var dialogue in dialogues) 
+			if (section.SectionType == "MiniTrack")
 			{
-				if(section.SectionId == dialogue.SectionId)
+				foreach (var miniTrack in miniTracks)
 				{
-					section.Dialogues.Add(dialogue);
+					if (section.SectionId == miniTrack.SectionId)
+					{
+						section.MiniTrack = miniTrack;
+					}
 				}
 			}
-			
+			else if (section.SectionType == "Dialogue")
+			{
+				section.Dialogues = new List<TableData.Dialogue>();
+				foreach (var dialogue in dialogues)
+				{
+					if (section.SectionId == dialogue.SectionId)
+					{
+						section.Dialogues.Add(dialogue);
+					}
+				}
+			}
+
 			SectionDict.Add(section.SectionId, section);
 		}
 	}
-	
-	public TableData.Section GetSectionById(int sectionId) 
+
+	public TableData.Section GetSectionById(int sectionId)
 	{
-		if(SectionDict.TryGetValue(sectionId, out var section))
+		if (SectionDict.TryGetValue(sectionId, out var section))
 		{
 			return section;
-		};	
-		
+		};
+
 		return null;
 	}
 }

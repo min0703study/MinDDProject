@@ -8,9 +8,10 @@ public class TableLoader : BaseManager<TableLoader>
 	{
 		base.init();
 	}
-	
-	public void Load() {
-		GameFlowTable.Instance.Load("Table_GameFlow", "Table_Dialogue");
+
+	public void Load()
+	{
+		GameFlowTable.Instance.Load("Table_GameFlow", "Table_Dialogue", "Table_MiniTrack");
 	}
-	
+
 }

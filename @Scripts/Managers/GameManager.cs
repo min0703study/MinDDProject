@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -9,49 +10,62 @@ public class GameManager : BaseManager<GameManager>
 	public Section CurrentSection;
 	public int CurrentSectionIndex;
 	public int CurrentDialogueIndex;
-	
 
-	public UI_PopupBase currentPopup;
-	
+	public UI_CoreLayerBase currentCoreLayer;
+
+	public Action OnChangedStep;
 
 	protected override void init()
 	{
 		base.init();
-		
+
 		DOTween.Init();
-		
+
 		CurrentSectionIndex = 0;
 		CurrentDialogueIndex = 0;
 	}
-	
-	public void ToNextStep() 
+
+	public void StartNewGame()
+	{
+		CurrentSectionIndex = 1;
+		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
+		currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_DialogueScript>();
+
+	}
+
+	public void ToNextStep()
 	{
 		CurrentDialogueIndex += 1;
-		if(CurrentSection.Dialogues.Count <= CurrentDialogueIndex) 
+
+		if (CurrentDialogueIndex >= CurrentSection.Dialogues.Count)
 		{
-			currentPopup.ClosePopupUI();
+			CurrentDialogueIndex = 0;
 			ToNextSection();
-		} else 
-		{
-			currentPopup.Refresh();
 		}
+
+		OnChangedStep?.Invoke();
 	}
-	
-	public void ToNextSection() 
+
+	public void ToNextSection()
 	{
 		CurrentSectionIndex += 1;
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
-		
-		if(CurrentSection.SectionType == "Dialogue") 
+
+		currentCoreLayer.Clear();
+		if (CurrentSection.SectionType == "Dialogue")
 		{
-			currentPopup = UIManager.Instance.ShowPopupUI<UI_DialogueScript>();
+			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_DialogueScript>();
 		}
+		else if (CurrentSection.SectionType == "MiniTrack")
+		{
+			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MiniTrackBase>(CurrentSection.MiniTrack.MiniTrackAsset);
+		}
+
 	}
-	
-	
+
 	// Update is called once per frame
 	void Update()
 	{
-		
+
 	}
 }

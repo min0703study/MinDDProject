@@ -18,7 +18,7 @@ public class UI_IntroScene : MonoBehaviour
 	{
 		ResourceManager.Instance.LoadAllAsync("PreLoad", (key, count, totalCount) =>
 		{
-			// loadingSlider.value = (float)count/totalCount;
+			// loadingSlider.value = (float)count / totalCount;
 			// loadingValueText.text = $"{Math.Round(loadingSlider.value * 100)}%";
 			if (count == totalCount)
 			{
@@ -29,11 +29,9 @@ public class UI_IntroScene : MonoBehaviour
 		});
 	}
 
-
-	// Start is called before the first frame update
 	private void OnClickGameStartButton()
 	{
-		SceneManager.LoadScene("MainScene");
+		SceneManager.LoadScene("GameScene");
 	}
 
 	private void CompleteLoading()
@@ -41,8 +39,5 @@ public class UI_IntroScene : MonoBehaviour
 		//SoundManager.Instance.Play(SoundManager.SoundType.Effect, "Sound_IntroOkButton");
 
 		TableLoader.Instance.Load();
-		SceneManager.LoadScene("GameScene");
-
-		//SceneChangeManager.Instance.LoadScene(Define.Scene.LobbyScene);
 	}
 }
