@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 513923bdb6ea41441b6b410041b184d2
+  m_SerializeEntries:
+  - m_GUID: 3850649b7de62b945b424dee926b808d
+    m_Address: Table_Dialogue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c02c8c9074a2a254c94b0aff69a1e5af
+    m_Address: Table_GameFlow
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02da52ebcc193dd438633ea03b599f99
+    m_Address: UI_DialogueScript
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b01f4161e31e35b4cb48d4ecaa456a3d
+    m_Address: Room_Sun_A_Open.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f6172d1d90687f4bb5f380107bad0a3
+    m_Address: Sunny.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50612c7e2f0975540a3faf0832e63a3e
+    m_Address: Room_Sun_A_Dark.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b51a3aabcf1573e4d91820bab22c7b93
+    m_Address: Full_01_01.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4f9f87dc548b3c4dbeb5a8bb7e33714
+    m_Address: Full_01_02.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25caa8c3ee388de4098c1116a286e63b
+    m_Address: Room_Sun_A.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecf74d4fc0106d4449657ed2a7818c9a
+    m_Address: Popup_01_01.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3a903c73f0428544aabb02842e350e17, type: 2}
+    - {fileID: 11400000, guid: d302c11d33a99784bb5ee84b43ba8538, type: 2}

@@ -1,0 +1,155 @@
+﻿[
+    {
+        "SectionId": "1",
+        "Type": "show_room",
+        "CharacterKey": "",
+        "Text": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Full_01_01",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "",
+        "Text": "으으음…",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Full_01_01",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "show_room",
+        "CharacterKey": "",
+        "Text": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Full_01_02",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "",
+        "Text": "하아암. 잘 잤다.",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Full_01_02",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "",
+        "Text": "오랜만에 늦잠을 잔건가? 너무 개운한데.",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Full_01_02",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "",
+        "Text": "이제 일어나야겠다.",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Full_01_02",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "show_room",
+        "CharacterKey": "",
+        "Text": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Sun_A_Dark",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "",
+        "Text": "일단 불부터 켜야겠다.",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Sun_A_Dark",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "popup",
+        "CharacterKey": "",
+        "Text": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Popup_01_01",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "show_room",
+        "CharacterKey": "",
+        "Text": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Sun_A",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "",
+        "Text": "그런데 나 어제 언제 들어왔더라? 뭘 했더라?",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Sun_A",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "show_room",
+        "CharacterKey": "",
+        "Text": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Sun_A_Open",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "listen",
+        "CharacterKey": "sunny",
+        "Text": "앩옹",
+        "CharacterImageAsset": "Sunny",
+        "RoomImageAsset": "Room_Sun_A_Open",
+        "SoundEffectAsset": "Sound_DoorOpen"
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "sunny",
+        "Text": "써니야!",
+        "CharacterImageAsset": "Sunny",
+        "RoomImageAsset": "Room_Sun_A_Open",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "sunny",
+        "Text": "아이고 귀여워!",
+        "CharacterImageAsset": "Sunny",
+        "RoomImageAsset": "Room_Sun_A_Open",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "listen",
+        "CharacterKey": "sunny",
+        "Text": "옹냥냥",
+        "CharacterImageAsset": "Sunny",
+        "RoomImageAsset": "Room_Sun_A_Open",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talk",
+        "CharacterKey": "sunny",
+        "Text": "밥 달라고? 그래, 그래. (읏챠)",
+        "CharacterImageAsset": "Sunny",
+        "RoomImageAsset": "Room_Sun_A_Open",
+        "SoundEffectAsset": ""
+    }
+]

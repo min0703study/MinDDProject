@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 7505c3381220deb47a269e76684e1380
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - S-Core Dream
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c33cc1caba15e924ba72715584ac0985, type: 3}
+  - {fileID: 12800000, guid: f0ed398e97960e545ad704b07e9470e8, type: 3}
+  - {fileID: 12800000, guid: 52d7e9dc996e11f428f9875be8fb2611, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,18 @@
+SectionId,Type,CharacterKey,Text,CharacterImageAsset,RoomImageAsset,SoundEffectAsset
+1,show_room,,,,Full_01_01,
+1,talk,,으으음…,,Full_01_01,
+1,show_room,,,,Full_01_02,
+1,talk,,하아암. 잘 잤다.,,Full_01_02,
+1,talk,,오랜만에 늦잠을 잔건가? 너무 개운한데.,,Full_01_02,
+1,talk,,이제 일어나야겠다.,,Full_01_02,
+1,show_room,,,,Room_Sun_A_Dark,
+1,talk,,일단 불부터 켜야겠다.,,Room_Sun_A_Dark,
+1,popup,,,,Popup_01_01,
+1,show_room,,,,Room_Sun_A,
+1,talk,,그런데 나 어제 언제 들어왔더라? 뭘 했더라?,,Room_Sun_A,
+1,show_room,,,,Room_Sun_A_Open,
+1,listen,sunny,앩옹,Sunny,Room_Sun_A_Open,Sound_DoorOpen
+1,talk,sunny,써니야!,Sunny,Room_Sun_A_Open,
+1,talk,sunny,아이고 귀여워!,Sunny,Room_Sun_A_Open,
+1,listen,sunny,옹냥냥,Sunny,Room_Sun_A_Open,
+1,talk,sunny,"밥 달라고? 그래, 그래. (읏챠)",Sunny,Room_Sun_A_Open,
