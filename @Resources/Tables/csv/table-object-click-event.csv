@@ -1,4 +1,7 @@
-ObjectTextId,SectionId,ObjectName,EventType,Text,ItemImageAsset
-sun_desktop,2,ì„ ì˜ ì±…ìƒ ìœ„,Text,ì±…ìƒì— ì „ê³µì±…ì´ ì˜¬ë ¤ì ¸ ìˆë‹¤. ìµœì•…ì˜ í•™ì ì„ ë°›ì€ ì „ê³µ. ì¬ìˆ˜ê°• í•  ìƒê°ì„ í•˜ë‹ˆ ë²Œì¨ ë¨¸ë¦¬ê°€ ì•„í”„ë‹¤.,Test
-sun_room_door,4,ì„  ë°©ë¬¸,Move,,
-living_room_water_bottle,4,ìƒìˆ˜ë³‘,Text,ëˆ„ê°€ ë¬¼ì„ ë§ˆì…¨ì§€? ë‚´ê°€ ë§ˆì‹œë‹¤ ë‚¨ê²¨ë†¨ë‚˜?,
+ObjectTextId,SectionId,ObjectName,EventType,Text,ObjectImageAsset
+sun_desk,2,¼±ÀÇ Ã¥»ó À§,Explain,"Ã¥»ó¿¡ Àü°øÃ¥ÀÌ ¿Ã·ÁÁ® ÀÖ´Ù. ÃÖ¾ÇÀÇ ÇĞÁ¡À» ¹ŞÀº Àü°ø. Àç¼ö°­ÇÒ »ı
+°¢À» ÇÏ´Ï ¹ú½á ¸Ó¸®°¡ ¾ÆÇÁ´Ù.",Room_Detail_Sun_Desk
+sun_desk_drawer,2,Ã¥»ó ¿· ¼­¶ø,Explain,³»°¡ ÈŞ´ëÆùÀ» ¼­¶ø¿¡ ³Ö¾î³ùÀ» ¸®´Â ¾øÁö.,Room_Detail_Sun_Desk_Drawer
+sun_cellphone,2,ÈŞ´ëÆù,Event,,
+sun_room_door,4,,Move,,
+living_room_water_bottle,4,,Explain,,

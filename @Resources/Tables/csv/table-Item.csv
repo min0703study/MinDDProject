@@ -1,2 +1,12 @@
-ItemTextId,ItemName,ItemDesc,ItemImageAsset,SectionId
-cat_food,ì¨ë‹ˆì˜ ì‚¬ë£Œ,ì¨ë‹ˆì˜ ì‚¬ë£Œ,cat-food,4
+ItemTextId,ItemName,ItemDesc,ItemImageAsset,R_Desc
+cat_food,½á´ÏÀÇ »ç·á,,Item_Cat_Food,
+key_a,¿­¼è1,,Item_Key_A,
+key_b,¿­¼è2,,Item_Key_B,
+note,ÂÊÁö,,Item_Note,
+ho_room_key,È£ÀÇ ¹æ ¿­¼è,,Item_Ho_Room_Key,
+recorder,³ìÀ½±â,,Item_Recorder,
+back_scratcher,È¿ÀÚ¼Õ,,Item_Back_Scratcher,
+secret_note,ÁÖ¿øÀÇ ¼ö¼ö²²³¢°¡ ÀûÈù Á¾ÀÌ,,Item_Secret_Note,
+ho_diary,È£ÀÇ ÀÏ±âÀå,,Item_Ho_Diary,
+key_c,¿­¼è3,,Item_Key_C,
+long_tool,±ä °ø±¸,,Item_Long_Tool,
