@@ -1,5 +1,5 @@
-SectionId,SectionType,ChapterIndex,R_SectionDesc
-1,Dialogue,1,선 깨어남
-2,MiniTrack,1,핸드폰 찾는 트랙
-3,Dialogue,1,써니 등장
-4,MainTrack,1,써니에게 사료를 주는 트랙
+SectionId,SectionType,ChapterIndex,SectionAsset,R_SectionDesc
+1,Dialogue,1,UI_DialogueScript,선 깨어남
+2,MiniTrack,1,UI_MiniTrack_0101,핸드폰 찾는 트랙
+3,Dialogue,1,UI_DialogueScript,써니 등장
+4,MainTrack,1,UI_MainTrack_0101,써니에게 사료를 주는 트랙
