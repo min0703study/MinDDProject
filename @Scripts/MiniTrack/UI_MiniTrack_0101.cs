@@ -7,39 +7,29 @@ using UnityEngine.UI;
 
 public class UI_MiniTrack_0101 : UI_MiniTrackBase
 {
-	[SerializeField]
-	Button cellphone;
-
-	[SerializeField]
-	Image roomImage;
+	[Header("Modules")]
+	[Header("Cellphone")]
 
 	[SerializeField]
 	GameObject cellphonePanel;
 
 	[SerializeField]
-	GameObject scriptPanel;
-
-	[SerializeField]
-	Button scriptButton;
-
-	[SerializeField]
 	Button lockButton;
 
 	[SerializeField]
-	private TextMeshProUGUI scriptText;
+	Image roomImage;
+
 
 	private int currentDialogueIndex;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		cellphone.onClick.AddListener(OnClickCellphone);
-		cellphonePanel.SetActive(false);
-
-		scriptButton.onClick.AddListener(OnClickScriptButton);
-		scriptPanel.SetActive(false);
-
+		scriptNextButton.onClick.AddListener(OnClickScriptButton);
 		lockButton.onClick.AddListener(OnClickLockButton);
+
+		scriptPanel.SetActive(false);
+		cellphonePanel.SetActive(false);
 
 		currentDialogueIndex = 0;
 	}
@@ -48,13 +38,6 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 	void Update()
 	{
 
-	}
-
-	private void OnClickCellphone()
-	{
-		Sprite sprite = ResourceManager.Instance.Load<Sprite>("Room_Sun_A_Open");
-		roomImage.sprite = sprite;
-		cellphonePanel.SetActive(true);
 	}
 
 	private void OnClickLockButton()
@@ -87,5 +70,38 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 	void StartTypingAnimation(string script)
 	{
 		DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f);
+	}
+
+	public void OnClickObject(string objectTextId)
+	{
+		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(objectTextId);
+
+		if (clickEvent.EventType == "Explain")
+		{
+			popupPanel.SetActive(true);
+			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ImageAsset);
+			popupImage.sprite = imageSprite;
+			popupText.text = clickEvent.Text;
+		}
+
+		if (clickEvent.EventType == "Event")
+		{
+			if (clickEvent.ObjectTextId == "sun_cellphone")
+			{
+				Sprite sprite = ResourceManager.Instance.Load<Sprite>("Room_Sun_A_Open");
+				roomImage.sprite = sprite;
+				cellphonePanel.SetActive(true);
+			}
+		}
+
+		if (clickEvent.EventType == "GetItem")
+		{
+			GameManager.Instance.AddItem(clickEvent.ItemTextId);
+		}
+
+		if (clickEvent.EventType == "UseItem")
+		{
+			GameManager.Instance.AddItem(clickEvent.ItemTextId);
+		}
 	}
 }

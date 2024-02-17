@@ -7,39 +7,15 @@ using TMPro;
 
 public class UI_DialogueScript : UI_CoreLayerBase
 {
-	[SerializeField]
-	private TextMeshProUGUI nameText;
-
-	[SerializeField]
-	private TextMeshProUGUI scriptText;
-
-	[SerializeField]
-	private Image roomIamge;
-
-	[SerializeField]
-	private Image characterImage;
-
-	[SerializeField]
-	private Image characterMaskImage;
-
-	[SerializeField]
-	public Button nextButton;
-
-	[SerializeField]
-	public GameObject scriptPanel;
-
-	[SerializeField]
-	public GameObject popupPanel;
-
-	[SerializeField]
-	public Image popupImage;
+	[Header("Room")]
+	[SerializeField] Image roomIamge;
 
 	protected override void Init()
 	{
 		base.Init();
 		scriptText.text = string.Empty;
 
-		nextButton.onClick.AddListener(OnClickNextButton);
+		scriptNextButton.onClick.AddListener(OnClickNextButton);
 		Bind();
 	}
 

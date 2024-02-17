@@ -2,8 +2,78 @@
     {
         "ItemTextId": "cat_food",
         "ItemName": "써니의 사료",
-        "ItemDesc": "써니의 사료",
-        "ItemImageAsset": "cat-food",
-        "SectionId": "4"
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Cat_Food",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "key_a",
+        "ItemName": "열쇠1",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Key_A",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "key_b",
+        "ItemName": "열쇠2",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Key_B",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "note",
+        "ItemName": "쪽지",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Note",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "ho_room_key",
+        "ItemName": "호의 방 열쇠",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Ho_Room_Key",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "recorder",
+        "ItemName": "녹음기",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Recorder",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "back_scratcher",
+        "ItemName": "효자손",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Back_Scratcher",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "secret_note",
+        "ItemName": "주원의 수수께끼가 적힌 종이",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Secret_Note",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "ho_diary",
+        "ItemName": "호의 일기장",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Ho_Diary",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "key_c",
+        "ItemName": "열쇠3",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Key_C",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "long_tool",
+        "ItemName": "긴 공구",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Long_Tool",
+        "R_Desc": ""
     }
 ]

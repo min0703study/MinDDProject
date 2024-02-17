@@ -2,12 +2,31 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_CoreLayerBase : MonoBehaviour
 {
 	protected bool isInitOver = false;
 	public Action OnClosedPopup { get; set; }
+
+	[Header("Core Layer")]
+	[Header("Dialogue GameObjects")]
+	[SerializeField] protected GameObject scriptPanel;
+	[SerializeField] protected TextMeshProUGUI nameText;
+	[SerializeField] protected TextMeshProUGUI scriptText;
+	[SerializeField] protected Button scriptNextButton;
+
+	[Header("Popup GameObjects")]
+	[SerializeField] protected GameObject popupPanel;
+	[SerializeField] protected Image popupImage;
+	[SerializeField] protected TextMeshProUGUI popupText;
+
+	[Header("Character GameObjects")]
+	[SerializeField] protected GameObject characterPanel;
+	[SerializeField] protected Image characterImage;
+	[SerializeField] protected Image characterMaskImage;
 
 	private void Awake()
 	{
@@ -20,6 +39,11 @@ public class UI_CoreLayerBase : MonoBehaviour
 			return;
 
 		isInitOver = true;
+
+		scriptPanel.SetActive(false);
+		popupPanel.SetActive(false);
+		characterPanel.SetActive(false);
+		scriptNextButton.enabled = false;
 	}
 
 	private void Start()

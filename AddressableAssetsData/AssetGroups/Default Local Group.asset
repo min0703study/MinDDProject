@@ -29,26 +29,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 02da52ebcc193dd438633ea03b599f99
+  - m_GUID: 4657002ee984a4a8fb94e5e7fb6d8701
     m_Address: UI_DialogueScript
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b01f4161e31e35b4cb48d4ecaa456a3d
-    m_Address: Room_Sun_A_Open.sprite
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4f6172d1d90687f4bb5f380107bad0a3
-    m_Address: Sunny.sprite
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 50612c7e2f0975540a3faf0832e63a3e
-    m_Address: Room_Sun_A_Dark.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
@@ -65,32 +47,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 25caa8c3ee388de4098c1116a286e63b
-    m_Address: Room_Sun_A.sprite
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ecf74d4fc0106d4449657ed2a7818c9a
-    m_Address: Popup_01_01.sprite
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eba8fda6d7a8c435095ebbf2376854f0
     m_Address: UI_GamePopup
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ed0bdfa29124644c3867aa97f1beafdc
-    m_Address: 01-01-light_on_before.sprite
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 08c9816c25aca49f8bf0cd25aa34883f
-    m_Address: 01-02-light_on_after.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
@@ -101,7 +59,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fb0568f1d96124f948cc29e355f6a699
+  - m_GUID: 72df1f5c974354417805ea5b8d4ffc29
     m_Address: UI_MiniTrack_0101
     m_ReadOnly: 0
     m_SerializedLabels:

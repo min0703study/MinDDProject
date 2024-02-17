@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Room
+  m_EditorClassIdentifier: 
+  m_GroupName: Room
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 40ecc15e32a4545a59ddd5e711139d26
+  m_SerializeEntries:
+  - m_GUID: 25caa8c3ee388de4098c1116a286e63b
+    m_Address: Room_Sun_A.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a246751c9034b4a7eb9b87118088894b
+    m_Address: Room_Living_A.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50612c7e2f0975540a3faf0832e63a3e
+    m_Address: Room_Sun_A_Dark.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84301bd48ef8f49759e9dc65b2a40623
+    m_Address: Room_Living_B.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8f3bf1ab9e5b4faeb7f855e0604f636
+    m_Address: Room_Sun_A_Cellphone.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b01f4161e31e35b4cb48d4ecaa456a3d
+    m_Address: Room_Sun_A_Open.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce7dfda4c46ba4f399521a6347c5b13c
+    m_Address: Room_Kitchen.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8e86d3c225a7f4186a953309a99e064c, type: 2}
+    - {fileID: 11400000, guid: 855c28eb670834c12aeec6f9bdedfa96, type: 2}

@@ -2,7 +2,6 @@
     {
         "SectionId": "1",
         "Type": "show_background",
-        "CharacterKey": "",
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Full_01_01",
@@ -12,8 +11,7 @@
     {
         "SectionId": "1",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
-        "Text": "으으음…",
+        "Text": "으으음...",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Full_01_01",
         "PopupImageAsset": "",
@@ -22,7 +20,6 @@
     {
         "SectionId": "1",
         "Type": "show_background",
-        "CharacterKey": "",
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Full_01_02",
@@ -32,7 +29,6 @@
     {
         "SectionId": "1",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
         "Text": "하아암. 잘 잤다.",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Full_01_02",
@@ -42,8 +38,7 @@
     {
         "SectionId": "1",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
-        "Text": "오랜만에 늦잠을 잔건가? 너무 개운한데.",
+        "Text": "오랜만에 늦잠을 잔 건가? 너무 개운한데. ",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Full_01_02",
         "PopupImageAsset": "",
@@ -52,7 +47,6 @@
     {
         "SectionId": "1",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
         "Text": "이제 일어나야겠다.",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Full_01_02",
@@ -62,7 +56,6 @@
     {
         "SectionId": "1",
         "Type": "show_background",
-        "CharacterKey": "",
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A_Dark",
@@ -72,8 +65,7 @@
     {
         "SectionId": "1",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
-        "Text": "몇시야?",
+        "Text": "몇 시야?",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A_Dark",
         "PopupImageAsset": "",
@@ -82,7 +74,6 @@
     {
         "SectionId": "1",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
         "Text": "휴대폰은 또 어디 있고...",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A_Dark",
@@ -92,7 +83,6 @@
     {
         "SectionId": "1",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
         "Text": "일단 불부터 켜야겠는데",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A_Dark",
@@ -102,27 +92,51 @@
     {
         "SectionId": "1",
         "Type": "popup",
-        "CharacterKey": "",
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A_Dark",
-        "PopupImageAsset": "01-01-light_on_before",
+        "PopupImageAsset": "Popup_Light_On_Before",
         "SoundEffectAsset": ""
     },
     {
         "SectionId": "1",
         "Type": "popup",
-        "CharacterKey": "",
         "Text": "",
         "CharacterImageAsset": "",
-        "RoomImageAsset": "Room_Sun_A",
-        "PopupImageAsset": "01-02-light_on_after",
+        "RoomImageAsset": "Room_Sun_A_Cellphone",
+        "PopupImageAsset": "Popup_Light_On_After",
         "SoundEffectAsset": ""
     },
     {
         "SectionId": "1",
         "Type": "show_background",
-        "CharacterKey": "",
+        "Text": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Sun_A_Cellphone",
+        "PopupImageAsset": "",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talking_to_myself",
+        "Text": "으으, 갑자기 밝아지니까 눈이 너무 부시네",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Sun_A_Cellphone",
+        "PopupImageAsset": "",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "1",
+        "Type": "talking_to_myself",
+        "Text": "휴대폰은 어디 있지?",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Sun_A_Cellphone",
+        "PopupImageAsset": "",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionId": "3",
+        "Type": "popup",
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A",
@@ -130,20 +144,18 @@
         "SoundEffectAsset": ""
     },
     {
-        "SectionId": "1",
+        "SectionId": "3",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
-        "Text": "으으. 갑자기 밝아지니까 눈이 너무 부시네",
+        "Text": "동아리 회식에 가서 또 필름이 끊길 때까지 술 마시고 들어온 건가.",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A",
         "PopupImageAsset": "",
         "SoundEffectAsset": ""
     },
     {
-        "SectionId": "1",
+        "SectionId": "3",
         "Type": "talking_to_myself",
-        "CharacterKey": "",
-        "Text": "휴대폰은 어디있지?",
+        "Text": "휴학하니까 매일 술이네, 술",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A",
         "PopupImageAsset": "",
@@ -152,7 +164,6 @@
     {
         "SectionId": "3",
         "Type": "show_background",
-        "CharacterKey": "",
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A_Open",
@@ -162,9 +173,8 @@
     {
         "SectionId": "3",
         "Type": "listen",
-        "CharacterKey": "sunny",
         "Text": "앩옹",
-        "CharacterImageAsset": "Sunny",
+        "CharacterImageAsset": "Sunny_Normal",
         "RoomImageAsset": "Room_Sun_A_Open",
         "PopupImageAsset": "",
         "SoundEffectAsset": "Sound_DoorOpen"
@@ -172,9 +182,8 @@
     {
         "SectionId": "3",
         "Type": "talk",
-        "CharacterKey": "sunny",
         "Text": "써니야!",
-        "CharacterImageAsset": "Sunny",
+        "CharacterImageAsset": "Sunny_Normal",
         "RoomImageAsset": "Room_Sun_A_Open",
         "PopupImageAsset": "",
         "SoundEffectAsset": ""
@@ -182,9 +191,8 @@
     {
         "SectionId": "3",
         "Type": "talk",
-        "CharacterKey": "sunny",
-        "Text": "아이고 귀여워!",
-        "CharacterImageAsset": "Sunny",
+        "Text": "아이, 귀여워.",
+        "CharacterImageAsset": "Sunny_Normal",
         "RoomImageAsset": "Room_Sun_A_Open",
         "PopupImageAsset": "",
         "SoundEffectAsset": ""
@@ -192,9 +200,8 @@
     {
         "SectionId": "3",
         "Type": "listen",
-        "CharacterKey": "sunny",
         "Text": "옹냥냥",
-        "CharacterImageAsset": "Sunny",
+        "CharacterImageAsset": "Sunny_Normal",
         "RoomImageAsset": "Room_Sun_A_Open",
         "PopupImageAsset": "",
         "SoundEffectAsset": ""
@@ -202,9 +209,8 @@
     {
         "SectionId": "3",
         "Type": "talk",
-        "CharacterKey": "sunny",
-        "Text": "밥 달라고? 그래, 그래. (읏챠)",
-        "CharacterImageAsset": "Sunny",
+        "Text": "밥 달라고? 그래, 그래.",
+        "CharacterImageAsset": "Sunny_Normal",
         "RoomImageAsset": "Room_Sun_A_Open",
         "PopupImageAsset": "",
         "SoundEffectAsset": ""

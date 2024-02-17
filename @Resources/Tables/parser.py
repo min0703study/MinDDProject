@@ -12,16 +12,17 @@ for full_filename in os.listdir('./csv'):
     if (full_filename.startswith(".")) :
         continue
 
-    with open('csv/' + full_filename, 'r') as csv_file:
+    with open('csv/' + full_filename, 'r', encoding='euc-kr') as csv_file:
         try:
             reader = csv.DictReader(csv_file)
             data = list(reader)
-        except:
-            print('오류 발생')
-            print(full_filename)
+            print('성공 : ' + full_filename)
+            print('=======================')
+        except Exception as e:
+            print('오류 발생 : ' + full_filename)
+            print(e)
+            print('=======================')
             
 
     with open('json/' + filename + '.json', 'w',  encoding='UTF-8-sig') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent = 4)
-
-print('작업 완료')

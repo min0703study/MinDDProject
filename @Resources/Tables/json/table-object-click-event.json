@@ -1,26 +1,42 @@
 ﻿[
     {
-        "ObjectTextId": "sun_desktop",
+        "ObjectTextId": "sun_desk",
         "SectionId": "2",
         "ObjectName": "선의 책상 위",
-        "EventType": "Text",
-        "Text": "책상에 전공책이 올려져 있다. 최악의 학점을 받은 전공. 재수강 할 생각을 하니 벌써 머리가 아프다.",
-        "ItemImageAsset": "Test"
+        "EventType": "Explain",
+        "Text": "책상에 전공책이 올려져 있다. 최악의 학점을 받은 전공. 재수강할 생\n각을 하니 벌써 머리가 아프다.",
+        "ObjectImageAsset": "Room_Detail_Sun_Desk"
+    },
+    {
+        "ObjectTextId": "sun_desk_drawer",
+        "SectionId": "2",
+        "ObjectName": "책상 옆 서랍",
+        "EventType": "Explain",
+        "Text": "내가 휴대폰을 서랍에 넣어놨을 리는 없지.",
+        "ObjectImageAsset": "Room_Detail_Sun_Desk_Drawer"
+    },
+    {
+        "ObjectTextId": "sun_cellphone",
+        "SectionId": "2",
+        "ObjectName": "휴대폰",
+        "EventType": "Event",
+        "Text": "",
+        "ObjectImageAsset": ""
     },
     {
         "ObjectTextId": "sun_room_door",
         "SectionId": "4",
-        "ObjectName": "선 방문",
+        "ObjectName": "",
         "EventType": "Move",
         "Text": "",
-        "ItemImageAsset": ""
+        "ObjectImageAsset": ""
     },
     {
         "ObjectTextId": "living_room_water_bottle",
         "SectionId": "4",
-        "ObjectName": "생수병",
-        "EventType": "Text",
-        "Text": "누가 물을 마셨지? 내가 마시다 남겨놨나?",
-        "ItemImageAsset": ""
+        "ObjectName": "",
+        "EventType": "Explain",
+        "Text": "",
+        "ObjectImageAsset": ""
     }
 ]
