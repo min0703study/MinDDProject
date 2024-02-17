@@ -1,5 +1,6 @@
 
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,8 +19,6 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 	[SerializeField] TextMeshProUGUI missionText;
 
 
-	private int currentDialogueIndex;
-
 	void Start()
 	{
 		scriptNextButton.onClick.AddListener(OnClickScriptButton);
@@ -28,47 +27,54 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 
 		cellphonePanel.SetActive(false);
 
-		currentDialogueIndex = 0;
+		Refresh();
+	}
+
+	public override void Refresh()
+	{
+		var dialogues = GameManager.Instance.CurrentSection.Dialogues;
+
+		if (dialogues != null && dialogues.Count > 0)
+		{
+			var dialogueIndex = GameManager.Instance.CurrentDialogueIndex;
+			var dialog = dialogues[dialogueIndex];
+
+			if (dialog.Type == "mission")
+			{
+				popupPanel.SetActive(false);
+				scriptPanel.SetActive(false);
+				characterPanel.SetActive(false);
+
+				missionText.text = dialog.MissionText;
+			}
+			else if (dialog.Type == "talking_to_myself")
+			{
+				popupPanel.SetActive(false);
+				scriptPanel.SetActive(true);
+				characterImage.gameObject.SetActive(false);
+				nameText.text = dialog.CharacterKey;
+
+				StartTypingAnimation(dialog.Text);
+			}
+		}
 	}
 
 	private void OnClickLockButton()
 	{
+		GameManager.Instance.ToNextStep();
 		scriptPanel.SetActive(true);
+		Refresh();
 	}
 
 	private void OnClickScriptButton()
 	{
-		if (currentDialogueIndex == 0)
-		{
-			StartTypingAnimation("왜 배터리가 없지?");
-		}
-		else if (currentDialogueIndex == 1)
-		{
-			StartTypingAnimation("그럼제 어제 나 어떻게 들어왔더라? 뭘 했더라?");
-		}
-		else if (currentDialogueIndex == 2)
-		{
-			StartTypingAnimation("기억이 하나도 안나..");
-		}
-		else if (currentDialogueIndex == 3)
-		{
-			GameManager.Instance.ToNextSection();
-		}
-
-		currentDialogueIndex++;
+		GameManager.Instance.ToNextStep();
+		Refresh();
 	}
 
 	public void OnClickRoomObject(string objectTextId)
 	{
 		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(objectTextId);
-
-		if (clickEvent.EventType == "Explain")
-		{
-			popupPanel.SetActive(true);
-			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
-			popupImage.sprite = imageSprite;
-			popupText.text = clickEvent.Text;
-		}
 
 		if (clickEvent.EventType == "Event")
 		{
@@ -78,6 +84,13 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 				roomImage.sprite = sprite;
 				cellphonePanel.SetActive(true);
 			}
+		}
+		else if (clickEvent.EventType == "Explain")
+		{
+			popupPanel.SetActive(true);
+			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
+			popupImage.sprite = imageSprite;
+			popupText.text = clickEvent.Text;
 		}
 	}
 }

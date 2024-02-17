@@ -15,44 +15,81 @@ public enum Room
 
 public class UI_MainTrack_0101 : UI_MainTrackBase
 {
-	[SerializeField]
-	TextMeshProUGUI missionText;
+	[Header("Module")]
+	[Header("GameUI")]
+	[SerializeField] TextMeshProUGUI missionText;
 
-	[SerializeField]
-	GameObject popupPanel;
+	[Header("Room GameObjects")]
+	[SerializeField] GameObject livingRoomA;
+	[SerializeField] GameObject sunRoomA;
+	[SerializeField] GameObject kitchen;
+	[SerializeField] GameObject livingRoomB;
 
-	[SerializeField]
-	Image popupImage;
-
-	[SerializeField]
-	TextMeshProUGUI popupText;
-
-	[SerializeField]
-	Button popupButton;
-
-	Room currentRoom;
-
-	[SerializeField]
-	GameObject livingRoomA, livingRoomB, sunRoomA, kitchen;
+	[SerializeField] GameObject inventoryListGO;
 
 	private void Awake()
 	{
-		popupButton.onClick.AddListener(OnClickPopupButton);
+		popupNextButton.onClick.AddListener(OnClickPopupButton);
 		popupPanel.SetActive(false);
 	}
 	// Start is called before the first frame update
 	void Start()
 	{
-		missionText.text = "문을 열고 밖으로 나가자";
+		Refresh();
+		RefreshInventoryList();
 	}
 
-	// Update is called once per frame
-	void Update()
+	private void RefreshInventoryList()
 	{
-
+		Util.DestroyChilds(inventoryListGO);
+		for (int i = 0; i < GameManager.INVENTORY_SIZE; i++)
+		{
+			var inventoryCell = UIManager.Instance.MakeSubItem<InventoryCell>(inventoryListGO.transform);
+			inventoryCell.SetInfo(i, null);
+			inventoryCell.Refresh();
+		}
 	}
 
-	public void Move(Room to)
+	public override void Refresh()
+	{
+		var dialogues = GameManager.Instance.CurrentSection.Dialogues;
+
+		if (dialogues != null && dialogues.Count > 0)
+		{
+			var dialogueIndex = GameManager.Instance.CurrentDialogueIndex;
+			var dialog = dialogues[dialogueIndex];
+
+			if (dialog.Type == "mission")
+			{
+				popupPanel.SetActive(false);
+				scriptPanel.SetActive(false);
+				characterPanel.SetActive(false);
+				missionText.text = dialog.MissionText;
+
+				Move(dialog.MissionStartRoom);
+			}
+			else if (dialog.Type == "talking_to_myself")
+			{
+				popupPanel.SetActive(false);
+				scriptPanel.SetActive(true);
+				characterImage.gameObject.SetActive(false);
+				nameText.text = dialog.CharacterKey;
+
+				StartTypingAnimation(dialog.Text);
+			}
+			else if (dialog.Type == "popup")
+			{
+				popupPanel.SetActive(true);
+				scriptPanel.SetActive(false);
+				var popupSprite = ResourceManager.Instance.Load<Sprite>(dialog.PopupImageAsset);
+				popupImage.sprite = popupSprite;
+
+				popupNextButton.onClick.AddListener(OnClickNextStep);
+			}
+		}
+	}
+
+	public void Move(string to)
 	{
 		livingRoomA.SetActive(false);
 		livingRoomB.SetActive(false);
@@ -61,16 +98,16 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 
 		switch (to)
 		{
-			case Room.LivingRoomA:
+			case "Living_A":
 				livingRoomA.SetActive(true);
 				break;
-			case Room.LivingRoomB:
+			case "Living_B":
 				livingRoomB.SetActive(true);
 				break;
-			case Room.SunRoomA:
+			case "Sun_A":
 				sunRoomA.SetActive(true);
 				break;
-			case Room.Kitchen:
+			case "Kitchen":
 				kitchen.SetActive(true);
 				break;
 		}
@@ -80,48 +117,49 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	{
 		if (arrowTextId == "to_living_room_a_arrow")
 		{
-			Move(Room.LivingRoomA);
+			Move("Living_A");
 		}
 		else if (arrowTextId == "to_living_room_b_arrow")
 		{
-			Move(Room.LivingRoomB);
+			Move("Living_B");
 		}
 		else if (arrowTextId == "to_kitchen_arrow")
 		{
-			Move(Room.Kitchen);
+			Move("Kitchen");
 		}
 	}
 
 	public void OnClickObject(string objectTextId)
 	{
 		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(objectTextId);
-		if (objectTextId == "sun_room_door")
+		if (clickEvent.EventType == "Event")
 		{
-			Move(Room.LivingRoomA);
+			if (clickEvent.ObjectTextId == "sun_room_door")
+			{
+				//Move(Room.LivingRoomA);
+				GameManager.Instance.ToNextStep();
+				Refresh();
+			}
 		}
-
-		if (clickEvent.EventType == "Text")
+		else if (clickEvent.EventType == "Explain")
 		{
 			popupPanel.SetActive(true);
-			//var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ImageAsset);
-			//popupImage.sprite = imageSprite;
+			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
+			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
-		}
-
-		if (clickEvent.EventType == "GetItem")
-		{
-			GameManager.Instance.AddItem(clickEvent.ItemTextId);
-		}
-
-		if (clickEvent.EventType == "UseItem")
-		{
-			GameManager.Instance.AddItem(clickEvent.ItemTextId);
 		}
 	}
 
 	public void OnClickPopupButton()
 	{
 		popupPanel.SetActive(false);
+	}
+
+	public void OnClickNextStep()
+	{
+		GameManager.Instance.ToNextStep();
+		popupNextButton.onClick.RemoveListener(OnClickNextStep);
+		Refresh();
 	}
 
 }

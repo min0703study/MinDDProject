@@ -5,6 +5,12 @@ using DG.Tweening;
 using TableData;
 using UnityEngine;
 
+public class InventorySlot
+{
+	public bool IsBlank { get; set; }
+	public string ItemTextId { get; set; }
+}
+
 public class GameManager : BaseManager<GameManager>
 {
 	public Section CurrentSection;
@@ -13,7 +19,8 @@ public class GameManager : BaseManager<GameManager>
 
 	public UI_CoreLayerBase currentCoreLayer;
 
-	public HashSet<Item> Inventory { get; private set; }
+	public const int INVENTORY_SIZE = 9;
+	public InventorySlot[] Inventory { get; private set; } = new InventorySlot[INVENTORY_SIZE];
 
 	public Action OnChangedStep;
 
@@ -25,12 +32,22 @@ public class GameManager : BaseManager<GameManager>
 
 		CurrentSectionIndex = 0;
 		CurrentDialogueIndex = 0;
+
+		for (int i = 0; i < GameManager.INVENTORY_SIZE; i++)
+		{
+			Inventory[i] = new InventorySlot();
+			Inventory[i].IsBlank = true;
+		}
 	}
 
 	public void StartNewGame()
 	{
-		CurrentSectionIndex = 1;
+		CurrentSectionIndex = 4;
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
+
+		// var catfood = GameFlowTable.Instance.GetItemById("cat_food");
+		// Inventory[0].IsBlank = false;
+		// Inventory[0].SlotItem = catfood;
 
 		StartSection();
 	}
@@ -65,11 +82,11 @@ public class GameManager : BaseManager<GameManager>
 		}
 		else if (CurrentSection.SectionType == "MiniTrack")
 		{
-			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MiniTrackBase>(CurrentSection.MiniTrack.MiniTrackAsset);
+			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MiniTrackBase>(CurrentSection.SectionAsset);
 		}
 		else if (CurrentSection.SectionType == "MainTrack")
 		{
-			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MainTrackBase>(CurrentSection.MainTrack.MainTrackAsset);
+			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MainTrackBase>(CurrentSection.SectionAsset);
 		}
 	}
 

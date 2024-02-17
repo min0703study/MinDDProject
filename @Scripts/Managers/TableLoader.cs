@@ -15,7 +15,8 @@ public class TableLoader : BaseManager<TableLoader>
 			"Table_Dialogue",
 			"Table_MiniTrack",
 			"Table_MainTrack",
-			"Table_ObjectClickEvent");
+			"Table_ObjectClickEvent",
+			"Table_Item");
 	}
 
 }

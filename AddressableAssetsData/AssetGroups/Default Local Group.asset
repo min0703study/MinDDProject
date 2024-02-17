@@ -77,8 +77,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4fe308b128fdb4f1eaada36d26e2fa91
+  - m_GUID: 1d5ef8355aa3848e8a6e1594fa3be165
     m_Address: UI_MainTrack_0101
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c64c26ac08ae4492b43bdd1c5f1467e
+    m_Address: Popup_Light_On_After.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f5711a0e65254d5caaf63376d0c01ae
+    m_Address: Popup_Light_On_Before.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

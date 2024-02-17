@@ -10,6 +10,7 @@ namespace TableData
 		public int SectionId { get; set; }
 		public string SectionType { get; set; }
 		public string ChapterId { get; set; }
+		public string SectionAsset { get; set; }
 
 		public List<Dialogue> Dialogues { get; set; }
 		public MiniTrack MiniTrack { get; set; }
@@ -20,9 +21,12 @@ namespace TableData
 	public class Dialogue
 	{
 		public int SectionId { get; set; }
+		public int Step { get; set; }
 		public string Type { get; set; }
 		public string CharacterKey { get; set; }
 		public string Text { get; set; }
+		public string MissionText { get; set; }
+		public string MissionStartRoom { get; set; }
 		public string CharacterImageAsset { get; set; }
 		public string RoomImageAsset { get; set; }
 		public string PopupImageAsset { get; set; }
@@ -44,9 +48,10 @@ namespace TableData
 
 	public class Item
 	{
-		public int ItemId { get; set; }
+		public string ItemTextId { get; set; }
 		public string ItemName { get; set; }
-
+		public string ItemImageAsset { get; set; }
+		public string ItemDesc { get; set; }
 	}
 
 	public class ObjectClickEvent
@@ -65,13 +70,14 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 	public List<TableData.Section> Sections { get; private set; } = new List<TableData.Section>();
 	public Dictionary<int, TableData.Section> SectionDict { get; private set; } = new Dictionary<int, TableData.Section>();
 	public Dictionary<string, TableData.ObjectClickEvent> ObjectClickEventDict { get; private set; } = new Dictionary<string, TableData.ObjectClickEvent>();
+	public Dictionary<string, TableData.Item> ItemDict { get; private set; } = new Dictionary<string, TableData.Item>();
 
 	protected override void init()
 	{
 		base.init();
 	}
 
-	public void Load(string sectionAssetLabel, string dialogueAssetLabel, string miniTrackAssetLabel, string mainTrackAssetLabel, string objectClickEventAssetLabel)
+	public void Load(string sectionAssetLabel, string dialogueAssetLabel, string miniTrackAssetLabel, string mainTrackAssetLabel, string objectClickEventAssetLabel, string itemAssetLabel)
 	{
 		TextAsset textAsset = ResourceManager.Instance.Load<TextAsset>(sectionAssetLabel);
 		Sections = JsonConvert.DeserializeObject<List<TableData.Section>>(textAsset.text);
@@ -107,15 +113,13 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 					}
 				}
 			}
-			else if (section.SectionType == "Dialogue")
+
+			section.Dialogues = new List<TableData.Dialogue>();
+			foreach (var dialogue in dialogues)
 			{
-				section.Dialogues = new List<TableData.Dialogue>();
-				foreach (var dialogue in dialogues)
+				if (section.SectionId == dialogue.SectionId)
 				{
-					if (section.SectionId == dialogue.SectionId)
-					{
-						section.Dialogues.Add(dialogue);
-					}
+					section.Dialogues.Add(dialogue);
 				}
 			}
 
@@ -129,6 +133,14 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 		foreach (var objectClickEvent in objectClickEvents)
 		{
 			ObjectClickEventDict.Add(objectClickEvent.ObjectTextId, objectClickEvent);
+		}
+
+		TextAsset itemAsset = ResourceManager.Instance.Load<TextAsset>(itemAssetLabel);
+		var items = JsonConvert.DeserializeObject<List<TableData.Item>>(itemAsset.text);
+
+		foreach (var item in items)
+		{
+			ItemDict.Add(item.ItemTextId, item);
 		}
 
 	}
@@ -148,6 +160,16 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 		if (ObjectClickEventDict.TryGetValue(objectTextId, out var objectClickEvent))
 		{
 			return objectClickEvent;
+		};
+
+		return null;
+	}
+
+	public TableData.Item GetItemById(string itemTextId)
+	{
+		if (ItemDict.TryGetValue(itemTextId, out var item))
+		{
+			return item;
 		};
 
 		return null;

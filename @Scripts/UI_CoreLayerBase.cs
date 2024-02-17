@@ -1,6 +1,6 @@
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -28,6 +28,8 @@ public class UI_CoreLayerBase : MonoBehaviour
 	[SerializeField] protected GameObject characterPanel;
 	[SerializeField] protected Image characterImage;
 	[SerializeField] protected Image characterMaskImage;
+
+	Action popupOnClosed;
 
 	private Tween typingTween;
 	private void Awake()

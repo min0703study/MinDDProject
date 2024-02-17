@@ -27,7 +27,7 @@
         "ObjectTextId": "sun_room_door",
         "SectionId": "4",
         "ObjectName": "",
-        "EventType": "Move",
+        "EventType": "Event",
         "Text": "",
         "ObjectImageAsset": ""
     },

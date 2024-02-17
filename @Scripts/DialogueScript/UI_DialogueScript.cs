@@ -106,16 +106,6 @@ public class UI_DialogueScript : UI_CoreLayerBase
 		GameManager.Instance.ToNextStep();
 	}
 
-	void StartTypingAnimation(string script)
-	{
-		DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f);
-	}
-
-	void StartTypingAnimations(string script)
-	{
-		scriptText.DOText(script, script.Length * 0.1f);
-	}
-
 	public override void Clear()
 	{
 		base.Clear();

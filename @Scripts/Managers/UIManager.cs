@@ -168,17 +168,17 @@ public class UIManager : BaseManager<UIManager>
 	// 		return sceneUIComp;
 	// 	}
 
-	// 	public T MakeSubItem<T>(Transform parent = null, string name = null, bool pooling = true) where T : UI_Base
-	// 	{
-	// 		if (string.IsNullOrEmpty(name))
-	// 			name = typeof(T).Name;
+	public T MakeSubItem<T>(Transform parent = null, string name = null, bool pooling = true)
+	{
+		if (string.IsNullOrEmpty(name))
+			name = typeof(T).Name;
 
-	// 		GameObject go = ResourceManager.Instance.Instantiate($"{name}", parent, pooling);
-	// 		go.transform.SetParent(parent, false);
+		GameObject go = ResourceManager.Instance.Instantiate($"{name}", parent, pooling);
+		go.transform.SetParent(parent, false);
 
-	// 		T subUIComp = go.GetComponent<T>();
-	// 		return subUIComp;
-	// 	}
+		T subUIComp = go.GetComponent<T>();
+		return subUIComp;
+	}
 
 
 	// 	public T MakeSceneUISubItem<T>(string name = null, bool pooling = true) where T : UI_Base
