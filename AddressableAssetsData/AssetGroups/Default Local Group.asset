@@ -95,6 +95,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44eb26fc1dd581d48b7ca0e34fcc021d
+    m_Address: InventoryCell
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b953554d81da5ba44aaa4afddf4eb005
+    m_Address: Item_Cat_Food.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2da072d1fcd874e6bb974b02174f0838
+    m_Address: Table_Item
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
   m_SchemaSet:

@@ -4,4 +4,5 @@ sun_desk,2,선의 책상 위,Explain,"책상에 전공책이 올려져 있다. 최악의 학점을 받은
 sun_desk_drawer,2,책상 옆 서랍,Explain,내가 휴대폰을 서랍에 넣어놨을 리는 없지.,Room_Detail_Sun_Desk_Drawer,
 sun_cellphone,2,휴대폰,Event,,,
 sun_room_door,4,,Event,,,
-living_room_water_bottle,4,,GetItem,열쇠를 주웠어,Room_Detail_Sun_Desk_Drawer,cat_food
+living_room_water_bottle,4,,Explain,열쇠를 주웠어,Room_Detail_Sun_Desk_Drawer,
+kitchen_under_drawer,4,싱크대 아래 서랍장,GetItem,써니의 사료 여기에 있었네.,Room_Detail_Sun_Desk_Drawer,cat_food

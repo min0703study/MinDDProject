@@ -148,6 +148,16 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
 		}
+		else if (clickEvent.EventType == "GetItem")
+		{
+			popupPanel.SetActive(true);
+			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
+			popupImage.sprite = imageSprite;
+			popupText.text = clickEvent.Text;
+
+			GameManager.Instance.AddItem(clickEvent.ItemTextId);
+			RefreshInventoryList();
+		}
 	}
 
 	public void OnClickPopupButton()

@@ -92,7 +92,22 @@ public class GameManager : BaseManager<GameManager>
 
 	public void AddItem(string itemTextId)
 	{
+		for (int i = 0; i < GameManager.INVENTORY_SIZE; i++)
+		{
 
+			if (Inventory[i].IsBlank)
+			{
+				Inventory[i].IsBlank = false;
+				Inventory[i].ItemTextId = itemTextId;
+				break;
+			};
+		}
+	}
+
+	public void UseItem(int index)
+	{
+		Inventory[index].IsBlank = true;
+		Inventory[index].ItemTextId = string.Empty;
 	}
 
 	// Update is called once per frame
