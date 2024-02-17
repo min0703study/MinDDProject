@@ -54,7 +54,7 @@ namespace TableData
 		public string ObjectTextId { get; set; }
 		public int SectionId { get; set; }
 		public string Text { get; set; }
-		public string ImageAsset { get; set; }
+		public string ObjectImageAsset { get; set; }
 		public string EventType { get; set; }
 		public string ItemTextId { get; set; }
 	}

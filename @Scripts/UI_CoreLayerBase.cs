@@ -22,6 +22,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 	[SerializeField] protected GameObject popupPanel;
 	[SerializeField] protected Image popupImage;
 	[SerializeField] protected TextMeshProUGUI popupText;
+	[SerializeField] protected Button popupNextButton;
 
 	[Header("Character GameObjects")]
 	[SerializeField] protected GameObject characterPanel;
@@ -43,7 +44,6 @@ public class UI_CoreLayerBase : MonoBehaviour
 		scriptPanel.SetActive(false);
 		popupPanel.SetActive(false);
 		characterPanel.SetActive(false);
-		scriptNextButton.enabled = false;
 	}
 
 	private void Start()
@@ -58,4 +58,8 @@ public class UI_CoreLayerBase : MonoBehaviour
 
 	}
 
+	protected void StartTypingAnimation(string script)
+	{
+		DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f);
+	}
 }

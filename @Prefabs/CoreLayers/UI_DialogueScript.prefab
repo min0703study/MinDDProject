@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b5dd974dba94e54489749fd849972ae4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25caa8c3ee388de4098c1116a286e63b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -190,6 +190,28 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2279266735486326225}
   m_SourcePrefab: {fileID: 100100000, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
+--- !u!114 &635797910888266342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7046145790791790609, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
+  m_PrefabInstance: {fileID: 7573434543461108343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1564618946171222121 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8983724901131989534, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
+  m_PrefabInstance: {fileID: 7573434543461108343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3117202427281776084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4780774967747909539, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
@@ -226,10 +248,11 @@ MonoBehaviour:
   scriptPanel: {fileID: 4478324216734436172}
   nameText: {fileID: 8814286302518210677}
   scriptText: {fileID: 4558872930752985549}
-  scriptNextButton: {fileID: 0}
+  scriptNextButton: {fileID: 635797910888266342}
   popupPanel: {fileID: 3117202427281776084}
   popupImage: {fileID: 3209364759430465605}
   popupText: {fileID: 6251904040070726647}
+  popupNextButton: {fileID: 1564618946171222121}
   characterPanel: {fileID: 6572192766589798792}
   characterImage: {fileID: 5448048101145212737}
   characterMaskImage: {fileID: 8013569382940437818}

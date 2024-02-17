@@ -10,34 +10,25 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 	[Header("Modules")]
 	[Header("Cellphone")]
 
-	[SerializeField]
-	GameObject cellphonePanel;
+	[SerializeField] GameObject cellphonePanel;
 
-	[SerializeField]
-	Button lockButton;
+	[SerializeField] Button lockButton;
 
-	[SerializeField]
-	Image roomImage;
+	[Header("Room")]
+	[SerializeField] Image roomImage;
 
 
 	private int currentDialogueIndex;
 
-	// Start is called before the first frame update
 	void Start()
 	{
 		scriptNextButton.onClick.AddListener(OnClickScriptButton);
+		popupNextButton.onClick.AddListener(() => popupPanel.SetActive(false));
 		lockButton.onClick.AddListener(OnClickLockButton);
 
-		scriptPanel.SetActive(false);
 		cellphonePanel.SetActive(false);
 
 		currentDialogueIndex = 0;
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-
 	}
 
 	private void OnClickLockButton()
@@ -72,14 +63,14 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 		DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f);
 	}
 
-	public void OnClickObject(string objectTextId)
+	public void OnClickRoomObject(string objectTextId)
 	{
 		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(objectTextId);
 
 		if (clickEvent.EventType == "Explain")
 		{
 			popupPanel.SetActive(true);
-			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ImageAsset);
+			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
 		}
@@ -92,16 +83,6 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 				roomImage.sprite = sprite;
 				cellphonePanel.SetActive(true);
 			}
-		}
-
-		if (clickEvent.EventType == "GetItem")
-		{
-			GameManager.Instance.AddItem(clickEvent.ItemTextId);
-		}
-
-		if (clickEvent.EventType == "UseItem")
-		{
-			GameManager.Instance.AddItem(clickEvent.ItemTextId);
 		}
 	}
 }
