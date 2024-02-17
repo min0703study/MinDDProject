@@ -9,6 +9,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 {
 	[Header("Room")]
 	[SerializeField] Image roomIamge;
+	[SerializeField] Button roomNextButton;
 
 	protected override void Init()
 	{
@@ -17,6 +18,8 @@ public class UI_DialogueScript : UI_CoreLayerBase
 
 		scriptNextButton.onClick.AddListener(OnClickNextButton);
 		popupNextButton.onClick.AddListener(OnClickNextButton);
+		roomNextButton.onClick.AddListener(OnClickNextButton);
+
 		Bind();
 	}
 
@@ -62,10 +65,12 @@ public class UI_DialogueScript : UI_CoreLayerBase
 			{
 				popupPanel.SetActive(false);
 				scriptPanel.SetActive(true);
+				characterPanel.SetActive(true);
+
 				nameText.text = dialog.CharacterKey;
 
 				characterImage.gameObject.SetActive(true);
-				characterMaskImage.enabled = false;
+				characterMaskImage.enabled = true;
 				var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
 				characterImage.sprite = characterSprite;
 
@@ -75,10 +80,12 @@ public class UI_DialogueScript : UI_CoreLayerBase
 			{
 				popupPanel.SetActive(false);
 				scriptPanel.SetActive(true);
+				characterPanel.SetActive(true);
+
 				nameText.text = dialog.CharacterKey;
 
 				characterImage.gameObject.SetActive(true);
-				characterMaskImage.enabled = true;
+				characterMaskImage.enabled = false;
 				var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
 				characterImage.sprite = characterSprite;
 

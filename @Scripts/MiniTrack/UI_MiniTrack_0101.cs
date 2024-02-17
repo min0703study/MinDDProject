@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +14,8 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 
 	[Header("Room")]
 	[SerializeField] Image roomImage;
+
+	[SerializeField] TextMeshProUGUI missionText;
 
 
 	private int currentDialogueIndex;
@@ -56,11 +56,6 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 		}
 
 		currentDialogueIndex++;
-	}
-
-	void StartTypingAnimation(string script)
-	{
-		DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f);
 	}
 
 	public void OnClickRoomObject(string objectTextId)

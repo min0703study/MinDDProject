@@ -29,7 +29,7 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentSectionIndex = 2;
+		CurrentSectionIndex = 1;
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
 
 		StartSection();
