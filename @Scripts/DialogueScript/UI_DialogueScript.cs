@@ -16,6 +16,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 		scriptText.text = string.Empty;
 
 		scriptNextButton.onClick.AddListener(OnClickNextButton);
+		popupNextButton.onClick.AddListener(OnClickNextButton);
 		Bind();
 	}
 

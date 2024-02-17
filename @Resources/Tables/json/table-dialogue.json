@@ -140,7 +140,7 @@
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A",
-        "PopupImageAsset": "",
+        "PopupImageAsset": "Popup_Light_On_After",
         "SoundEffectAsset": ""
     },
     {
@@ -173,7 +173,7 @@
     {
         "SectionId": "3",
         "Type": "listen",
-        "Text": "앩옹",
+        "Text": "애옹",
         "CharacterImageAsset": "Sunny_Normal",
         "RoomImageAsset": "Room_Sun_A_Open",
         "PopupImageAsset": "",

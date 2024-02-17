@@ -29,6 +29,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 	[SerializeField] protected Image characterImage;
 	[SerializeField] protected Image characterMaskImage;
 
+	private Tween typingTween;
 	private void Awake()
 	{
 		Init();
@@ -60,6 +61,13 @@ public class UI_CoreLayerBase : MonoBehaviour
 
 	protected void StartTypingAnimation(string script)
 	{
-		DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f);
+		if (typingTween != null)
+		{
+			typingTween.Complete();
+			typingTween.Kill();
+		}
+
+		typingTween = DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f)
+			.OnComplete(() => scriptText.text = script);
 	}
 }
