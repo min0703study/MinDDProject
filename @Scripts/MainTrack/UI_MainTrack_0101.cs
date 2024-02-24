@@ -10,6 +10,7 @@ public enum Room
 	SunRoomA,
 	LivingRoomA,
 	LivingRoomB,
+	LivingRoomDrawer,
 	Kitchen,
 }
 
@@ -24,6 +25,7 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	[SerializeField] GameObject sunRoomA;
 	[SerializeField] GameObject kitchen;
 	[SerializeField] GameObject livingRoomB;
+	[SerializeField] GameObject livingRoomDrawer;
 
 	[SerializeField] GameObject inventoryListGO;
 
@@ -93,6 +95,7 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	{
 		livingRoomA.SetActive(false);
 		livingRoomB.SetActive(false);
+		livingRoomDrawer.SetActive(false);
 		sunRoomA.SetActive(false);
 		kitchen.SetActive(false);
 
@@ -103,6 +106,9 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 				break;
 			case "Living_B":
 				livingRoomB.SetActive(true);
+				break;
+			case "Living_Drawer":
+				livingRoomDrawer.SetActive(true);
 				break;
 			case "Sun_A":
 				sunRoomA.SetActive(true);
@@ -122,6 +128,10 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		else if (arrowTextId == "to_living_room_b_arrow")
 		{
 			Move("Living_B");
+		}
+		else if (arrowTextId == "to_living_room_drawer")
+		{
+			Move("Living_Drawer");
 		}
 		else if (arrowTextId == "to_kitchen_arrow")
 		{

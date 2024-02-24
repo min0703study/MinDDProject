@@ -42,7 +42,7 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentSectionIndex = 4;
+		CurrentSectionIndex = 1;
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
 
 		// var catfood = GameFlowTable.Instance.GetItemById("cat_food");
@@ -110,9 +110,4 @@ public class GameManager : BaseManager<GameManager>
 		Inventory[index].ItemTextId = string.Empty;
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-
-	}
 }

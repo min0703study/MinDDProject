@@ -1,4 +1,5 @@
 
+using System.Collections;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -10,6 +11,10 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 	[Header("Cellphone")]
 
 	[SerializeField] GameObject cellphonePanel;
+	[SerializeField] GameObject lockScreen;
+	[SerializeField] GameObject noBatteryScreen;
+	[SerializeField] GameObject turnOffScreen;
+	[SerializeField] GameObject mainScreen;
 
 	[SerializeField] Button lockButton;
 
@@ -61,9 +66,8 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 
 	private void OnClickLockButton()
 	{
-		GameManager.Instance.ToNextStep();
-		scriptPanel.SetActive(true);
-		Refresh();
+		lockScreen.SetActive(false);
+		StartCoroutine(StartCellphoneAnimation());
 	}
 
 	private void OnClickScriptButton()
@@ -92,5 +96,20 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
 		}
+	}
+
+	public IEnumerator StartCellphoneAnimation()
+	{
+		mainScreen.SetActive(true);
+		yield return new WaitForSeconds(1.5f);
+		mainScreen.SetActive(false);
+		noBatteryScreen.SetActive(true);
+		yield return new WaitForSeconds(1.0f);
+		noBatteryScreen.SetActive(false);
+		turnOffScreen.SetActive(true);
+		yield return new WaitForSeconds(1.0f);
+
+		GameManager.Instance.ToNextStep();
+		Refresh();
 	}
 }

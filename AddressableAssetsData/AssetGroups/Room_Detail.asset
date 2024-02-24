@@ -29,6 +29,66 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0592f98002164deb80838112475c9eb
+    m_Address: Room_Detail_Living_Cat_Bowl.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2dafcda818a56499e88cd7ae76558ae3
+    m_Address: Room_Detail_Kitchen_Under_Drawer.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48ddefafcf9cb4233b5c1b65acf9c5bc
+    m_Address: Room_Detail_Kitchen_Under_Drawer_Cat_Food.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ae4596163d604a33a8400972eb2482f
+    m_Address: Room_Detail_Living_Cat_Booth.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e2d4d59470734c60bfc6b142ab77cdd
+    m_Address: Room_Detail_Living_Desk.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dabdcd4e285e4c63b8b31a42bfc733c
+    m_Address: Room_Detail_Living_TV.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 265cffce5f3054fa18371eae7fea0671
+    m_Address: Room_Detail_Living_Drawer_First.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7a9be6d8a7314b0bb0d00a16d26bc6f
+    m_Address: Room_Detail_Living_Cat_Tower.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff8e31e95b13e4f3b94a5702f69bdb09
+    m_Address: Room_Detail_Kitchen_Cupboard.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6488d2994590c4331831318bc0139af5
+    m_Address: Room_Detail_Living_Cat_Bowl_Full.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
   m_SchemaSet:

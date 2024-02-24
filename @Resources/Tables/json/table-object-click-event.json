@@ -5,7 +5,7 @@
         "ObjectName": "선의 책상 위",
         "EventType": "Explain",
         "Text": "책상에 전공책이 올려져 있다. 최악의 학점을 받은 전공. 재수강할 생\n각을 하니 벌써 머리가 아프다.",
-        "ObjectImageAsset": "Room_Detail_Sun_Desk",
+        "ObjectImageAsset": "Room_Object_Sun_Desk",
         "ItemTextId": ""
     },
     {
@@ -14,7 +14,7 @@
         "ObjectName": "책상 옆 서랍",
         "EventType": "Explain",
         "Text": "내가 휴대폰을 서랍에 넣어놨을 리는 없지.",
-        "ObjectImageAsset": "Room_Detail_Sun_Desk_Drawer",
+        "ObjectImageAsset": "Room_Object_Sun_Desk_Drawer",
         "ItemTextId": ""
     },
     {
@@ -29,19 +29,91 @@
     {
         "ObjectTextId": "sun_room_door",
         "SectionId": "4",
-        "ObjectName": "",
+        "ObjectName": "선이 방문",
         "EventType": "Event",
         "Text": "",
         "ObjectImageAsset": "",
         "ItemTextId": ""
     },
     {
-        "ObjectTextId": "living_room_water_bottle",
+        "ObjectTextId": "living_room_desk",
         "SectionId": "4",
-        "ObjectName": "",
+        "ObjectName": "책상 위 물병",
         "EventType": "Explain",
-        "Text": "열쇠를 주웠어",
-        "ObjectImageAsset": "Room_Detail_Sun_Desk_Drawer",
+        "Text": "누가 물을 마셨지? 내가 마시다 남겨놨나.",
+        "ObjectImageAsset": "Room_Detail_Living_Desk",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "living_room_drawer_first",
+        "SectionId": "4",
+        "ObjectName": "첫번째 칸",
+        "EventType": "Explain",
+        "Text": "평범한 옷이 들어있다.",
+        "ObjectImageAsset": "Room_Detail_Living_Drawer_First",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "living_room_drawer_second",
+        "SectionId": "4",
+        "ObjectName": "두번째 칸",
+        "EventType": "DialogueScript",
+        "Text": "잠긴 건가? 그냥은 열리지 않을 것 같다.",
+        "ObjectImageAsset": "",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "living_room_drawer_third",
+        "SectionId": "4",
+        "ObjectName": "세번째 칸",
+        "EventType": "DialogueScript",
+        "Text": "잠긴 건가? 그냥은 열리지 않을 것 같다.",
+        "ObjectImageAsset": "",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "living_room_cat_bowl",
+        "SectionId": "4",
+        "ObjectName": "써니 밥그릇",
+        "EventType": "UseItem",
+        "Text": "써니의 밥그릇이다 비어있다.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl",
+        "ItemTextId": "cat_food"
+    },
+    {
+        "ObjectTextId": "living_room_cat_booth",
+        "SectionId": "4",
+        "ObjectName": "숨숨집",
+        "EventType": "GetItem",
+        "Text": "비싸게 주고 산 숨숨집인데 써니는 택배 상자를 더 좋아한다.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Booth",
+        "ItemTextId": "key_a"
+    },
+    {
+        "ObjectTextId": "living_room_tv",
+        "SectionId": "4",
+        "ObjectName": "\bTV",
+        "EventType": "Explain",
+        "Text": "켜지지 않는다.",
+        "ObjectImageAsset": "Room_Detail_Living_TV",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "living_room_cat_tower",
+        "SectionId": "4",
+        "ObjectName": "캣타워",
+        "EventType": "Explain",
+        "Text": "써니의 캣타워이다.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Tower",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "kitchen_cupboard",
+        "SectionId": "4",
+        "ObjectName": "싱크대 위 찬장",
+        "EventType": "Explain",
+        "Text": "여러 약들이 있다.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Cupboard",
         "ItemTextId": ""
     },
     {
@@ -50,7 +122,7 @@
         "ObjectName": "싱크대 아래 서랍장",
         "EventType": "GetItem",
         "Text": "써니의 사료 여기에 있었네.",
-        "ObjectImageAsset": "Room_Detail_Sun_Desk_Drawer",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer",
         "ItemTextId": "cat_food"
     }
 ]

@@ -7,7 +7,7 @@ namespace TableData
 {
 	public class Section
 	{
-		public int SectionId { get; set; }
+		public int SectionIndex { get; set; }
 		public string SectionType { get; set; }
 		public string ChapterId { get; set; }
 		public string SectionAsset { get; set; }
@@ -20,7 +20,7 @@ namespace TableData
 
 	public class Dialogue
 	{
-		public int SectionId { get; set; }
+		public int SectionIndex { get; set; }
 		public int Step { get; set; }
 		public string Type { get; set; }
 		public string CharacterKey { get; set; }
@@ -57,7 +57,7 @@ namespace TableData
 	public class ObjectClickEvent
 	{
 		public string ObjectTextId { get; set; }
-		public int SectionId { get; set; }
+		public int SectionIndex { get; set; }
 		public string Text { get; set; }
 		public string ObjectImageAsset { get; set; }
 		public string EventType { get; set; }
@@ -85,45 +85,45 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 		TextAsset dialogueAsset = ResourceManager.Instance.Load<TextAsset>(dialogueAssetLabel);
 		var dialogues = JsonConvert.DeserializeObject<List<TableData.Dialogue>>(dialogueAsset.text);
 
-		TextAsset miniTrackAsset = ResourceManager.Instance.Load<TextAsset>(miniTrackAssetLabel);
-		var miniTracks = JsonConvert.DeserializeObject<List<TableData.MiniTrack>>(miniTrackAsset.text);
+		// TextAsset miniTrackAsset = ResourceManager.Instance.Load<TextAsset>(miniTrackAssetLabel);
+		// var miniTracks = JsonConvert.DeserializeObject<List<TableData.MiniTrack>>(miniTrackAsset.text);
 
-		TextAsset mainTrackAsset = ResourceManager.Instance.Load<TextAsset>(mainTrackAssetLabel);
-		var mainTracks = JsonConvert.DeserializeObject<List<TableData.MainTrack>>(mainTrackAsset.text);
+		// TextAsset mainTrackAsset = ResourceManager.Instance.Load<TextAsset>(mainTrackAssetLabel);
+		// var mainTracks = JsonConvert.DeserializeObject<List<TableData.MainTrack>>(mainTrackAsset.text);
 
 		foreach (var section in Sections)
 		{
-			if (section.SectionType == "MiniTrack")
-			{
-				foreach (var miniTrack in miniTracks)
-				{
-					if (section.SectionId == miniTrack.SectionId)
-					{
-						section.MiniTrack = miniTrack;
-					}
-				}
-			}
-			else if (section.SectionType == "MainTrack")
-			{
-				foreach (var mainTrack in mainTracks)
-				{
-					if (section.SectionId == mainTrack.SectionId)
-					{
-						section.MainTrack = mainTrack;
-					}
-				}
-			}
+			// if (section.SectionType == "MiniTrack")
+			// {
+			// 	foreach (var miniTrack in miniTracks)
+			// 	{
+			// 		if (section.SectionIndex == miniTrack.SectionId)
+			// 		{
+			// 			section.MiniTrack = miniTrack;
+			// 		}
+			// 	}
+			// }
+			// else if (section.SectionType == "MainTrack")
+			// {
+			// 	foreach (var mainTrack in mainTracks)
+			// 	{
+			// 		if (section.SectionIndex == mainTrack.SectionId)
+			// 		{
+			// 			section.MainTrack = mainTrack;
+			// 		}
+			// 	}
+			// }
 
 			section.Dialogues = new List<TableData.Dialogue>();
 			foreach (var dialogue in dialogues)
 			{
-				if (section.SectionId == dialogue.SectionId)
+				if (section.SectionIndex == dialogue.SectionIndex)
 				{
 					section.Dialogues.Add(dialogue);
 				}
 			}
 
-			SectionDict.Add(section.SectionId, section);
+			SectionDict.Add(section.SectionIndex, section);
 		}
 
 

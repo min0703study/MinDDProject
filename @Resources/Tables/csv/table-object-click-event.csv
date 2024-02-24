@@ -3,6 +3,14 @@ sun_desk,2,선의 책상 위,Explain,"책상에 전공책이 올려져 있다. 최악의 학점을 받은
 각을 하니 벌써 머리가 아프다.",Room_Object_Sun_Desk,
 sun_desk_drawer,2,책상 옆 서랍,Explain,내가 휴대폰을 서랍에 넣어놨을 리는 없지.,Room_Object_Sun_Desk_Drawer,
 sun_cellphone,2,휴대폰,Event,,,
-sun_room_door,4,,Event,,,
-living_room_water_bottle,4,,Explain,열쇠를 주웠어,Room_Object_Sun_Desk_Drawer,
-kitchen_under_drawer,4,싱크대 아래 서랍장,GetItem,써니의 사료 여기에 있었네.,Room_Object_Sun_Desk_Drawer,cat_food
+sun_room_door,4,선이 방문,Event,,,
+living_room_desk,4,책상 위 물병,Explain,누가 물을 마셨지? 내가 마시다 남겨놨나.,Room_Detail_Living_Desk,
+living_room_drawer_first,4,첫번째 칸,Explain,평범한 옷이 들어있다.,Room_Detail_Living_Drawer_First,
+living_room_drawer_second,4,두번째 칸,DialogueScript,잠긴 건가? 그냥은 열리지 않을 것 같다.,,
+living_room_drawer_third,4,세번째 칸,DialogueScript,잠긴 건가? 그냥은 열리지 않을 것 같다.,,
+living_room_cat_bowl,4,써니 밥그릇,UseItem,써니의 밥그릇이다 비어있다.,Room_Detail_Living_Cat_Bowl,cat_food
+living_room_cat_booth,4,숨숨집,GetItem,비싸게 주고 산 숨숨집인데 써니는 택배 상자를 더 좋아한다.,Room_Detail_Living_Cat_Booth,key_a
+living_room_tv,4,TV,Explain,켜지지 않는다.,Room_Detail_Living_TV,
+living_room_cat_tower,4,캣타워,Explain,써니의 캣타워이다.,Room_Detail_Living_Cat_Tower,
+kitchen_cupboard,4,싱크대 위 찬장,Explain,여러 약들이 있다.,Room_Detail_Kitchen_Cupboard,
+kitchen_under_drawer,4,싱크대 아래 서랍장,GetItem,써니의 사료 여기에 있었네.,Room_Detail_Kitchen_Under_Drawer,cat_food

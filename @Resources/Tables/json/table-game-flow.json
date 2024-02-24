@@ -1,29 +1,29 @@
 ﻿[
     {
-        "SectionId": "1",
-        "SectionType": "Dialogue",
         "ChapterIndex": "1",
+        "SectionIndex": "1",
+        "SectionType": "Dialogue",
         "SectionAsset": "UI_DialogueScript",
         "R_SectionDesc": "선 깨어남"
     },
     {
-        "SectionId": "2",
-        "SectionType": "MiniTrack",
         "ChapterIndex": "1",
+        "SectionIndex": "2",
+        "SectionType": "MiniTrack",
         "SectionAsset": "UI_MiniTrack_0101",
         "R_SectionDesc": "핸드폰 찾는 트랙"
     },
     {
-        "SectionId": "3",
-        "SectionType": "Dialogue",
         "ChapterIndex": "1",
+        "SectionIndex": "3",
+        "SectionType": "Dialogue",
         "SectionAsset": "UI_DialogueScript",
         "R_SectionDesc": "써니 등장"
     },
     {
-        "SectionId": "4",
-        "SectionType": "MainTrack",
         "ChapterIndex": "1",
+        "SectionIndex": "4",
+        "SectionType": "MainTrack",
         "SectionAsset": "UI_MainTrack_0101",
         "R_SectionDesc": "써니에게 사료를 주는 트랙"
     }
