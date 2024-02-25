@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 6275488284542986314}
   - component: {fileID: 1046163646904030023}
   - component: {fileID: 2974228467039122770}
+  - component: {fileID: 8958897925138429190}
   m_Layer: 5
   m_Name: CatBooth
   m_TagString: Untagged
@@ -269,19 +270,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1046163646904030023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: living_room_cat_booth
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &8958897925138429190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628414027033695766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: living_room_cat_booth
 --- !u!1 &906516468441460560
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &642130106220219886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -340,6 +342,7 @@ GameObject:
   - component: {fileID: 6388585639080874008}
   - component: {fileID: 2923827219375074069}
   - component: {fileID: 8451154442810000785}
+  - component: {fileID: 3520707768122671165}
   m_Layer: 5
   m_Name: DrawerSecond
   m_TagString: Untagged
@@ -447,19 +450,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2923827219375074069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: living_room_drawer_second
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &3520707768122671165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981801192132141773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: living_room_drawer_second
 --- !u!1 &1512950943322361316
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +496,6 @@ RectTransform:
   - {fileID: 7731724862606301441}
   - {fileID: 6616406898423024473}
   - {fileID: 2745216007842194741}
-  - {fileID: 83374476612266783}
   m_Father: {fileID: 523953677000052106}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -520,6 +523,7 @@ GameObject:
   - component: {fileID: 1400826955416402437}
   - component: {fileID: 9057355787136254907}
   - component: {fileID: 3320970607408840761}
+  - component: {fileID: 4297773470848911254}
   m_Layer: 5
   m_Name: Cupboard
   m_TagString: Untagged
@@ -627,19 +631,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9057355787136254907}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: kitchen_cupboard
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &4297773470848911254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662505108365732002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: kitchen_cupboard
 --- !u!1 &1823123585127440902
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,16 +671,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823123585127440902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 341407784732441991}
+  m_Father: {fileID: 1850810188467816068}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35, y: -800}
+  m_AnchoredPosition: {x: -35, y: -800.0002}
   m_SizeDelta: {x: 200, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8951765702978140841
@@ -802,6 +807,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3840270156730747820}
+  - {fileID: 1850810188467816068}
   - {fileID: 341407784732441991}
   m_Father: {fileID: 3755004487491771396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -848,6 +854,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2051401251663428277}
+  - {fileID: 6661928873981728905}
   - {fileID: 7673212717866953842}
   m_Father: {fileID: 3755004487491771396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1160,12 +1167,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2819690060471330137}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2122089606335492676}
+  m_Father: {fileID: 2635523464122652587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1278,6 +1285,7 @@ GameObject:
   - component: {fileID: 6136151562026920656}
   - component: {fileID: 3533035649236592196}
   - component: {fileID: 2967439174535323114}
+  - component: {fileID: 5968759123665176999}
   m_Layer: 5
   m_Name: DrawerFirst
   m_TagString: Untagged
@@ -1385,19 +1393,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3533035649236592196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: living_room_drawer_first
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &5968759123665176999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3086628733869036322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: living_room_drawer_first
 --- !u!1 &3407705332528964318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,8 +1587,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1509585494966474491}
-  - {fileID: 5173006506549307020}
   - {fileID: 4285872320771770517}
   - {fileID: 4932043547669917125}
   m_Father: {fileID: 3751068325905332314}
@@ -1730,6 +1737,7 @@ GameObject:
   - component: {fileID: 9000198857152429906}
   - component: {fileID: 986400544507540831}
   - component: {fileID: 7508643528004826426}
+  - component: {fileID: 7410201351715357086}
   m_Layer: 5
   m_Name: DrawerThird
   m_TagString: Untagged
@@ -1837,19 +1845,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 986400544507540831}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: living_room_drawer_third
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &7410201351715357086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443434993584235702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: living_room_drawer_third
 --- !u!1 &4560777704248941022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,6 +1949,7 @@ GameObject:
   - component: {fileID: 4782555675897384684}
   - component: {fileID: 4334659019672828184}
   - component: {fileID: 2920568107785439722}
+  - component: {fileID: 4888236206740361253}
   m_Layer: 5
   m_Name: Desk
   m_TagString: Untagged
@@ -2047,19 +2057,56 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4334659019672828184}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: living_room_desk
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &4888236206740361253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693433732162064077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: living_room_desk
+--- !u!1 &4894909643794016833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850810188467816068}
+  m_Layer: 5
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1850810188467816068
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894909643794016833}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 83374476612266783}
+  m_Father: {fileID: 523953677000052106}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.00018310547}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4912839626670667004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,8 +2186,6 @@ RectTransform:
   - {fileID: 6601887231447437075}
   - {fileID: 3723194364270090924}
   - {fileID: 5416049712442274398}
-  - {fileID: 7344969518629650165}
-  - {fileID: 5300418669513097110}
   m_Father: {fileID: 878368306935210663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2308,16 +2353,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5896912349623924605}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7673212717866953842}
+  m_Father: {fileID: 6661928873981728905}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 368, y: -259}
+  m_AnchoredPosition: {x: 368, y: -259.00027}
   m_SizeDelta: {x: 200, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1183558302699539502
@@ -2550,6 +2595,43 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &6151386635577198364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6661928873981728905}
+  m_Layer: 5
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6661928873981728905
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6151386635577198364}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5173006506549307020}
+  - {fileID: 1509585494966474491}
+  m_Father: {fileID: 3751068325905332314}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.00024414062}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6608697016997622972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,7 +2784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &878368306935210663
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2716,6 +2798,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8013039599862707284}
+  - {fileID: 2635523464122652587}
   - {fileID: 2122089606335492676}
   m_Father: {fileID: 3755004487491771396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2876,6 +2959,7 @@ GameObject:
   - component: {fileID: 9138551795090402916}
   - component: {fileID: 8339681794360735359}
   - component: {fileID: 7445381135880020018}
+  - component: {fileID: 4685419155683575088}
   m_Layer: 5
   m_Name: Door
   m_TagString: Untagged
@@ -2983,19 +3067,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8339681794360735359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: sun_room_door
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &4685419155683575088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869751432207782183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: sun_room_door
 --- !u!1 &7078550710275084743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,16 +3107,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7078550710275084743}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7673212717866953842}
+  m_Father: {fileID: 6661928873981728905}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -801}
+  m_AnchoredPosition: {x: 9, y: -801.00024}
   m_SizeDelta: {x: 200, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &656304292102575755
@@ -3306,6 +3391,7 @@ GameObject:
   - component: {fileID: 6922934391003364073}
   - component: {fileID: 18161866923521454}
   - component: {fileID: 6027090368336903726}
+  - component: {fileID: 3668792493959878460}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -3396,6 +3482,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &3668792493959878460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7576656009334607104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &7733391709495987891
 GameObject:
   m_ObjectHideFlags: 0
@@ -3408,6 +3507,7 @@ GameObject:
   - component: {fileID: 3969282789662042605}
   - component: {fileID: 3039796896862053311}
   - component: {fileID: 616448501192486808}
+  - component: {fileID: 1557440554615407655}
   m_Layer: 5
   m_Name: CatTower
   m_TagString: Untagged
@@ -3515,19 +3615,57 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3039796896862053311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: living_room_cat_tower
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1557440554615407655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7733391709495987891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: living_room_cat_tower
+--- !u!1 &8071663143707043163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2635523464122652587}
+  m_Layer: 5
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2635523464122652587
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8071663143707043163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7344969518629650165}
+  - {fileID: 5300418669513097110}
+  m_Father: {fileID: 878368306935210663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8077527792547265104
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,12 +3692,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8077527792547265104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2122089606335492676}
+  m_Father: {fileID: 2635523464122652587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3719,6 +3857,7 @@ GameObject:
   - component: {fileID: 597889770760297537}
   - component: {fileID: 3640151506136897821}
   - component: {fileID: 4813606331221631672}
+  - component: {fileID: 138100704422975573}
   m_Layer: 5
   m_Name: UnderDrawer
   m_TagString: Untagged
@@ -3826,19 +3965,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3640151506136897821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: kitchen_under_drawer
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &138100704422975573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467628952958988364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: kitchen_under_drawer
 --- !u!1 &8525326472549890324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,6 +3991,7 @@ GameObject:
   - component: {fileID: 1972730443363031235}
   - component: {fileID: 5591998266795835004}
   - component: {fileID: 6581872985831346098}
+  - component: {fileID: 473793332049297484}
   m_Layer: 5
   m_Name: CatBowl
   m_TagString: Untagged
@@ -3958,19 +4099,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5591998266795835004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: living_room_cat_bowl
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &473793332049297484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525326472549890324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: living_room_cat_bowl
 --- !u!1 &8610657256600984102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3983,6 +4125,7 @@ GameObject:
   - component: {fileID: 3852714695414607224}
   - component: {fileID: 874231355910672845}
   - component: {fileID: 4995288595671943165}
+  - component: {fileID: 1452327065724694019}
   m_Layer: 5
   m_Name: TV
   m_TagString: Untagged
@@ -4006,8 +4149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90.000015, y: 34.283886}
-  m_SizeDelta: {x: 280, y: 220.3306}
+  m_AnchoredPosition: {x: -80.633026, y: 48.054214}
+  m_SizeDelta: {x: 210.8525, y: 134.1084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3852714695414607224
 CanvasRenderer:
@@ -4090,19 +4233,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 874231355910672845}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5328664707301687105}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: living_room_tv
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1452327065724694019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8610657256600984102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: living_room_tv
 --- !u!1 &8671754552820643830
 GameObject:
   m_ObjectHideFlags: 0

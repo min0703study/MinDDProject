@@ -89,6 +89,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 530cd999ef6fe424e8a2af9a5eb83da1
+    m_Address: Room_Living_A_Bowl_Full.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
   m_SchemaSet:

@@ -30,7 +30,7 @@
         "ObjectTextId": "living_room_drawer_second",
         "SectionId": "4",
         "ObjectName": "두번째 칸",
-        "EventType": "DialogueScript",
+        "EventType": "talking_to_myself",
         "Text": "잠긴 건가? 그냥은 열리지 않을 것 같다.",
         "ObjectImageAsset": "",
         "ItemTextId": ""
@@ -39,7 +39,7 @@
         "ObjectTextId": "living_room_drawer_third",
         "SectionId": "4",
         "ObjectName": "세번째 칸",
-        "EventType": "DialogueScript",
+        "EventType": "talking_to_myself",
         "Text": "잠긴 건가? 그냥은 열리지 않을 것 같다.",
         "ObjectImageAsset": "",
         "ItemTextId": ""

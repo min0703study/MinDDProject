@@ -2,8 +2,8 @@ ObjectTextId,SectionId,ObjectName,EventType,Text,ObjectImageAsset,ItemTextId
 sun_room_door,4,선이 방문,Event,,,
 living_room_desk,4,책상 위 물병,Explain,누가 물을 마셨지? 내가 마시다 남겨놨나.,Room_Detail_Living_Desk,
 living_room_drawer_first,4,첫번째 칸,Explain,평범한 옷이 들어있다.,Room_Detail_Living_Drawer_First,
-living_room_drawer_second,4,두번째 칸,DialogueScript,잠긴 건가? 그냥은 열리지 않을 것 같다.,,
-living_room_drawer_third,4,세번째 칸,DialogueScript,잠긴 건가? 그냥은 열리지 않을 것 같다.,,
+living_room_drawer_second,4,두번째 칸,talking_to_myself,잠긴 건가? 그냥은 열리지 않을 것 같다.,,
+living_room_drawer_third,4,세번째 칸,talking_to_myself,잠긴 건가? 그냥은 열리지 않을 것 같다.,,
 living_room_cat_bowl,4,써니 밥그릇,UseItem,써니의 밥그릇이다 비어있다.,Room_Detail_Living_Cat_Bowl,cat_food
 use_item_living_room_cat_bowl,4,써니 밥그릇,UsedItem,,Room_Detail_Living_Cat_Bowl_Full,
 living_room_cat_booth,4,숨숨집,GetItem,비싸게 주고 산 숨숨집인데 써니는 택배 상자를 더 좋아한다.,Room_Detail_Living_Cat_Booth,key_a

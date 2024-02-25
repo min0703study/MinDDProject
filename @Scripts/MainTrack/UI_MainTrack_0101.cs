@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor.UIElements;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,11 +36,14 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	[SerializeField] Action clickEventCallback;
 
 	InventoryCell SelectedInventoryCell;
-	private void Awake()
+	protected override void Init()
 	{
+		base.Init();
+		scriptNextButton.onClick.AddListener(OnClickNextButton);
 		popupNextButton.onClick.AddListener(OnClickPopupButton);
 		getItemNextButton.onClick.AddListener(OnClickGetItemNextButton);
 		popupPanel.SetActive(false);
+
 		Bind();
 	}
 
@@ -55,6 +56,11 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	private void Bind()
 	{
 		GameManager.Instance.OnChangedStep += Refresh;
+	}
+
+	public void OnClickNextButton()
+	{
+		scriptPanel.SetActive(false);
 	}
 
 	private void RefreshInventoryList()
@@ -122,7 +128,11 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 				var popupSprite = ResourceManager.Instance.Load<Sprite>(dialog.PopupImageAsset);
 				popupImage.sprite = popupSprite;
 
-				popupNextButton.onClick.AddListener(OnClickNextStep);
+				clickEventCallback = () =>
+				{
+					GameManager.Instance.ToNextStep();
+					clickEventCallback = null;
+				};
 			}
 			else if (dialog.Type == "show_background")
 			{
@@ -184,16 +194,18 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		}
 	}
 
-	public void OnClickObject(string objectTextId)
+	public void Test(GameObject gameObject)
+	{
+
+	}
+	public override void OnClickRoomObject(GameObject gameObject, string objectTextId)
 	{
 		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(objectTextId);
 		if (clickEvent.EventType == "Event")
 		{
 			if (clickEvent.ObjectTextId == "sun_room_door")
 			{
-				//Move(Room.LivingRoomA);rhto
 				GameManager.Instance.ToNextStep();
-				Refresh();
 			}
 		}
 		else if (clickEvent.EventType == "Explain")
@@ -211,6 +223,8 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
+
+			gameObject.SetActive(false);
 
 			clickEventCallback = () =>
 			{
@@ -242,7 +256,6 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		}
 		else if (clickEvent.EventType == "UseItem")
 		{
-
 			if (SelectedInventoryCell != null)
 			{
 				var index = SelectedInventoryCell.Index;
@@ -257,14 +270,15 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 					var imageSprite = ResourceManager.Instance.Load<Sprite>(usedItem.ObjectImageAsset);
 					popupImage.sprite = imageSprite;
 					popupText.text = usedItem.Text;
+					popupTextPanel.SetActive(false);
 
 					clickEventCallback = () =>
 					{
 						GameManager.Instance.ToNextStep();
 						clickEventCallback = null;
 					};
-					//GameManager.Instance.ToNextStep();
-					//Refresh();
+
+					gameObject.SetActive(false);
 				}
 			}
 			else
@@ -275,6 +289,15 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 				popupImage.sprite = imageSprite;
 				popupText.text = clickEvent.Text;
 			}
+		}
+		else if (clickEvent.EventType == "talking_to_myself")
+		{
+			popupPanel.SetActive(false);
+			scriptPanel.SetActive(true);
+			characterImage.gameObject.SetActive(false);
+			nameText.text = "선";
+
+			scriptText.text = clickEvent.Text;
 		}
 	}
 
@@ -289,17 +312,11 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		getItemPanel.SetActive(false);
 	}
 
-	public void OnClickNextStep()
-	{
-		GameManager.Instance.ToNextStep();
-		popupNextButton.onClick.RemoveListener(OnClickNextStep);
-		Refresh();
-	}
-
 	public override void Clear()
 	{
 		base.Clear();
 		GameManager.Instance.OnChangedStep -= Refresh;
 		UIManager.Instance.CloseCoreUI(this);
 	}
+
 }

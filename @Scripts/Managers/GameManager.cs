@@ -41,7 +41,7 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentSectionIndex = 4;
+		CurrentSectionIndex = 1;
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
 
 		StartSection();
@@ -79,7 +79,7 @@ public class GameManager : BaseManager<GameManager>
 		}
 		else if (CurrentSection.SectionType == "MiniTrack")
 		{
-			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MiniTrackBase>(CurrentSection.SectionAsset);
+			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MainTrackBase>(CurrentSection.SectionAsset);
 		}
 		else if (CurrentSection.SectionType == "MainTrack")
 		{

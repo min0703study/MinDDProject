@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 using TMPro;
 
-public class UI_MiniTrack_0101 : UI_MiniTrackBase
+public class UI_MiniTrack_0101 : UI_MainTrackBase
 {
 	[Header("Modules")]
 	[Header("Cellphone")]
@@ -23,8 +23,10 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 	[Header("GameUI")]
 	[SerializeField] TextMeshProUGUI missionText;
 
-	void Awake()
+	protected override void Init()
 	{
+		base.Init();
+
 		scriptNextButton.onClick.AddListener(OnClickScriptButton);
 		popupNextButton.onClick.AddListener(OnClickPopupNextButton);
 		lockButton.onClick.AddListener(OnClickLockButton);

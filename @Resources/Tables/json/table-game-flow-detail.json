@@ -236,7 +236,7 @@
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "Room_Sun_A",
-        "PopupImageAsset": "Popup_Light_On_After",
+        "PopupImageAsset": "Popup_Sun_Worried",
         "SoundEffectAsset": ""
     },
     {
@@ -379,7 +379,7 @@
         "MissionStartRoom": "",
         "Text": "",
         "CharacterImageAsset": "",
-        "RoomImageAsset": "Room_Living_A_Cat_Food_Full",
+        "RoomImageAsset": "Room_Living_A_Bowl_Full",
         "PopupImageAsset": "",
         "SoundEffectAsset": ""
     }
