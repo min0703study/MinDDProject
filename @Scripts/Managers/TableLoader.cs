@@ -12,9 +12,7 @@ public class TableLoader : BaseManager<TableLoader>
 	public void Load()
 	{
 		GameFlowTable.Instance.Load("Table_GameFlow",
-			"Table_Dialogue",
-			"Table_MiniTrack",
-			"Table_MainTrack",
+			"Table_GameFlowDetail",
 			"Table_ObjectClickEvent",
 			"Table_Item");
 	}

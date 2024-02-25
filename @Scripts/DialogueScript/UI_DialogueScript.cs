@@ -95,6 +95,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 			{
 				popupPanel.SetActive(true);
 				scriptPanel.SetActive(false);
+				popupTextPanel.SetActive(false);
 				var popupSprite = ResourceManager.Instance.Load<Sprite>(dialog.PopupImageAsset);
 				popupImage.sprite = popupSprite;
 			}
@@ -109,61 +110,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 	public override void Clear()
 	{
 		base.Clear();
-
+		GameManager.Instance.OnChangedStep -= Refresh;
 		UIManager.Instance.CloseCoreUI(this);
 	}
-
-	// void StartTypingEffect2(string script, float duration = 1.0f)
-	// {
-	// 	var foundSpaceIndexes = new List<int>();
-	// 	foundSpaceIndexes.Add(0);
-	// 	for (int i = 0; i < script.Length; i++)
-	// 	{
-	// 		if (script[i] == ' ')
-	// 			foundSpaceIndexes.Add(i + 1);
-	// 	}
-	// 	foundSpaceIndexes.Add(script.Length - 1);
-
-	// 	Sequence mySequence = DOTween.Sequence();
-	// 	for (int i = 0; i < foundSpaceIndexes.Count - 1; i++)
-	// 	{
-	// 		int startIndex = foundSpaceIndexes[i];
-	// 		int length = foundSpaceIndexes[i + 1] - startIndex;
-	// 		string splitScript = script.Substring(startIndex, length);
-	// 		string frontScript = script.Substring(0, startIndex);
-
-	// 		mySequence.Append(DOTween.To(() => 0, x => scriptText.text = frontScript + splitScript.Substring(0, x), length, length * 0.1f));
-	// 		mySequence.AppendInterval(0.5f);
-	// 	}
-
-	// 	mySequence.Play();
-
-	// }
-
-	// void StartTypingEffect2(string script, float duration = 1.0f)
-	// {
-	// 	var foundSpaceIndexes = new List<int>();
-	// 	foundSpaceIndexes.Add(0);
-	// 	for (int i = 0; i < script.Length; i++)
-	// 	{
-	// 		if (script[i] == ' ')
-	// 			foundSpaceIndexes.Add(i + 1);
-	// 	}
-	// 	foundSpaceIndexes.Add(script.Length - 1);
-
-	// 	Sequence mySequence = DOTween.Sequence();
-	// 	for (int i = 0; i < foundSpaceIndexes.Count - 1; i++)
-	// 	{
-	// 		int startIndex = foundSpaceIndexes[i];
-	// 		int length = foundSpaceIndexes[i + 1] - startIndex;
-	// 		string splitScript = script.Substring(startIndex, length);
-	// 		string frontScript = script.Substring(0, startIndex);
-
-	// 		mySequence.Append(DOTween.To(() => 0, x => scriptText.text = frontScript + splitScript.Substring(0, x), length, length * 0.1f));
-	// 		mySequence.AppendInterval(0.5f);
-	// 	}
-
-	// 	mySequence.Play();
-
-	// }
 }

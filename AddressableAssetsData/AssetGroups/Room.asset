@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 40ecc15e32a4545a59ddd5e711139d26
   m_SerializeEntries:
   - m_GUID: 25caa8c3ee388de4098c1116a286e63b
-    m_Address: Room_Sun_A.sprite
+    m_Address: Room_Sun_A_Cellphone.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
@@ -42,7 +42,7 @@ MonoBehaviour:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a8f3bf1ab9e5b4faeb7f855e0604f636
-    m_Address: Room_Sun_A_Cellphone.sprite
+    m_Address: Room_Sun_A.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

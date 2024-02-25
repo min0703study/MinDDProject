@@ -77,49 +77,22 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 		base.init();
 	}
 
-	public void Load(string sectionAssetLabel, string dialogueAssetLabel, string miniTrackAssetLabel, string mainTrackAssetLabel, string objectClickEventAssetLabel, string itemAssetLabel)
+	public void Load(string gameFlowAssetLabel, string gameFlowDetailLabel, string objectClickEventLabel, string itemAssetLabel)
 	{
-		TextAsset textAsset = ResourceManager.Instance.Load<TextAsset>(sectionAssetLabel);
+		TextAsset textAsset = ResourceManager.Instance.Load<TextAsset>(gameFlowAssetLabel);
 		Sections = JsonConvert.DeserializeObject<List<TableData.Section>>(textAsset.text);
 
-		TextAsset dialogueAsset = ResourceManager.Instance.Load<TextAsset>(dialogueAssetLabel);
-		var dialogues = JsonConvert.DeserializeObject<List<TableData.Dialogue>>(dialogueAsset.text);
-
-		// TextAsset miniTrackAsset = ResourceManager.Instance.Load<TextAsset>(miniTrackAssetLabel);
-		// var miniTracks = JsonConvert.DeserializeObject<List<TableData.MiniTrack>>(miniTrackAsset.text);
-
-		// TextAsset mainTrackAsset = ResourceManager.Instance.Load<TextAsset>(mainTrackAssetLabel);
-		// var mainTracks = JsonConvert.DeserializeObject<List<TableData.MainTrack>>(mainTrackAsset.text);
+		TextAsset gameflowDetailAsset = ResourceManager.Instance.Load<TextAsset>(gameFlowDetailLabel);
+		var gameFlowDetails = JsonConvert.DeserializeObject<List<TableData.Dialogue>>(gameflowDetailAsset.text);
 
 		foreach (var section in Sections)
 		{
-			// if (section.SectionType == "MiniTrack")
-			// {
-			// 	foreach (var miniTrack in miniTracks)
-			// 	{
-			// 		if (section.SectionIndex == miniTrack.SectionId)
-			// 		{
-			// 			section.MiniTrack = miniTrack;
-			// 		}
-			// 	}
-			// }
-			// else if (section.SectionType == "MainTrack")
-			// {
-			// 	foreach (var mainTrack in mainTracks)
-			// 	{
-			// 		if (section.SectionIndex == mainTrack.SectionId)
-			// 		{
-			// 			section.MainTrack = mainTrack;
-			// 		}
-			// 	}
-			// }
-
 			section.Dialogues = new List<TableData.Dialogue>();
-			foreach (var dialogue in dialogues)
+			foreach (var gameFlowDetail in gameFlowDetails)
 			{
-				if (section.SectionIndex == dialogue.SectionIndex)
+				if (section.SectionIndex == gameFlowDetail.SectionIndex)
 				{
-					section.Dialogues.Add(dialogue);
+					section.Dialogues.Add(gameFlowDetail);
 				}
 			}
 
@@ -127,7 +100,7 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 		}
 
 
-		TextAsset objectClickEventAsset = ResourceManager.Instance.Load<TextAsset>(objectClickEventAssetLabel);
+		TextAsset objectClickEventAsset = ResourceManager.Instance.Load<TextAsset>(objectClickEventLabel);
 		var objectClickEvents = JsonConvert.DeserializeObject<List<TableData.ObjectClickEvent>>(objectClickEventAsset.text);
 
 		foreach (var objectClickEvent in objectClickEvents)

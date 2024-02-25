@@ -21,7 +21,6 @@ public class GameManager : BaseManager<GameManager>
 
 	public const int INVENTORY_SIZE = 9;
 	public InventorySlot[] Inventory { get; private set; } = new InventorySlot[INVENTORY_SIZE];
-
 	public Action OnChangedStep;
 
 	protected override void init()
@@ -42,12 +41,8 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentSectionIndex = 1;
+		CurrentSectionIndex = 4;
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
-
-		// var catfood = GameFlowTable.Instance.GetItemById("cat_food");
-		// Inventory[0].IsBlank = false;
-		// Inventory[0].SlotItem = catfood;
 
 		StartSection();
 	}
@@ -71,6 +66,8 @@ public class GameManager : BaseManager<GameManager>
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
 
 		currentCoreLayer.Clear();
+		currentCoreLayer = null;
+
 		StartSection();
 	}
 

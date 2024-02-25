@@ -1,32 +1,5 @@
 ﻿[
     {
-        "ObjectTextId": "sun_desk",
-        "SectionId": "2",
-        "ObjectName": "선의 책상 위",
-        "EventType": "Explain",
-        "Text": "책상에 전공책이 올려져 있다. 최악의 학점을 받은 전공. 재수강할 생\n각을 하니 벌써 머리가 아프다.",
-        "ObjectImageAsset": "Room_Object_Sun_Desk",
-        "ItemTextId": ""
-    },
-    {
-        "ObjectTextId": "sun_desk_drawer",
-        "SectionId": "2",
-        "ObjectName": "책상 옆 서랍",
-        "EventType": "Explain",
-        "Text": "내가 휴대폰을 서랍에 넣어놨을 리는 없지.",
-        "ObjectImageAsset": "Room_Object_Sun_Desk_Drawer",
-        "ItemTextId": ""
-    },
-    {
-        "ObjectTextId": "sun_cellphone",
-        "SectionId": "2",
-        "ObjectName": "휴대폰",
-        "EventType": "Event",
-        "Text": "",
-        "ObjectImageAsset": "",
-        "ItemTextId": ""
-    },
-    {
         "ObjectTextId": "sun_room_door",
         "SectionId": "4",
         "ObjectName": "선이 방문",
@@ -81,6 +54,15 @@
         "ItemTextId": "cat_food"
     },
     {
+        "ObjectTextId": "use_item_living_room_cat_bowl",
+        "SectionId": "4",
+        "ObjectName": "써니 밥그릇",
+        "EventType": "UsedItem",
+        "Text": "",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl_Full",
+        "ItemTextId": ""
+    },
+    {
         "ObjectTextId": "living_room_cat_booth",
         "SectionId": "4",
         "ObjectName": "숨숨집",
@@ -88,6 +70,15 @@
         "Text": "비싸게 주고 산 숨숨집인데 써니는 택배 상자를 더 좋아한다.",
         "ObjectImageAsset": "Room_Detail_Living_Cat_Booth",
         "ItemTextId": "key_a"
+    },
+    {
+        "ObjectTextId": "get_item_living_room_cat_booth",
+        "SectionId": "4",
+        "ObjectName": "숨숨집",
+        "EventType": "\bGotItem",
+        "Text": "엇, 그런데 안에 뭔가 반짝이는 게 보이는 걸?",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Booth",
+        "ItemTextId": ""
     },
     {
         "ObjectTextId": "living_room_tv",
@@ -122,7 +113,34 @@
         "ObjectName": "싱크대 아래 서랍장",
         "EventType": "GetItem",
         "Text": "써니의 사료 여기에 있었네.",
-        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer_Cat_Food",
         "ItemTextId": "cat_food"
+    },
+    {
+        "ObjectTextId": "sun_desk",
+        "SectionId": "2",
+        "ObjectName": "선의 책상 위",
+        "EventType": "Explain",
+        "Text": "책상에 전공책이 올려져 있다. 최악의 학점을 받은 전공. 재수강할 생\n각을 하니 벌써 머리가 아프다.",
+        "ObjectImageAsset": "Room_Detail_Sun_Desk",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "sun_desk_drawer",
+        "SectionId": "2",
+        "ObjectName": "책상 옆 서랍",
+        "EventType": "Explain",
+        "Text": "내가 휴대폰을 서랍에 넣어놨을 리는 없지.",
+        "ObjectImageAsset": "Room_Detail_Sun_Desk_Drawer",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "sun_cellphone",
+        "SectionId": "2",
+        "ObjectName": "휴대폰",
+        "EventType": "Event",
+        "Text": "",
+        "ObjectImageAsset": "",
+        "ItemTextId": ""
     }
 ]

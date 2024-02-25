@@ -20,6 +20,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 
 	[Header("Popup GameObjects")]
 	[SerializeField] protected GameObject popupPanel;
+	[SerializeField] protected GameObject popupTextPanel;
 	[SerializeField] protected Image popupImage;
 	[SerializeField] protected TextMeshProUGUI popupText;
 	[SerializeField] protected Button popupNextButton;

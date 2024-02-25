@@ -356,7 +356,7 @@
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "",
-        "PopupImageAsset": "Popup_Light_On_Before",
+        "PopupImageAsset": "Popup_Sun_Open_Door",
         "SoundEffectAsset": ""
     },
     {
@@ -368,6 +368,18 @@
         "Text": "",
         "CharacterImageAsset": "",
         "RoomImageAsset": "",
+        "PopupImageAsset": "",
+        "SoundEffectAsset": ""
+    },
+    {
+        "SectionIndex": "4",
+        "Step": "4",
+        "Type": "show_background",
+        "MissionText": "",
+        "MissionStartRoom": "",
+        "Text": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "Room_Living_A_Cat_Food_Full",
         "PopupImageAsset": "",
         "SoundEffectAsset": ""
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -20,25 +21,40 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	[Header("GameUI")]
 	[SerializeField] TextMeshProUGUI missionText;
 
+	[Header("GetItem")]
+	[SerializeField] GameObject getItemPanel;
+	[SerializeField] Image getItemImage;
+	[SerializeField] TextMeshProUGUI getItemText;
+	[SerializeField] Button getItemNextButton;
+
 	[Header("Room GameObjects")]
 	[SerializeField] GameObject livingRoomA;
 	[SerializeField] GameObject sunRoomA;
 	[SerializeField] GameObject kitchen;
 	[SerializeField] GameObject livingRoomB;
 	[SerializeField] GameObject livingRoomDrawer;
-
 	[SerializeField] GameObject inventoryListGO;
+	[SerializeField] Image livingRoomAImage;
+	[SerializeField] Action clickEventCallback;
 
+	InventoryCell SelectedInventoryCell;
 	private void Awake()
 	{
 		popupNextButton.onClick.AddListener(OnClickPopupButton);
+		getItemNextButton.onClick.AddListener(OnClickGetItemNextButton);
 		popupPanel.SetActive(false);
+		Bind();
 	}
-	// Start is called before the first frame update
+
 	void Start()
 	{
 		Refresh();
 		RefreshInventoryList();
+	}
+
+	private void Bind()
+	{
+		GameManager.Instance.OnChangedStep += Refresh;
 	}
 
 	private void RefreshInventoryList()
@@ -47,9 +63,28 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		for (int i = 0; i < GameManager.INVENTORY_SIZE; i++)
 		{
 			var inventoryCell = UIManager.Instance.MakeSubItem<InventoryCell>(inventoryListGO.transform);
-			inventoryCell.SetInfo(i, null);
+			inventoryCell.SetInfo(i, (inventoryCell) =>
+			{
+				if (SelectedInventoryCell != null)
+				{
+					SelectedInventoryCell.SetSelected(false);
+				}
+
+				SelectedInventoryCell = inventoryCell;
+				SelectedInventoryCell.SetSelected(true);
+			});
+
 			inventoryCell.Refresh();
 		}
+	}
+
+	public void ShowGetItemPopup(string itemTextId)
+	{
+		var item = GameFlowTable.Instance.GetItemById(itemTextId);
+		var imageSprite = ResourceManager.Instance.Load<Sprite>(item.ItemImageAsset);
+		getItemImage.sprite = imageSprite;
+		getItemText.text = $"[<color=yellow>{item.ItemName}</color=yellow>]을 발견했다!";
+		getItemPanel.SetActive(true);
 	}
 
 	public override void Refresh()
@@ -82,11 +117,21 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 			else if (dialog.Type == "popup")
 			{
 				popupPanel.SetActive(true);
+				popupTextPanel.SetActive(false);
 				scriptPanel.SetActive(false);
 				var popupSprite = ResourceManager.Instance.Load<Sprite>(dialog.PopupImageAsset);
 				popupImage.sprite = popupSprite;
 
 				popupNextButton.onClick.AddListener(OnClickNextStep);
+			}
+			else if (dialog.Type == "show_background")
+			{
+				var roomSprite = ResourceManager.Instance.Load<Sprite>(dialog.RoomImageAsset);
+				livingRoomAImage.sprite = roomSprite;
+
+				popupPanel.SetActive(false);
+				scriptPanel.SetActive(false);
+				characterImage.gameObject.SetActive(false);
 			}
 		}
 	}
@@ -146,7 +191,7 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		{
 			if (clickEvent.ObjectTextId == "sun_room_door")
 			{
-				//Move(Room.LivingRoomA);
+				//Move(Room.LivingRoomA);rhto
 				GameManager.Instance.ToNextStep();
 				Refresh();
 			}
@@ -154,6 +199,7 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		else if (clickEvent.EventType == "Explain")
 		{
 			popupPanel.SetActive(true);
+			popupTextPanel.SetActive(true);
 			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
@@ -161,18 +207,86 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		else if (clickEvent.EventType == "GetItem")
 		{
 			popupPanel.SetActive(true);
+			popupTextPanel.SetActive(true);
 			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
 
-			GameManager.Instance.AddItem(clickEvent.ItemTextId);
-			RefreshInventoryList();
+			clickEventCallback = () =>
+			{
+				var getItemClickEvent = GameFlowTable.Instance.GetObjectClickEvent("get_item_" + objectTextId);
+				if (getItemClickEvent != null)
+				{
+					popupPanel.SetActive(true);
+					popupTextPanel.SetActive(true);
+					var imageSprite = ResourceManager.Instance.Load<Sprite>(getItemClickEvent.ObjectImageAsset);
+					popupImage.sprite = imageSprite;
+					popupText.text = getItemClickEvent.Text;
+
+					clickEventCallback = () =>
+					{
+						ShowGetItemPopup(clickEvent.ItemTextId);
+						GameManager.Instance.AddItem(clickEvent.ItemTextId);
+						RefreshInventoryList();
+						clickEventCallback = null;
+					};
+				}
+				else
+				{
+					ShowGetItemPopup(clickEvent.ItemTextId);
+					GameManager.Instance.AddItem(clickEvent.ItemTextId);
+					RefreshInventoryList();
+					clickEventCallback = null;
+				}
+			};
+		}
+		else if (clickEvent.EventType == "UseItem")
+		{
+
+			if (SelectedInventoryCell != null)
+			{
+				var index = SelectedInventoryCell.Index;
+				InventorySlot inventorySlot = GameManager.Instance.Inventory[index];
+				if (inventorySlot.ItemTextId == clickEvent.ItemTextId)
+				{
+					GameManager.Instance.UseItem(index);
+					RefreshInventoryList();
+
+					var usedItem = GameFlowTable.Instance.GetObjectClickEvent("use_item_" + objectTextId);
+					popupPanel.SetActive(true);
+					var imageSprite = ResourceManager.Instance.Load<Sprite>(usedItem.ObjectImageAsset);
+					popupImage.sprite = imageSprite;
+					popupText.text = usedItem.Text;
+
+					clickEventCallback = () =>
+					{
+						GameManager.Instance.ToNextStep();
+						clickEventCallback = null;
+					};
+					//GameManager.Instance.ToNextStep();
+					//Refresh();
+				}
+			}
+			else
+			{
+				popupPanel.SetActive(true);
+				popupTextPanel.SetActive(true);
+				var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
+				popupImage.sprite = imageSprite;
+				popupText.text = clickEvent.Text;
+			}
 		}
 	}
 
 	public void OnClickPopupButton()
 	{
 		popupPanel.SetActive(false);
+		clickEventCallback?.Invoke();
+	}
+
+	private void OnClickGetItemNextButton()
+	{
+		getItemPanel.SetActive(false);
 	}
 
 	public void OnClickNextStep()
@@ -182,4 +296,10 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		Refresh();
 	}
 
+	public override void Clear()
+	{
+		base.Clear();
+		GameManager.Instance.OnChangedStep -= Refresh;
+		UIManager.Instance.CloseCoreUI(this);
+	}
 }

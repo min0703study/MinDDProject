@@ -1,38 +1,47 @@
 
 using System.Collections;
-using TMPro;
-using UnityEditor;
+
 using UnityEngine;
 using UnityEngine.UI;
+
+using TMPro;
 
 public class UI_MiniTrack_0101 : UI_MiniTrackBase
 {
 	[Header("Modules")]
 	[Header("Cellphone")]
-
 	[SerializeField] GameObject cellphonePanel;
 	[SerializeField] GameObject lockScreen;
 	[SerializeField] GameObject noBatteryScreen;
 	[SerializeField] GameObject turnOffScreen;
 	[SerializeField] GameObject mainScreen;
-
 	[SerializeField] Button lockButton;
 
 	[Header("Room")]
 	[SerializeField] Image roomImage;
 
+	[Header("GameUI")]
 	[SerializeField] TextMeshProUGUI missionText;
 
-
-	void Start()
+	void Awake()
 	{
 		scriptNextButton.onClick.AddListener(OnClickScriptButton);
-		popupNextButton.onClick.AddListener(() => popupPanel.SetActive(false));
+		popupNextButton.onClick.AddListener(OnClickPopupNextButton);
 		lockButton.onClick.AddListener(OnClickLockButton);
 
 		cellphonePanel.SetActive(false);
 
+		Bind();
+	}
+
+	private void Start()
+	{
 		Refresh();
+	}
+
+	private void Bind()
+	{
+		GameManager.Instance.OnChangedStep += Refresh;
 	}
 
 	public override void Refresh()
@@ -73,7 +82,11 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 	private void OnClickScriptButton()
 	{
 		GameManager.Instance.ToNextStep();
-		Refresh();
+	}
+
+	private void OnClickPopupNextButton()
+	{
+		popupPanel.SetActive(false);
 	}
 
 	public void OnClickRoomObject(string objectTextId)
@@ -110,6 +123,12 @@ public class UI_MiniTrack_0101 : UI_MiniTrackBase
 		yield return new WaitForSeconds(1.0f);
 
 		GameManager.Instance.ToNextStep();
-		Refresh();
+	}
+
+	public override void Clear()
+	{
+		base.Clear();
+		GameManager.Instance.OnChangedStep -= Refresh;
+		UIManager.Instance.CloseCoreUI(this);
 	}
 }

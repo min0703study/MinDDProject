@@ -17,18 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 513923bdb6ea41441b6b410041b184d2
   m_SerializeEntries:
-  - m_GUID: 3850649b7de62b945b424dee926b808d
-    m_Address: Table_Dialogue
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c02c8c9074a2a254c94b0aff69a1e5af
-    m_Address: Table_GameFlow
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4657002ee984a4a8fb94e5e7fb6d8701
     m_Address: UI_DialogueScript
     m_ReadOnly: 0
@@ -53,26 +41,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 008bd43976b724e4db295ae1a5c6f758
-    m_Address: Table_MiniTrack
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 72df1f5c974354417805ea5b8d4ffc29
     m_Address: UI_MiniTrack_0101
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 57802c5ca9c904390803ac3c5848bd14
-    m_Address: Table_MainTrack
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 19a952fc767af4d118d78581986d04c4
-    m_Address: Table_ObjectClickEvent
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
@@ -101,14 +71,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b953554d81da5ba44aaa4afddf4eb005
-    m_Address: Item_Cat_Food.sprite
+  - m_GUID: 512a296d066b240d9ab1b49f08d18d8c
+    m_Address: Popup_Sun_Open_Door.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2da072d1fcd874e6bb974b02174f0838
-    m_Address: Table_Item
+  - m_GUID: cd864569249c0402888196c4c8cae8a0
+    m_Address: Item_Key_A.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec485fc2f627441149d85da2d16e01ba
+    m_Address: Item_Cat_Food.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
