@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: ee5dcc446e138400d85a59e93086f23c
+guid: 85e81f6d7e3bf40a9907fa2336784915
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6964289897616552066
-    second: Popup_Sun_Worried_0
+      213: -5346795138581710022
+    second: Cellphone_Main_0
+  - first:
+      213: -2398045716637752450
+    second: Cellphone_Main_1
+  - first:
+      213: 5908816827748102922
+    second: Cellphone_Main_2
+  - first:
+      213: 7641011703440058459
+    second: Cellphone_Main_3
+  - first:
+      213: -7959006187776006545
+    second: Cellphone_Main_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Popup_Sun_Worried_0
+      name: Cellphone_Main_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1000
-        height: 1000
+        x: 507
+        y: 1183
+        width: 12
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +152,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7f49bb8c3fd95f90800000000000000
-      internalID: -6964289897616552066
+      spriteID: a3b3d06662e5cc5b0800000000000000
+      internalID: -5346795138581710022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cellphone_Main_1
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1185
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73e8a8402e68bed0800000000000000
+      internalID: -2398045716637752450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cellphone_Main_2
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1184
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03b6cc3995500250800000000000000
+      internalID: 5908816827748102922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cellphone_Main_3
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1181
+        width: 55
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58a52419a35a0a60800000000000000
+      internalID: 7641011703440058459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cellphone_Main_4
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 680
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66a9747a0eeb8190800000000000000
+      internalID: -7959006187776006545
       vertices: []
       indices: 
       edges: []
@@ -149,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -157,7 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Popup_Sun_Worried_0: -6964289897616552066
+      Cellphone_Main_0: -5346795138581710022
+      Cellphone_Main_1: -2398045716637752450
+      Cellphone_Main_2: 5908816827748102922
+      Cellphone_Main_3: 7641011703440058459
+      Cellphone_Main_4: -7959006187776006545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
