@@ -95,6 +95,54 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fff913786dd16b44db0659ba2cab7e9d
+    m_Address: Popup_Ho_Door.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b58793463e3f2245b91684bc61ebb1b
+    m_Address: Popup_Ho_Door_Knock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 327263ab052177e4b9b48aa3de1a49b8
+    m_Address: UI_MiniTrack_0102
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb8252718a8bf9d48a784a4b64063924
+    m_Address: Room_Kitchen_Refrigerator.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbcc721591941b547b05d318d2f47cf7
+    m_Address: Room_Detail_Kitchen_Family_Photo.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 341082d536679ac479bfacd2282a7c43
+    m_Address: Room_Detail_Kitchen_Refrigerator_Top.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5e8c3f1206d60148ba67405740b14f1
+    m_Address: Room_Detail_Kitchen_Refrigerator_Under.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3a67626d0aa92f45aef9f7aa02f2905
+    m_Address: Room_Detail_Kitchen_Buy_List.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
   m_SchemaSet:

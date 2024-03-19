@@ -16,3 +16,4 @@ sun_desk,2,선의 책상 위,Explain,"책상에 전공책이 올려져 있다. 최악의 학점을 받은
 각을 하니 벌써 머리가 아프다.",Room_Detail_Sun_Desk,
 sun_desk_drawer,2,책상 옆 서랍,Explain,내가 휴대폰을 서랍에 넣어놨을 리는 없지.,Room_Detail_Sun_Desk_Drawer,
 sun_cellphone,2,휴대폰,Event,,,
+kitchen_buy_list,2,생필품 목록 메모,Explain,"사야 할 것? 내 글씨인데…….\n 내가 이걸 적어뒀었나?\n 음…… 뭔가 이상해.",Room_Detail_Kitchen_Buy_List,

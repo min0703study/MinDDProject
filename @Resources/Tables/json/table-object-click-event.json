@@ -142,5 +142,14 @@
         "Text": "",
         "ObjectImageAsset": "",
         "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "kitchen_buy_list",
+        "SectionId": "2",
+        "ObjectName": "생필품 목록 메모",
+        "EventType": "Explain",
+        "Text": "사야 할 것? 내 글씨인데…….\\n 내가 이걸 적어뒀었나?\\n 음…… 뭔가 이상해.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Buy_List",
+        "ItemTextId": ""
     }
 ]

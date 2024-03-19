@@ -91,7 +91,7 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 		popupPanel.SetActive(false);
 	}
 
-	public void OnClickRoomObject(string objectTextId)
+	public override void OnClickRoomObject(GameObject gameObject, string objectTextId)
 	{
 		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(objectTextId);
 

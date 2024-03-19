@@ -26,5 +26,19 @@
         "SectionType": "MainTrack",
         "SectionAsset": "UI_MainTrack_0101",
         "R_SectionDesc": "써니에게 사료를 주는 트랙"
+    },
+    {
+        "ChapterIndex": "1",
+        "SectionIndex": "5",
+        "SectionType": "Dialogue",
+        "SectionAsset": "UI_DialogueScript",
+        "R_SectionDesc": "호 방 확인"
+    },
+    {
+        "ChapterIndex": "1",
+        "SectionIndex": "6",
+        "SectionType": "MiniTrack",
+        "SectionAsset": "UI_MiniTrack_0102",
+        "R_SectionDesc": "호 방 확인"
     }
 ]

@@ -41,7 +41,7 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentSectionIndex = 1;
+		CurrentSectionIndex = 5;
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
 
 		StartSection();
