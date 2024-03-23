@@ -12,7 +12,7 @@ namespace TableData
 		public string ChapterId { get; set; }
 		public string SectionAsset { get; set; }
 
-		public List<Dialogue> Dialogues { get; set; }
+		public Dictionary<string, Dialogue> Dialogues { get; set; } = new Dictionary<string, Dialogue>();
 		public MiniTrack MiniTrack { get; set; }
 
 		public MainTrack MainTrack { get; set; }
@@ -21,7 +21,7 @@ namespace TableData
 	public class Dialogue
 	{
 		public int SectionIndex { get; set; }
-		public int Step { get; set; }
+		public string StepId { get; set; }
 		public string Type { get; set; }
 		public string CharacterKey { get; set; }
 		public string Text { get; set; }
@@ -87,12 +87,11 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 
 		foreach (var section in Sections)
 		{
-			section.Dialogues = new List<TableData.Dialogue>();
 			foreach (var gameFlowDetail in gameFlowDetails)
 			{
 				if (section.SectionIndex == gameFlowDetail.SectionIndex)
 				{
-					section.Dialogues.Add(gameFlowDetail);
+					section.Dialogues.Add(gameFlowDetail.StepId, gameFlowDetail);
 				}
 			}
 
@@ -139,6 +138,16 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 	}
 
 	public TableData.Item GetItemById(string itemTextId)
+	{
+		if (ItemDict.TryGetValue(itemTextId, out var item))
+		{
+			return item;
+		};
+
+		return null;
+	}
+	
+	public TableData.Item GetDialogue(string itemTextId)
 	{
 		if (ItemDict.TryGetValue(itemTextId, out var item))
 		{

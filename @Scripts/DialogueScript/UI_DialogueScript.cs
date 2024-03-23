@@ -39,8 +39,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 
 		if (dialogues != null && dialogues.Count > 0)
 		{
-			var dialogueIndex = GameManager.Instance.CurrentDialogueIndex;
-			var dialog = dialogues[dialogueIndex];
+			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 
 			// 방 배경 설정
 			var roomSprite = ResourceManager.Instance.Load<Sprite>(dialog.RoomImageAsset);

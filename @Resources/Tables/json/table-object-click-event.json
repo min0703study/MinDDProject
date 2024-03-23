@@ -57,7 +57,16 @@
         "ObjectTextId": "use_item_living_room_cat_bowl",
         "SectionId": "4",
         "ObjectName": "써니 밥그릇",
-        "EventType": "UsedItem",
+        "EventType": "UseItem",
+        "Text": "",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl_Full",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "used_item_living_room_cat_bowl",
+        "SectionId": "4",
+        "ObjectName": "써니 밥그릇",
+        "EventType": "Explain",
         "Text": "",
         "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl_Full",
         "ItemTextId": ""
@@ -75,8 +84,17 @@
         "ObjectTextId": "get_item_living_room_cat_booth",
         "SectionId": "4",
         "ObjectName": "숨숨집",
-        "EventType": "\bGotItem",
+        "EventType": "GetItem",
         "Text": "엇, 그런데 안에 뭔가 반짝이는 게 보이는 걸?",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Booth",
+        "ItemTextId": ""
+    },
+    {
+        "ObjectTextId": "got_item_living_room_cat_booth",
+        "SectionId": "4",
+        "ObjectName": "숨숨집",
+        "EventType": "Explain",
+        "Text": "비싸게 주고 산 숨숨집인데 써니는 택배 상자를 더 좋아한다.",
         "ObjectImageAsset": "Room_Detail_Living_Cat_Booth",
         "ItemTextId": ""
     },
@@ -115,6 +133,15 @@
         "Text": "써니의 사료 여기에 있었네.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer_Cat_Food",
         "ItemTextId": "cat_food"
+    },
+    {
+        "ObjectTextId": "got_item_kitchen_under_drawer",
+        "SectionId": "4",
+        "ObjectName": "싱크대 아래 서랍장",
+        "EventType": "Explain",
+        "Text": "빈 수납장",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer",
+        "ItemTextId": ""
     },
     {
         "ObjectTextId": "sun_desk",

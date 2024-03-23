@@ -52,8 +52,7 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 
 		if (dialogues != null && dialogues.Count > 0)
 		{
-			var dialogueIndex = GameManager.Instance.CurrentDialogueIndex;
-			var dialog = dialogues[dialogueIndex];
+			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 
 			if (dialog.Type == "mission")
 			{
@@ -91,10 +90,10 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 		popupPanel.SetActive(false);
 	}
 
-	public override void OnClickRoomObject(GameObject gameObject, string objectTextId)
+	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
-		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(objectTextId);
-
+		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(clickableRoomObject.ObjectTextId);
+		
 		if (clickEvent.EventType == "Event")
 		{
 			if (clickEvent.ObjectTextId == "sun_cellphone")

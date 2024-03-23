@@ -16,5 +16,5 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 
 	}
 
-	public virtual void OnClickRoomObject(GameObject gameObject, string objectTextId) { }
+	public virtual void OnClickRoomObject(ClickableRoomObject gameObject) { }
 }

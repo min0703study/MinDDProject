@@ -14,8 +14,9 @@ public class InventorySlot
 public class GameManager : BaseManager<GameManager>
 {
 	public Section CurrentSection;
-	public int CurrentSectionIndex;
-	public int CurrentDialogueIndex;
+	public int CurrentGameFlowIndex;
+	public int CurrentDetailFlowIndex;
+	public string CurrentDetailFlowId;
 
 	public UI_CoreLayerBase currentCoreLayer;
 
@@ -29,9 +30,6 @@ public class GameManager : BaseManager<GameManager>
 
 		DOTween.Init();
 
-		CurrentSectionIndex = 0;
-		CurrentDialogueIndex = 0;
-
 		for (int i = 0; i < GameManager.INVENTORY_SIZE; i++)
 		{
 			Inventory[i] = new InventorySlot();
@@ -41,19 +39,25 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentSectionIndex = 1;
-		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
+		CurrentGameFlowIndex = 3;
+		
+		CurrentDetailFlowIndex = 1;
+		CurrentDetailFlowId = "1";
+		
+		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentGameFlowIndex);
 
 		StartSection();
 	}
 
 	public void ToNextStep()
 	{
-		CurrentDialogueIndex += 1;
-
-		if (CurrentDialogueIndex >= CurrentSection.Dialogues.Count)
+		CurrentDetailFlowIndex += 1;
+		CurrentDetailFlowId = $"{CurrentDetailFlowIndex}";
+		
+		if (!CurrentSection.Dialogues.ContainsKey(CurrentDetailFlowId))
 		{
-			CurrentDialogueIndex = 0;
+			CurrentDetailFlowIndex = 1;
+			CurrentDetailFlowId = $"1";
 			ToNextSection();
 		}
 
@@ -62,8 +66,8 @@ public class GameManager : BaseManager<GameManager>
 
 	public void ToNextSection()
 	{
-		CurrentSectionIndex += 1;
-		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentSectionIndex);
+		CurrentGameFlowIndex += 1;
+		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentGameFlowIndex);
 
 		currentCoreLayer.Clear();
 		currentCoreLayer = null;

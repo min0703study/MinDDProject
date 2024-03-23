@@ -71,6 +71,12 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 			var inventoryCell = UIManager.Instance.MakeSubItem<InventoryCell>(inventoryListGO.transform);
 			inventoryCell.SetInfo(i, (inventoryCell) =>
 			{
+				InventorySlot inventorySlot = GameManager.Instance.Inventory[inventoryCell.Index];
+				if(inventorySlot.IsBlank) 
+				{
+					return;
+				}
+				
 				if (SelectedInventoryCell != null)
 				{
 					SelectedInventoryCell.SetSelected(false);
@@ -99,8 +105,7 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 
 		if (dialogues != null && dialogues.Count > 0)
 		{
-			var dialogueIndex = GameManager.Instance.CurrentDialogueIndex;
-			var dialog = dialogues[dialogueIndex];
+			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 
 			if (dialog.Type == "mission")
 			{
@@ -198,9 +203,59 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	{
 
 	}
-	public override void OnClickRoomObject(GameObject gameObject, string objectTextId)
+	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
-		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(objectTextId);
+		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(clickableRoomObject.ObjectTextId);
+		var objectTextId = clickableRoomObject.ObjectTextId;
+		
+		if(SelectedInventoryCell != null) 
+		{
+			bool isUsedItem = false;
+			if(clickEvent.EventType == "UseItem") 
+			{
+				var index = SelectedInventoryCell.Index;
+				InventorySlot inventorySlot = GameManager.Instance.Inventory[index];
+				
+				if (inventorySlot.ItemTextId == clickEvent.ItemTextId)
+				{
+					GameManager.Instance.UseItem(index);
+					RefreshInventoryList();
+
+					var usedItem = GameFlowTable.Instance.GetObjectClickEvent("use_item_" + objectTextId);
+					var imageSprite = ResourceManager.Instance.Load<Sprite>(usedItem.ObjectImageAsset);
+					
+					popupImage.sprite = imageSprite;
+					popupText.text = usedItem.Text;
+					
+					popupPanel.SetActive(true);
+					popupTextPanel.SetActive(false);
+
+					isUsedItem = true;
+					clickableRoomObject.ChangeObjectTextId("used_item_" + objectTextId);
+					clickEventCallback = () =>
+					{
+						GameManager.Instance.ToNextStep();
+						clickEventCallback = null;
+					};
+					
+					return;
+				}
+			}
+			
+			if(isUsedItem == false) 
+			{
+				popupPanel.SetActive(false);
+				scriptPanel.SetActive(true);
+				characterImage.gameObject.SetActive(false);
+				nameText.text = "선";
+
+				scriptText.text = "여기에 사용하는게 아닌가봐.";
+				
+				SelectedInventoryCell = null;
+				SelectedInventoryCell.SetSelected(false);
+			}
+		}
+		
 		if (clickEvent.EventType == "Event")
 		{
 			if (clickEvent.ObjectTextId == "sun_room_door")
@@ -224,8 +279,6 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
 
-			gameObject.SetActive(false);
-
 			clickEventCallback = () =>
 			{
 				var getItemClickEvent = GameFlowTable.Instance.GetObjectClickEvent("get_item_" + objectTextId);
@@ -239,6 +292,7 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 
 					clickEventCallback = () =>
 					{
+						clickableRoomObject.ChangeObjectTextId("got_item_" + objectTextId);
 						ShowGetItemPopup(clickEvent.ItemTextId);
 						GameManager.Instance.AddItem(clickEvent.ItemTextId);
 						RefreshInventoryList();
@@ -247,6 +301,7 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 				}
 				else
 				{
+					clickableRoomObject.ChangeObjectTextId("got_item_" + objectTextId);
 					ShowGetItemPopup(clickEvent.ItemTextId);
 					GameManager.Instance.AddItem(clickEvent.ItemTextId);
 					RefreshInventoryList();
@@ -256,39 +311,11 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		}
 		else if (clickEvent.EventType == "UseItem")
 		{
-			if (SelectedInventoryCell != null)
-			{
-				var index = SelectedInventoryCell.Index;
-				InventorySlot inventorySlot = GameManager.Instance.Inventory[index];
-				if (inventorySlot.ItemTextId == clickEvent.ItemTextId)
-				{
-					GameManager.Instance.UseItem(index);
-					RefreshInventoryList();
-
-					var usedItem = GameFlowTable.Instance.GetObjectClickEvent("use_item_" + objectTextId);
-					popupPanel.SetActive(true);
-					var imageSprite = ResourceManager.Instance.Load<Sprite>(usedItem.ObjectImageAsset);
-					popupImage.sprite = imageSprite;
-					popupText.text = usedItem.Text;
-					popupTextPanel.SetActive(false);
-
-					clickEventCallback = () =>
-					{
-						GameManager.Instance.ToNextStep();
-						clickEventCallback = null;
-					};
-
-					gameObject.SetActive(false);
-				}
-			}
-			else
-			{
-				popupPanel.SetActive(true);
-				popupTextPanel.SetActive(true);
-				var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
-				popupImage.sprite = imageSprite;
-				popupText.text = clickEvent.Text;
-			}
+			popupPanel.SetActive(true);
+			popupTextPanel.SetActive(true);
+			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
+			popupImage.sprite = imageSprite;
+			popupText.text = clickEvent.Text;
 		}
 		else if (clickEvent.EventType == "talking_to_myself")
 		{

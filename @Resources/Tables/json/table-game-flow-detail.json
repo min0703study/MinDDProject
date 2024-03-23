@@ -1,7 +1,7 @@
 ﻿[
     {
         "SectionIndex": "1",
-        "Step": "1",
+        "StepId": "1",
         "Type": "show_background",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -13,7 +13,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "2",
+        "StepId": "2",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -25,7 +25,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "3",
+        "StepId": "3",
         "Type": "show_background",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -37,7 +37,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "4",
+        "StepId": "4",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -49,7 +49,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "5",
+        "StepId": "5",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -61,7 +61,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "6",
+        "StepId": "6",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -73,7 +73,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "7",
+        "StepId": "7",
         "Type": "show_background",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -85,7 +85,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "8",
+        "StepId": "8",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -97,7 +97,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "9",
+        "StepId": "9",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -109,7 +109,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "10",
+        "StepId": "10",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -121,7 +121,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "11",
+        "StepId": "11",
         "Type": "popup",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -133,7 +133,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "12",
+        "StepId": "12",
         "Type": "popup",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -145,7 +145,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "13",
+        "StepId": "13",
         "Type": "show_background",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -157,7 +157,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "14",
+        "StepId": "14",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -169,7 +169,7 @@
     },
     {
         "SectionIndex": "1",
-        "Step": "15",
+        "StepId": "15",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -181,7 +181,7 @@
     },
     {
         "SectionIndex": "2",
-        "Step": "1",
+        "StepId": "1",
         "Type": "mission",
         "MissionText": "휴대폰을 찾자",
         "MissionStartRoom": "",
@@ -193,7 +193,7 @@
     },
     {
         "SectionIndex": "2",
-        "Step": "2",
+        "StepId": "2",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -205,7 +205,7 @@
     },
     {
         "SectionIndex": "2",
-        "Step": "3",
+        "StepId": "3",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -217,7 +217,7 @@
     },
     {
         "SectionIndex": "2",
-        "Step": "4",
+        "StepId": "4",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -229,7 +229,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "1",
+        "StepId": "1",
         "Type": "popup",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -241,7 +241,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "2",
+        "StepId": "2",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -253,7 +253,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "3",
+        "StepId": "3",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -265,7 +265,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "4",
+        "StepId": "4",
         "Type": "show_background",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -277,7 +277,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "5",
+        "StepId": "5",
         "Type": "listen",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -289,7 +289,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "6",
+        "StepId": "6",
         "Type": "talk",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -301,7 +301,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "7",
+        "StepId": "7",
         "Type": "talk",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -313,7 +313,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "8",
+        "StepId": "8",
         "Type": "listen",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -325,7 +325,7 @@
     },
     {
         "SectionIndex": "3",
-        "Step": "9",
+        "StepId": "9",
         "Type": "talk",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -337,7 +337,7 @@
     },
     {
         "SectionIndex": "4",
-        "Step": "1",
+        "StepId": "1",
         "Type": "mission",
         "MissionText": "문을 열고 밖으로 나가자",
         "MissionStartRoom": "Sun_A",
@@ -349,7 +349,7 @@
     },
     {
         "SectionIndex": "4",
-        "Step": "2",
+        "StepId": "2",
         "Type": "popup",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -361,7 +361,7 @@
     },
     {
         "SectionIndex": "4",
-        "Step": "3",
+        "StepId": "3",
         "Type": "mission",
         "MissionText": "사료를 찾아서 써니에게 밥을 주자!",
         "MissionStartRoom": "Living_A",
@@ -372,8 +372,8 @@
         "SoundEffectAsset": ""
     },
     {
-        "SectionIndex": "4",
-        "Step": "4",
+        "SectionIndex": "5",
+        "StepId": "1",
         "Type": "show_background",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -385,7 +385,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "1",
+        "StepId": "2",
         "Type": "listen",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -397,7 +397,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "2",
+        "StepId": "3",
         "Type": "talk",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -409,7 +409,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "3",
+        "StepId": "4",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -421,7 +421,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "4",
+        "StepId": "5",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -433,7 +433,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "5",
+        "StepId": "6",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -445,7 +445,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "6",
+        "StepId": "7",
         "Type": "popup",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -457,7 +457,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "7",
+        "StepId": "8",
         "Type": "popup",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -469,7 +469,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "8",
+        "StepId": "9",
         "Type": "show_background",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -481,7 +481,7 @@
     },
     {
         "SectionIndex": "5",
-        "Step": "9",
+        "StepId": "10",
         "Type": "talking_to_myself",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -493,7 +493,7 @@
     },
     {
         "SectionIndex": "6",
-        "Step": "1",
+        "StepId": "1",
         "Type": "mission",
         "MissionText": "냉장고를 살펴보자",
         "MissionStartRoom": "Kitchen",

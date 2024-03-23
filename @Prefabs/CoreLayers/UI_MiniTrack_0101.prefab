@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 5265392374410535353}
   - component: {fileID: 8678996953553379823}
   - component: {fileID: 3279896691847717641}
+  - component: {fileID: 7527881745327325518}
   m_Layer: 5
   m_Name: SunCellphone
   m_TagString: Untagged
@@ -317,19 +318,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8678996953553379823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1558364262505594364}
-        m_TargetAssemblyTypeName: UI_MiniTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickRoomObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: sun_cellphone
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &7527881745327325518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255538539465877732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: sun_cellphone
 --- !u!1 &332026791765301534
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +822,7 @@ GameObject:
   - component: {fileID: 4232977163059683830}
   - component: {fileID: 8299253037842150013}
   - component: {fileID: 7722420345081089057}
+  - component: {fileID: 6363568929423982363}
   m_Layer: 5
   m_Name: SunDesk
   m_TagString: Untagged
@@ -928,19 +931,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8299253037842150013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1558364262505594364}
-        m_TargetAssemblyTypeName: UI_MiniTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickRoomObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: sun_desk
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &6363568929423982363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649564907220895201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: sun_desk
 --- !u!1 &1694069641381472651
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,6 +957,7 @@ GameObject:
   - component: {fileID: 4553118125440849424}
   - component: {fileID: 8539159101679664699}
   - component: {fileID: 2927689839329875639}
+  - component: {fileID: 4363336379004699616}
   m_Layer: 5
   m_Name: SunDeskDrawer
   m_TagString: Untagged
@@ -1061,19 +1066,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8539159101679664699}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1558364262505594364}
-        m_TargetAssemblyTypeName: UI_MiniTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickRoomObject
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: sun_desk_drawer
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &4363336379004699616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694069641381472651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTextId: sun_desk_drawer
 --- !u!1 &2134823188150118297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3468,7 +3474,7 @@ RectTransform:
   m_GameObject: {fileID: 8347257229778909481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2000024, y: 2.2000024, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 49967522531325248}
@@ -3476,8 +3482,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00024414062}
-  m_SizeDelta: {x: 486, y: 864}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1036988516475285083
 CanvasRenderer:
