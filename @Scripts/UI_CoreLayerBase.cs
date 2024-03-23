@@ -10,25 +10,21 @@ public class UI_CoreLayerBase : MonoBehaviour
 {
 	protected bool isInitOver = false;
 	public Action OnClosedPopup { get; set; }
+	
+	[SerializeField] private UI_CommonPanel common;
 
-	[Header("Core Layer")]
-	[Header("Dialogue GameObjects")]
-	[SerializeField] protected GameObject scriptPanel;
-	[SerializeField] protected TextMeshProUGUI nameText;
-	[SerializeField] protected TextMeshProUGUI scriptText;
-	[SerializeField] protected Button scriptNextButton;
-
-	[Header("Popup GameObjects")]
-	[SerializeField] protected GameObject popupPanel;
-	[SerializeField] protected GameObject popupTextPanel;
-	[SerializeField] protected Image popupImage;
-	[SerializeField] protected TextMeshProUGUI popupText;
-	[SerializeField] protected Button popupNextButton;
-
-	[Header("Character GameObjects")]
-	[SerializeField] protected GameObject characterPanel;
-	[SerializeField] protected Image characterImage;
-	[SerializeField] protected Image characterMaskImage;
+	protected GameObject scriptPanel => common.scriptPanel;
+	protected TextMeshProUGUI nameText => common.nameText;
+	protected TextMeshProUGUI scriptText => common.scriptText;
+	protected Button scriptNextButton => common.scriptNextButton;
+	protected GameObject popupPanel => common.popupPanel;
+	protected GameObject popupTextPanel => common.popupTextPanel;
+	protected Image popupImage => common.popupImage;
+	protected TextMeshProUGUI popupText => common.popupText;
+	protected Button popupNextButton => common.popupNextButton;
+	protected GameObject characterPanel => common.characterPanel;
+	protected Image characterImage => common.characterImage;
+	protected Image characterMaskImage => common.characterMaskImage;
 
 	Action popupOnClosed;
 

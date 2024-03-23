@@ -8,8 +8,6 @@ using TMPro;
 
 public class UI_MiniTrack_0102 : UI_MainTrackBase
 {
-	[Header("Modules")]
-
 	[Header("GameUI")]
 	[SerializeField] TextMeshProUGUI missionText;
 
