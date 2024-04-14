@@ -19,6 +19,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 		scriptNextButton.onClick.AddListener(OnClickNextButton);
 		popupNextButton.onClick.AddListener(OnClickNextButton);
 		roomNextButton.onClick.AddListener(OnClickNextButton);
+		visualSoundEffectNextButton.onClick.AddListener(OnClickNextButton);
 
 		Bind();
 	}
@@ -39,30 +40,77 @@ public class UI_DialogueScript : UI_CoreLayerBase
 
 		if (dialogues != null && dialogues.Count > 0)
 		{
+			choicePanel.SetActive(false);
+			popupPanel.SetActive(false);
+			scriptPanel.SetActive(false);
+			thinkingPanel.SetActive(false);
+			characterImage.gameObject.SetActive(false);
+			characterMaskImage.enabled = false;
+			visualSoundEffectPanel.SetActive(false);
+				
 			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 
-			// 방 배경 설정
 			var roomSprite = ResourceManager.Instance.Load<Sprite>(dialog.RoomImageAsset);
 			roomIamge.sprite = roomSprite;
 
 			if (dialog.Type == "show_background")
 			{
-				popupPanel.SetActive(false);
-				scriptPanel.SetActive(false);
-				characterImage.gameObject.SetActive(false);
+			}
+			else if (dialog.Type == "show_character")
+			{
+				characterPanel.SetActive(true);
+				characterImage.gameObject.SetActive(true);
+
+				nameText.text = dialog.CharacterKey;
+				
+				var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
+				characterImage.sprite = characterSprite;
+			}
+			else if (dialog.Type == "visual_sound_effect")
+			{
+				visualSoundEffectPanel.SetActive(true);
+
+				nameText.text = dialog.CharacterKey;
+				visualSoundEffectImage.sprite =  ResourceManager.Instance.Load<Sprite>(dialog.VisualSoundEffectAsset);
+				
+				if(dialog.CharacterKey != null && dialog.CharacterKey != string.Empty) 
+				{
+					characterPanel.SetActive(true);
+					characterImage.gameObject.SetActive(true);
+
+					nameText.text = "선";
+					
+					var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
+					characterImage.sprite = characterSprite;
+				}
 			}
 			else if (dialog.Type == "talking_to_myself")
 			{
-				popupPanel.SetActive(false);
 				scriptPanel.SetActive(true);
-				characterImage.gameObject.SetActive(false);
 				nameText.text = dialog.CharacterKey;
+
+				StartTypingAnimation(dialog.Text);
+			}
+			else if (dialog.Type == "thinking")
+			{
+				scriptPanel.SetActive(true);
+				thinkingPanel.SetActive(true);
+				
+				if(dialog.CharacterKey != null && dialog.CharacterKey != string.Empty) 
+				{
+					characterPanel.SetActive(true);
+					characterImage.gameObject.SetActive(true);
+
+					nameText.text = "선";
+					
+					var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
+					characterImage.sprite = characterSprite;
+				}
 
 				StartTypingAnimation(dialog.Text);
 			}
 			else if (dialog.Type == "talk")
 			{
-				popupPanel.SetActive(false);
 				scriptPanel.SetActive(true);
 				characterPanel.SetActive(true);
 
@@ -77,13 +125,12 @@ public class UI_DialogueScript : UI_CoreLayerBase
 			}
 			else if (dialog.Type == "listen")
 			{
-				popupPanel.SetActive(false);
 				scriptPanel.SetActive(true);
 				characterPanel.SetActive(true);
-
+				characterImage.gameObject.SetActive(true);
+				
 				nameText.text = dialog.CharacterKey;
 
-				characterImage.gameObject.SetActive(true);
 				characterMaskImage.enabled = false;
 				var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
 				characterImage.sprite = characterSprite;
@@ -93,10 +140,39 @@ public class UI_DialogueScript : UI_CoreLayerBase
 			else if (dialog.Type == "popup")
 			{
 				popupPanel.SetActive(true);
-				scriptPanel.SetActive(false);
-				popupTextPanel.SetActive(false);
 				var popupSprite = ResourceManager.Instance.Load<Sprite>(dialog.PopupImageAsset);
 				popupImage.sprite = popupSprite;
+			}
+			else if (dialog.Type == "choice")
+			{
+				choicePanel.SetActive(true);
+				
+				Util.DestroyChilds(choiceListPanel);
+				string[] choiceItems = dialog.Text.Split(",");
+				
+				int index = 1;
+				foreach(string text in choiceItems) 
+				{
+					var itemHolderGO = Instantiate(choiceItemHolderPrefab);
+					itemHolderGO.transform.SetParent(choiceListPanel.transform, false);
+					var itemHolder = Util.GetOrAddComponent<ChoiceItemHolder>(itemHolderGO);
+					itemHolder.Init(text, index, (int index) => 
+					{
+						GameManager.Instance.ChoiceIndex(index);
+						GameManager.Instance.ToNextStep();
+					});
+					
+					index++;
+				}
+				
+				if(dialog.CharacterKey != null && dialog.CharacterKey != string.Empty) 
+				{
+					characterPanel.SetActive(true);
+					characterImage.gameObject.SetActive(true);
+
+					var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
+					characterImage.sprite = characterSprite;
+				}
 			}
 		}
 	}

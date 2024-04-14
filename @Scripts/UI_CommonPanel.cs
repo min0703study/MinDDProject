@@ -12,6 +12,10 @@ public class UI_CommonPanel : MonoBehaviour
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI scriptText;
 	public Button scriptNextButton;
+	public GameObject thinkingPanel;
+	public GameObject visualSoundEffectPanel;
+	public Image visualSoundEffectImage;
+	public Button visualSoundEffectNextButton;
 
 	[Header("Popup GameObjects")]
 	public GameObject popupPanel;
@@ -24,5 +28,9 @@ public class UI_CommonPanel : MonoBehaviour
 	public GameObject characterPanel;
 	public Image characterImage;
 	public Image characterMaskImage;
-
+	
+	[Header("Choice GameObjects")]
+	public GameObject choicePanel;
+	public GameObject choiceListPanel;
+	public GameObject choiceItemHolderPrefab;
 }

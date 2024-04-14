@@ -16,6 +16,8 @@ public class GameManager : BaseManager<GameManager>
 	public Section CurrentSection;
 	public int CurrentGameFlowIndex;
 	public int CurrentDetailFlowIndex;
+	public int CurrentChoiceIndex;
+	public int CurrentDetailChoiceIndex;
 	public string CurrentDetailFlowId;
 
 	public UI_CoreLayerBase currentCoreLayer;
@@ -39,26 +41,55 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentGameFlowIndex = 3;
+		CurrentGameFlowIndex = 1;
 		
 		CurrentDetailFlowIndex = 1;
 		CurrentDetailFlowId = "1";
+		CurrentChoiceIndex = -1;
 		
 		CurrentSection = GameFlowTable.Instance.GetSectionById(CurrentGameFlowIndex);
 
 		StartSection();
 	}
 
+	public void ChoiceIndex(int index) 
+	{
+		CurrentChoiceIndex = index;
+		CurrentDetailChoiceIndex = 0;
+	}
+	
 	public void ToNextStep()
 	{
-		CurrentDetailFlowIndex += 1;
-		CurrentDetailFlowId = $"{CurrentDetailFlowIndex}";
-		
-		if (!CurrentSection.Dialogues.ContainsKey(CurrentDetailFlowId))
+		if(CurrentChoiceIndex != -1) 
 		{
-			CurrentDetailFlowIndex = 1;
-			CurrentDetailFlowId = $"1";
-			ToNextSection();
+			CurrentDetailChoiceIndex += 1;
+			CurrentDetailFlowId = $"{CurrentDetailFlowIndex}-{CurrentChoiceIndex}-{CurrentDetailChoiceIndex}";
+			Debug.Log(CurrentDetailFlowId);
+			
+			if (!CurrentSection.Dialogues.ContainsKey(CurrentDetailFlowId))
+			{
+				CurrentChoiceIndex = -1;
+				CurrentDetailFlowIndex += 1;
+				CurrentDetailFlowId = $"{CurrentDetailFlowIndex}";
+				
+				if (!CurrentSection.Dialogues.ContainsKey(CurrentDetailFlowId))
+				{
+					CurrentDetailFlowIndex = 1;
+					CurrentDetailFlowId = $"1";
+					ToNextSection();
+				}
+			}
+		} else 
+		{
+			CurrentDetailFlowIndex += 1;
+			CurrentDetailFlowId = $"{CurrentDetailFlowIndex}";
+			
+			if (!CurrentSection.Dialogues.ContainsKey(CurrentDetailFlowId))
+			{
+				CurrentDetailFlowIndex = 1;
+				CurrentDetailFlowId = $"1";
+				ToNextSection();
+			}
 		}
 
 		OnChangedStep?.Invoke();

@@ -1,15 +1,20 @@
 
 using System.Collections;
-
 using UnityEngine;
-using UnityEngine.UI;
-
 using TMPro;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using System;
 
 public class UI_MiniTrack_0102 : UI_MainTrackBase
 {
 	[Header("GameUI")]
 	[SerializeField] TextMeshProUGUI missionText;
+	[SerializeField] Button backButton;
+	
+	Dictionary<string, bool> objectClickMissionDict = new Dictionary<string, bool>();
+	
+	
 
 	protected override void Init()
 	{
@@ -17,6 +22,17 @@ public class UI_MiniTrack_0102 : UI_MainTrackBase
 
 		scriptNextButton.onClick.AddListener(OnClickScriptButton);
 		popupNextButton.onClick.AddListener(OnClickPopupNextButton);
+		backButton.onClick.AddListener(OnClickBackButton);
+		
+		objectClickMissionDict.Add("kitchen_refrigerator_top", false);
+		objectClickMissionDict.Add("kitchen_refrigerator_bottom", false);
+		
+		backButton.gameObject.SetActive(false);
+	}
+
+	private void OnClickBackButton()
+	{
+		GameManager.Instance.ToNextStep();
 	}
 
 	private void Start()
@@ -36,6 +52,8 @@ public class UI_MiniTrack_0102 : UI_MainTrackBase
 
 		if (dialogues != null && dialogues.Count > 0)
 		{
+			visualSoundEffectPanel.SetActive(false);
+			
 			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 
 			if (dialog.Type == "mission")
@@ -58,9 +76,35 @@ public class UI_MiniTrack_0102 : UI_MainTrackBase
 		}
 	}
 
+	private void CheckObjectClickMission(string objectTextId) 
+	{
+		if(objectClickMissionDict.ContainsKey(objectTextId)) 
+		{
+			if(objectClickMissionDict[objectTextId] == false) 
+			{
+				objectClickMissionDict[objectTextId] = true;
+				
+				bool isMissionClickCompleted = true;
+				foreach(var objectClickMission in objectClickMissionDict.Values) 
+				{
+					if(objectClickMission == false) 
+					{
+						isMissionClickCompleted = false;
+						break;
+					}
+				}
+				
+				if(isMissionClickCompleted) 
+				{
+					backButton.gameObject.SetActive(true);
+				}
+			}
+		}
+	}
+	
 	private void OnClickScriptButton()
 	{
-		GameManager.Instance.ToNextStep();
+		scriptPanel.SetActive(false);
 	}
 
 	private void OnClickPopupNextButton()
@@ -71,7 +115,8 @@ public class UI_MiniTrack_0102 : UI_MainTrackBase
 	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
 		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(clickableRoomObject.ObjectTextId);
-
+		CheckObjectClickMission(clickableRoomObject.ObjectTextId);
+		
 		if (clickEvent.EventType == "Event")
 		{
 		}
@@ -82,6 +127,16 @@ public class UI_MiniTrack_0102 : UI_MainTrackBase
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
 		}
+		else if (clickEvent.EventType == "talking_to_myself")
+		{
+			popupPanel.SetActive(false);
+			scriptPanel.SetActive(true);
+			characterImage.gameObject.SetActive(false);
+			nameText.text = "선";
+
+			scriptText.text = clickEvent.Text;
+		}
+		
 	}
 	
 	public override void Clear()

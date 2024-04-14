@@ -132,13 +132,199 @@ MonoBehaviour:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b5e8c3f1206d60148ba67405740b14f1
-    m_Address: Room_Detail_Kitchen_Refrigerator_Under.sprite
+    m_Address: Room_Detail_Kitchen_Refrigerator_Bottom.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d3a67626d0aa92f45aef9f7aa02f2905
     m_Address: Room_Detail_Kitchen_Buy_List.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee5dcc446e138400d85a59e93086f23c
+    m_Address: Popup_Sun_Worried.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1972143c79622a34ab10f47aea46e322
+    m_Address: Popup_Sun_Worried_In_Kitchen.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f69123f14463cd0468375fc05b81c4bb
+    m_Address: Room_Detail_Living_Cat_Booth_Key.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 685aee2330a60c140bb322d82cfd88ed
+    m_Address: Room_Entrance.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28d5467dfba7e074b84e5a04b83eddaf
+    m_Address: Room_Entrance_Door_Lock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3b3b8d5d458f724dbeefebc848ecf68
+    m_Address: Room_Entrance_Lock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3fa588d91128a1949bdab2613c07c63f
+    m_Address: Room_Detail_Entrance_Door_Leaflet.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f50923585dd500646960f58329222054
+    m_Address: Room_Detail_Entrance_Door_Photo.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff56da6c16a910b49bfe4306b1a6fa02
+    m_Address: Room_Detail_Entrance_Lock_A_Lock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27e58e59976c6974c9dfc6cec244b397
+    m_Address: Room_Detail_Entrance_Lock_A_Unlock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4993ce4710dec5b43a5fdd8887bd0447
+    m_Address: Room_Detail_Entrance_Lock_B_Lock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aba4bf12208f25a448c2737442a173b5
+    m_Address: Room_Detail_Entrance_Lock_B_Unlock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1ef588b71d9d854e8947a3885c3bea8
+    m_Address: Room_Detail_Entrance_Lock_C_Lock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dcce2eeac662f8419f60ecd22decf66
+    m_Address: Room_Detail_Entrance_Lock_C_Unlock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27a75a2efcdb91a44a84646db5b987f4
+    m_Address: Room_Detail_Entrance_Door_View.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bef028ebbb024f4c89304c661d17362
+    m_Address: UI_MiniTrack_0103
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b1d580635922564d8c4c20f445a28d0
+    m_Address: Ho_Happy.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 298be9fa9888f5e47b516417a135e08a
+    m_Address: Ho_Frown.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 692484c051cbe074480188034845e5ee
+    m_Address: Ho_Angry.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76138983c5c51d14f98d7697f51e9f29
+    m_Address: Ho_LightSmile.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8281c5ec9cceda8448d4ef5d03366554
+    m_Address: Ho_Normal.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d64c20993db9274d9ee259cbc0369cc
+    m_Address: Ho_Worry.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74e20da1bf3f96145b61017447664f6d
+    m_Address: Room_Kitchen_Back_View.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6040051306e6eb74ea3b64d9445d1798
+    m_Address: Visual_Sound_Effect_Sunny_Meow.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7ca2afda2387954c9ae3012ca1f7b03
+    m_Address: Full_Entrance_Fall_Down_02.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 378c128d1d939da47ae3d03e1745a4ca
+    m_Address: Full_Entrance_Fall_Down_01.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6b254146ea58fc43b601a612ece0ac6
+    m_Address: Full_Ho_Entrance_Frown_Motion.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe1bf6c1e5ad54b4fa8bb8d006029aa6
+    m_Address: Ho_Frown_Motion.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f12898beacb4b94fa061f2fdd71d921
+    m_Address: Full_Entrance_Fall_Down_03.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f8924a742a2c6444afc0972eeb164c5
+    m_Address: Sun_Fall_Down_At_Entrance.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9826ebf8b41ddb449ccbeeba43e909b
+    m_Address: Sun_Back_Entrance.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

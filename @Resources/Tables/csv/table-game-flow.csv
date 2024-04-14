@@ -5,3 +5,6 @@ ChapterIndex,SectionIndex,SectionType,SectionAsset,R_SectionDesc
 1,4,MainTrack,UI_MainTrack_0101,써니에게 사료를 주는 트랙
 1,5,Dialogue,UI_DialogueScript,호 방 확인
 1,6,MiniTrack,UI_MiniTrack_0102, 냉장고 확인
+1,7,Dialogue,UI_DialogueScript, 냉장고 확인
+1,8,MiniTrack,UI_MiniTrack_0103, 냉장고 확인
+1,9,Dialogue,UI_DialogueScript, 냉장고 확인

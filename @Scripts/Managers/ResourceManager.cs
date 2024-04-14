@@ -17,7 +17,7 @@ public class ResourceManager : BaseManager<ResourceManager>
 		base.init();
 	}
 
-	#region 리소스 로드
+#region 리소스 로드
 	public T Load<T>(string key) where T : Object
 	{
 		if (resources.TryGetValue(key, out Object resource))

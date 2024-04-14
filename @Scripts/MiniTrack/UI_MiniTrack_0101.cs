@@ -52,6 +52,8 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 
 		if (dialogues != null && dialogues.Count > 0)
 		{
+			visualSoundEffectPanel.SetActive(false);
+			
 			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 
 			if (dialog.Type == "mission")

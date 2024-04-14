@@ -31,6 +31,7 @@ namespace TableData
 		public string RoomImageAsset { get; set; }
 		public string PopupImageAsset { get; set; }
 		public string SoundEffectAsset { get; set; }
+		public string VisualSoundEffectAsset { get; set; }
 
 	}
 

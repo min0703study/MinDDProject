@@ -40,5 +40,26 @@
         "SectionType": "MiniTrack",
         "SectionAsset": "UI_MiniTrack_0102",
         "R_SectionDesc": " 냉장고 확인"
+    },
+    {
+        "ChapterIndex": "1",
+        "SectionIndex": "7",
+        "SectionType": "Dialogue",
+        "SectionAsset": "UI_DialogueScript",
+        "R_SectionDesc": " 냉장고 확인"
+    },
+    {
+        "ChapterIndex": "1",
+        "SectionIndex": "8",
+        "SectionType": "MiniTrack",
+        "SectionAsset": "UI_MiniTrack_0103",
+        "R_SectionDesc": " 냉장고 확인"
+    },
+    {
+        "ChapterIndex": "1",
+        "SectionIndex": "9",
+        "SectionType": "Dialogue",
+        "SectionAsset": "UI_DialogueScript",
+        "R_SectionDesc": " 냉장고 확인"
     }
 ]

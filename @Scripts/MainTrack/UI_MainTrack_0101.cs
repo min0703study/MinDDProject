@@ -39,7 +39,7 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	protected override void Init()
 	{
 		base.Init();
-		scriptNextButton.onClick.AddListener(OnClickNextButton);
+		scriptNextButton.onClick.AddListener(OnClickScriptButton);
 		popupNextButton.onClick.AddListener(OnClickPopupButton);
 		getItemNextButton.onClick.AddListener(OnClickGetItemNextButton);
 		popupPanel.SetActive(false);
@@ -56,11 +56,6 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	private void Bind()
 	{
 		GameManager.Instance.OnChangedStep += Refresh;
-	}
-
-	public void OnClickNextButton()
-	{
-		scriptPanel.SetActive(false);
 	}
 
 	private void RefreshInventoryList()
@@ -105,6 +100,8 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 
 		if (dialogues != null && dialogues.Count > 0)
 		{
+			visualSoundEffectPanel.SetActive(false);
+			
 			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 
 			if (dialog.Type == "mission")
@@ -199,10 +196,6 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 		}
 	}
 
-	public void Test(GameObject gameObject)
-	{
-
-	}
 	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
 		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(clickableRoomObject.ObjectTextId);
@@ -251,8 +244,8 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 
 				scriptText.text = "여기에 사용하는게 아닌가봐.";
 				
-				SelectedInventoryCell = null;
 				SelectedInventoryCell.SetSelected(false);
+				SelectedInventoryCell = null;
 			}
 		}
 		
@@ -326,6 +319,11 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 
 			scriptText.text = clickEvent.Text;
 		}
+	}
+
+	public void OnClickScriptButton()
+	{
+		scriptPanel.SetActive(false);
 	}
 
 	public void OnClickPopupButton()
