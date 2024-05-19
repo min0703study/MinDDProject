@@ -64,7 +64,6 @@ public class GameManager : BaseManager<GameManager>
 		{
 			CurrentDetailChoiceIndex += 1;
 			CurrentDetailFlowId = $"{CurrentDetailFlowIndex}-{CurrentChoiceIndex}-{CurrentDetailChoiceIndex}";
-			Debug.Log(CurrentDetailFlowId);
 			
 			if (!CurrentSection.Dialogues.ContainsKey(CurrentDetailFlowId))
 			{
