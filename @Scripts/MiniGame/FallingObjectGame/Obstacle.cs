@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Obstacle : MonoBehaviour
@@ -7,6 +8,8 @@ public class Obstacle : MonoBehaviour
 	private RectTransform rectTransform;
 	
 	public FallingObjectGame gameController;
+	
+	public bool isStopFalling = false;
 
 	void Start()
 	{
@@ -16,10 +19,13 @@ public class Obstacle : MonoBehaviour
 
 	void Update()
 	{
-		rectTransform.anchoredPosition += new Vector2(0, -fallingSpeed * Time.deltaTime);
-		if (rectTransform.anchoredPosition.y < groundY)
+		if(isStopFalling == false) 
 		{
-			gameController.DestroyObstacle(this);
+			rectTransform.anchoredPosition += new Vector2(0, -fallingSpeed * Time.deltaTime);
+			if (rectTransform.anchoredPosition.y < groundY)
+			{
+				gameController.DestroyObstacle(this);
+			}
 		}
 	}
 	
@@ -33,5 +39,14 @@ public class Obstacle : MonoBehaviour
 	public void HandleCollision()
 	{
 		gameController.DestroyObstacle(this);
+		if(isStopFalling == false) 
+		{
+			gameController.HandleObstacleCollision();	
+		}
+	}
+
+	internal void StopFalling()
+	{
+		isStopFalling = true;
 	}
 }

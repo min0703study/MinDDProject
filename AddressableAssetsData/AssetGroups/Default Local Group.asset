@@ -24,13 +24,13 @@ MonoBehaviour:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b51a3aabcf1573e4d91820bab22c7b93
-    m_Address: Full_01_01.sprite
+    m_Address: Full_Wake_Up_A.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a4f9f87dc548b3c4dbeb5a8bb7e33714
-    m_Address: Full_01_02.sprite
+    m_Address: Full_Wake_Up_B.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
@@ -325,6 +325,102 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b9826ebf8b41ddb449ccbeeba43e909b
     m_Address: Sun_Back_Entrance.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14d72c1650e632f4db8dcb25782a270a
+    m_Address: UI_0201_MiniGame
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb2d6f9d01de6c9448fb4b13d7201c48
+    m_Address: UI_ChapterTitle_02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1aa68c8fac426f34898d6d2488593f84
+    m_Address: Popup_Hana_Sitting_In_A_Chair.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b446b927513b62478c8aecb7d0ac808
+    m_Address: Popup_Open_Sun_Door_Powerful.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33aaacef721044b42bd07f89e17bcd7d
+    m_Address: Hana_Embarrassed.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa5f2cb9e2c6bca45916bed06ec4f115
+    m_Address: Hana_Frown.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41e6112227389524eafc3db3c311c2b5
+    m_Address: Hana_Normal.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 405d7d6db202ad641919538205b5740d
+    m_Address: Hana_Smile.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9eaf00db847477b4d90ba271e723aae0
+    m_Address: Full_Wake_Up_B_Knock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a39ae5df2c3cf047be396d4d9d54d37
+    m_Address: Full_Room_Sun_Knock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b66fa3e278311ca4b89bb5be107102ea
+    m_Address: Full_Room_Sun_A_Dark_Knock.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7af9a64660da80346b8b6329a789d5a5
+    m_Address: Room_Entrance_Lock_Taping.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e2601142150ff7489d97cf065fff153
+    m_Address: Item_Key_B.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6ec476d9e944004b8afb6f69c10dac4
+    m_Address: Sound_Keyboard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5126cc257491fb8458981b89769db56c
+    m_Address: Sound_KnockDoor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86d5244671e98204cb555e4e1b063ae1
+    m_Address: Sound_Cat
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

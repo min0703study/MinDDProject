@@ -4,62 +4,83 @@
         "SectionIndex": "1",
         "SectionType": "Dialogue",
         "SectionAsset": "UI_DialogueScript",
-        "R_SectionDesc": "선 깨어남"
+        "R_SectionDesc": ""
     },
     {
         "ChapterIndex": "1",
         "SectionIndex": "2",
         "SectionType": "MiniTrack",
         "SectionAsset": "UI_MiniTrack_0101",
-        "R_SectionDesc": "핸드폰 찾는 트랙"
+        "R_SectionDesc": ""
     },
     {
         "ChapterIndex": "1",
         "SectionIndex": "3",
         "SectionType": "Dialogue",
         "SectionAsset": "UI_DialogueScript",
-        "R_SectionDesc": "써니 등장"
+        "R_SectionDesc": ""
     },
     {
         "ChapterIndex": "1",
         "SectionIndex": "4",
         "SectionType": "MainTrack",
         "SectionAsset": "UI_MainTrack_0101",
-        "R_SectionDesc": "써니에게 사료를 주는 트랙"
+        "R_SectionDesc": ""
     },
     {
         "ChapterIndex": "1",
         "SectionIndex": "5",
         "SectionType": "Dialogue",
         "SectionAsset": "UI_DialogueScript",
-        "R_SectionDesc": "호 방 확인"
+        "R_SectionDesc": ""
     },
     {
         "ChapterIndex": "1",
         "SectionIndex": "6",
         "SectionType": "MiniTrack",
         "SectionAsset": "UI_MiniTrack_0102",
-        "R_SectionDesc": " 냉장고 확인"
+        "R_SectionDesc": ""
     },
     {
         "ChapterIndex": "1",
         "SectionIndex": "7",
         "SectionType": "Dialogue",
         "SectionAsset": "UI_DialogueScript",
-        "R_SectionDesc": " 냉장고 확인"
+        "R_SectionDesc": ""
     },
     {
         "ChapterIndex": "1",
         "SectionIndex": "8",
         "SectionType": "MiniTrack",
         "SectionAsset": "UI_MiniTrack_0103",
-        "R_SectionDesc": " 냉장고 확인"
+        "R_SectionDesc": ""
     },
     {
         "ChapterIndex": "1",
         "SectionIndex": "9",
         "SectionType": "Dialogue",
         "SectionAsset": "UI_DialogueScript",
-        "R_SectionDesc": " 냉장고 확인"
+        "R_SectionDesc": ""
+    },
+    {
+        "ChapterIndex": "2",
+        "SectionIndex": "10",
+        "SectionType": "ChapterTitle",
+        "SectionAsset": "UI_ChapterTitle_02",
+        "R_SectionDesc": ""
+    },
+    {
+        "ChapterIndex": "2",
+        "SectionIndex": "11",
+        "SectionType": "MiniGame",
+        "SectionAsset": "UI_0201_MiniGame",
+        "R_SectionDesc": ""
+    },
+    {
+        "ChapterIndex": "2",
+        "SectionIndex": "12",
+        "SectionType": "Dialogue",
+        "SectionAsset": "UI_DialogueScript",
+        "R_SectionDesc": ""
     }
 ]

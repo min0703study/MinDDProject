@@ -52,6 +52,12 @@ public class UI_DialogueScript : UI_CoreLayerBase
 
 			var roomSprite = ResourceManager.Instance.Load<Sprite>(dialog.RoomImageAsset);
 			roomIamge.sprite = roomSprite;
+			
+			if( dialog.SoundEffectAsset != null &&  dialog.SoundEffectAsset != string.Empty) 
+			{
+				SoundManager.Instance.Play(SoundManager.SoundType.Effect, dialog.SoundEffectAsset);
+			}
+
 
 			if (dialog.Type == "show_background")
 			{

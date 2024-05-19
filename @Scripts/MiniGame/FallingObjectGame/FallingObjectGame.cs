@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+using Random = UnityEngine.Random;
 
 public class FallingObjectGame : MonoBehaviour
 {
@@ -22,6 +25,8 @@ public class FallingObjectGame : MonoBehaviour
 	[SerializeField] private float playerMoveSpeed = 40f;
 	[SerializeField] private float fallingSpeed = 500f;
 	[SerializeField] private float groundY = 0;
+	
+	public Action OnEndedGame; 
 
 	private float obstacleSpawnTimer;
 	private float elapsedGameTimer;
@@ -48,12 +53,17 @@ public class FallingObjectGame : MonoBehaviour
 			obstacleSpawnTimer += Time.deltaTime;
 			if (obstacleSpawnTimer >= obstacleSpawnInterval)
 			{
-				SpawnObstacle();
+				int randomCount = Random.Range(1, 3);
+				for (int i = 0; i < randomCount; i++) 
+				{
+					SpawnObstacle(); 
+				}
+				
 				obstacleSpawnTimer = 0;
 			}
 			
 			elapsedGameTimer += Time.deltaTime;
-			 UpdateClearTimeSlider();
+			UpdateClearTimeSlider();
 			if (elapsedGameTimer >= clearGameTime)
 			{
 				WinGame();
@@ -71,10 +81,13 @@ public class FallingObjectGame : MonoBehaviour
 	{
 		float xPosition = Random.Range(-Screen.width / 2, Screen.width / 2);
 		Vector3 spawnPosition = new Vector3(xPosition, Screen.height / 2, 0);
+		
+
 		GameObject newObstacle = Instantiate(obstaclePrefab, transform);
 		
+		float randomSpeed = Random.Range(fallingSpeed - 100, fallingSpeed + 100);
 		newObstacle.GetComponent<RectTransform>().anchoredPosition = spawnPosition;
-		newObstacle.GetComponent<Obstacle>().Initialize(this, fallingSpeed, groundY);
+		newObstacle.GetComponent<Obstacle>().Initialize(this, randomSpeed, groundY);
 		obstacles.Add(newObstacle.GetComponent<Obstacle>());
 	}
 	
@@ -105,14 +118,12 @@ public class FallingObjectGame : MonoBehaviour
 		isGameWon = true;
 		foreach(var obstacle in obstacles) 
 		{
-			obstacle.gameObject.SetActive(false);
-			Destroy(obstacle.gameObject);
+			obstacle.StopFalling();
 		}
 		
-		obstacles.Clear();
 		clearTextPanel.SetActive(true);
 		
-		SpawnKey();
+		StartCoroutine(CoSpawnKeyDelay());
 	}
 	
 	void OnClickMoveButton(bool isLeft) 
@@ -133,6 +144,21 @@ public class FallingObjectGame : MonoBehaviour
 	
 	public void HandleKeyCollision() 
 	{
-		elapsedGameTimer -= 3f;
+		OnEndedGame?.Invoke();
+	}
+	
+	public IEnumerator CoSpawnKeyDelay() 
+	{
+		yield return new WaitForSeconds(2.0f);
+		
+		foreach(var obstacle in obstacles) 
+		{
+			obstacle.gameObject.SetActive(false);
+			Destroy(obstacle.gameObject);
+		}
+		
+		obstacles.Clear();
+		
+		SpawnKey();
 	}
 }

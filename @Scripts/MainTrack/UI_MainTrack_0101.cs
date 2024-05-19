@@ -18,12 +18,14 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	[Header("Module")]
 	[Header("GameUI")]
 	[SerializeField] TextMeshProUGUI missionText;
+	[SerializeField] GameObject inventoryListGO;
 
 	[Header("GetItem")]
 	[SerializeField] GameObject getItemPanel;
 	[SerializeField] Image getItemImage;
 	[SerializeField] TextMeshProUGUI getItemText;
 	[SerializeField] Button getItemNextButton;
+	
 
 	[Header("Room GameObjects")]
 	[SerializeField] GameObject livingRoomA;
@@ -31,7 +33,6 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	[SerializeField] GameObject kitchen;
 	[SerializeField] GameObject livingRoomB;
 	[SerializeField] GameObject livingRoomDrawer;
-	[SerializeField] GameObject inventoryListGO;
 	[SerializeField] Image livingRoomAImage;
 	[SerializeField] Action clickEventCallback;
 

@@ -32,16 +32,22 @@ public class PlayerController : MonoBehaviour
 	{
 		if (collision.CompareTag("Obstacle"))
 		{
-			gameController.HandleObstacleCollision();
 			collision.gameObject.GetComponent<Obstacle>().HandleCollision();
 		}
 		else if (collision.CompareTag("Key"))
 		{
-			gameController.HandleKeyCollision();
 			collision.gameObject.GetComponent<Key>().HandleCollision();
 			normalPanel.SetActive(false);
 			winPanel.SetActive(true);
 		}
+	}
+	
+	public void OnCompleteWinAnimation() 
+	{
+		normalPanel.SetActive(true);
+		winPanel.SetActive(false);
+		
+		gameController.HandleKeyCollision();
 	}
 
 }

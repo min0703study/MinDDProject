@@ -21,7 +21,7 @@
         "ObjectTextId": "living_room_drawer_first",
         "ObjectName": "첫번째 칸",
         "EventType": "Explain",
-        "Text": "그냥 평범한 옷이다",
+        "Text": "그냥 평범한 옷이다.",
         "ObjectImageAsset": "Room_Detail_Living_Drawer_First",
         "ItemTextId": "",
         "SectionId": "4"
@@ -138,7 +138,7 @@
         "ObjectTextId": "kitchen_under_drawer",
         "ObjectName": "싱크대 아래 서랍장",
         "EventType": "GetItem",
-        "Text": "써니의 사료 여기에 있었네.",
+        "Text": "써니의 사료. 여기에 있었네.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer_Cat_Food",
         "ItemTextId": "cat_food",
         "SectionId": "4"
@@ -192,7 +192,7 @@
         "ObjectTextId": "kitchen_family_photo",
         "ObjectName": "가족사진",
         "EventType": "Explain",
-        "Text": "형의 고등학교 졸업식 날<br>이것도 엄청 옛날이네.",
+        "Text": "형의 고등학교 졸업식 날 찍었던 가족사진.<br>이것도 엄청 옛날이네.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Family_Photo",
         "ItemTextId": "",
         "SectionId": ""
@@ -237,7 +237,7 @@
         "ObjectTextId": "entrance_lock_b",
         "ObjectName": "자물쇠 B",
         "EventType": "Explain",
-        "Text": "네 자리 숫자 자물쇠. 비밀번호가 뭘까",
+        "Text": "네 자리 숫자 자물쇠. 비밀번호가 뭘까?",
         "ObjectImageAsset": "Room_Detail_Entrance_Lock_B_Lock",
         "ItemTextId": "",
         "SectionId": ""
@@ -264,7 +264,7 @@
         "ObjectTextId": "entrance_leaflet",
         "ObjectName": "중국집 전단지",
         "EventType": "Explain",
-        "Text": "역시 여기 있었네.<br>하지만 지금은 밥 먹을 때가 아닌 것 같아.",
+        "Text": "중국집 전단지. 역시 여기 있었네.<br>하지만 지금은 밥 먹을 때가 아닌 것 같아.",
         "ObjectImageAsset": "Room_Detail_Entrance_Door_Leaflet",
         "ItemTextId": "",
         "SectionId": ""

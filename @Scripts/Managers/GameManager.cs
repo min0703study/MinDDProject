@@ -41,7 +41,7 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentGameFlowIndex = 1;
+		CurrentGameFlowIndex = 10;
 		
 		CurrentDetailFlowIndex = 1;
 		CurrentDetailFlowId = "1";
@@ -118,6 +118,14 @@ public class GameManager : BaseManager<GameManager>
 		else if (CurrentSection.SectionType == "MainTrack")
 		{
 			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_MainTrackBase>(CurrentSection.SectionAsset);
+		}
+		else if (CurrentSection.SectionType == "MiniGame")
+		{
+			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_CoreLayerBase>(CurrentSection.SectionAsset);
+		}
+		else if (CurrentSection.SectionType == "ChapterTitle")
+		{
+			currentCoreLayer = UIManager.Instance.ShowCoreLayerUI<UI_CoreLayerBase>(CurrentSection.SectionAsset);
 		}
 	}
 

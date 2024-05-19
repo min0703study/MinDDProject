@@ -49,9 +49,12 @@ public class UI_CoreLayerBase : MonoBehaviour
 
 		isInitOver = true;
 
-		scriptPanel.SetActive(false);
-		popupPanel.SetActive(false);
-		characterPanel.SetActive(false);
+		if(common != null) 
+		{
+			scriptPanel.SetActive(false);
+			popupPanel.SetActive(false);
+			characterPanel.SetActive(false);
+		}
 	}
 
 	private void Start()
