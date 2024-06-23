@@ -125,7 +125,7 @@ SectionIndex,StepId,Type,MissionText,MissionStartRoom,Text,CharacterKey,Characte
 12,7,talking_to_myself,,,형?,,,Full_Wake_Up_B_Knock,,,
 12,8,show_background,,,,,,Full_Room_Sun_A_Dark_Knock,,Sound_KnockDoor,
 12,9,talking_to_myself,,,"아오, 형!!!",,,Full_Room_Sun_A_Dark_Knock,,,
-12,10,popup,,,,,,Full_Room_Sun_A_Dark_Knock,Popup_Open_Sun_Door_Powerful,,
+12,10,popup,,,,,,Full_Room_Sun_A_Dark_Knock,Popup_Open_Sun_Door_Powerful,Sound_OpenDoor,
 12,11,show_character,,,,Hana,Hana_Normal,Room_Living_A,,,
 12,12,talk,,,어?,Hana,Hana_Normal,Room_Living_A,,,
 12,13,talk,,,하나?,Hana,Hana_Normal,Room_Living_A,,,

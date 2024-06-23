@@ -1774,7 +1774,7 @@
         "CharacterImageAsset": "",
         "RoomImageAsset": "Full_Room_Sun_A_Dark_Knock",
         "PopupImageAsset": "Popup_Open_Sun_Door_Powerful",
-        "SoundEffectAsset": "",
+        "SoundEffectAsset": "Sound_OpenDoor",
         "VisualSoundEffectAsset": ""
     },
     {

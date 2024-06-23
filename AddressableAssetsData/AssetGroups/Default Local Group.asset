@@ -425,6 +425,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c551a7f8e3692845a7168cfa3b329a1
+    m_Address: Sound_OpenDoor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ad591428b0c18c4da51fe3bf98dbc63
+    m_Address: Sound_MiniGame0201_BGM
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
   m_SchemaSet:

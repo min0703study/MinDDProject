@@ -55,7 +55,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 			
 			if( dialog.SoundEffectAsset != null &&  dialog.SoundEffectAsset != string.Empty) 
 			{
-				SoundManager.Instance.Play(SoundManager.SoundType.Effect, dialog.SoundEffectAsset);
+				SoundManager.Instance.Play(SoundManager.SoundType.Effect, dialog.SoundEffectAsset, 0.5f);
 			}
 
 

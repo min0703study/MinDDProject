@@ -55,7 +55,7 @@ public class SoundManager : BaseManager<SoundManager>
 		audioSource.Play();
 	}
 
-	public void Play(SoundType type, string key, float pitch = 1.0f)
+	public void Play(SoundType type, string key, float volume = 1.0f)
 	{
 		AudioSource audioSource = audioSources[(int)type];
 
@@ -63,7 +63,7 @@ public class SoundManager : BaseManager<SoundManager>
 		{
 			LoadAudioClip(key, (audioClip) =>
 			{
-				audioSource.pitch = pitch;
+				audioSource.volume = volume;
 				
 				if (audioSource.isPlaying)
 					audioSource.Stop();
@@ -88,13 +88,13 @@ public class SoundManager : BaseManager<SoundManager>
 		{
 			LoadAudioClip(key, (audioClip) =>
 			{
-				audioSource.pitch = pitch;
+				audioSource.volume = volume;
 				audioSource.PlayOneShot(audioClip);
 			});
 		}
 	}
 
-	public void Play(SoundType type, AudioClip audioClip, float pitch = 1.0f)
+	public void Play(SoundType type, AudioClip audioClip, float volume = 1.0f)
 	{
 		AudioSource audioSource = audioSources[(int)type];
 
@@ -116,7 +116,7 @@ public class SoundManager : BaseManager<SoundManager>
 		}
 		else
 		{
-			audioSource.pitch = pitch;
+			audioSource.volume = volume;
 			audioSource.PlayOneShot(audioClip);
 		}
 	}

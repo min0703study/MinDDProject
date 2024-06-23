@@ -15,6 +15,7 @@ public class UI_0201_MiniGame : UI_CoreLayerBase
 	// Start is called before the first frame update
 	void Start()
 	{
+		SoundManager.Instance.Play(SoundManager.SoundType.Bgm, "Sound_MiniGame0201_BGM", 0.5f);
 		inventoryListGO.SetActive(false);
 		fallingObjectGameController.OnEndedGame += EndedGame;
 	}
@@ -65,6 +66,7 @@ public class UI_0201_MiniGame : UI_CoreLayerBase
 		GameManager.Instance.AddItem("key_b");
 		inventoryListGO.SetActive(true);
 		RefreshInventoryList();
+		SoundManager.Instance.Stop(SoundManager.SoundType.Bgm);
 		yield return new WaitForSeconds(4.0f);
 		GameManager.Instance.ToNextSection();
 	}
