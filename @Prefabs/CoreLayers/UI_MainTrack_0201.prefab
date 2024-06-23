@@ -845,6 +845,8 @@ MonoBehaviour:
   - {fileID: 2403694852430166306}
   - {fileID: 8840371323756840093}
   livingRoomAImage: {fileID: 0}
+  lockA: {fileID: 0}
+  blockLock: {fileID: 0}
 --- !u!224 &8066564217115852668 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2816672376237748755, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}

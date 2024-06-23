@@ -205,6 +205,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3755004487491771396}
     m_Modifications:
+    - target: {fileID: 3786063445992218990, guid: 5d54d51cee3afb340ac8199a4e1cca83, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6211498176024320760, guid: 5d54d51cee3afb340ac8199a4e1cca83, type: 3}
       propertyPath: m_Name
       value: Kitchen
@@ -295,7 +299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
-    - {fileID: 7811606024488856983, guid: 5d54d51cee3afb340ac8199a4e1cca83, type: 3}
+    - {fileID: 3786063445992218990, guid: 5d54d51cee3afb340ac8199a4e1cca83, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d54d51cee3afb340ac8199a4e1cca83, type: 3}
@@ -621,18 +625,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commonPanel: {fileID: 895079596730343623}
   trackPanel: {fileID: 6780028402842243749}
-  startRoom: 0
-  startFocusZone: 0
   rooms:
   - {fileID: 3837705164810648815}
   - {fileID: 9212432298479427136}
   - {fileID: 3629556982714094089}
   - {fileID: 3173780575837950354}
-  livingRoomA: {fileID: 0}
-  sunRoomA: {fileID: 906516468441460560}
-  kitchen: {fileID: 0}
-  livingRoomB: {fileID: 0}
-  livingRoomDrawer: {fileID: 0}
   livingRoomAImage: {fileID: 0}
 --- !u!224 &8066564217115852668 stripped
 RectTransform:
@@ -749,17 +746,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5152145566718692146, guid: 64dd7475295d55e4bbac22a15e6003c2, type: 3}
   m_PrefabInstance: {fileID: 5722198215202703068}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &906516468441460560 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4899286483333458316, guid: 64dd7475295d55e4bbac22a15e6003c2, type: 3}
-  m_PrefabInstance: {fileID: 5722198215202703068}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3837705164810648815 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8803147996199942707, guid: 64dd7475295d55e4bbac22a15e6003c2, type: 3}
   m_PrefabInstance: {fileID: 5722198215202703068}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906516468441460560}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9508df8109ef2c45a6986b024fe453b, type: 3}

@@ -7,17 +7,20 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
-public class NumberLock : MonoBehaviour
+public class NumberLock : ClickableRoomObject
 {
-	bool isCollected = false;
+	public bool IsUnlocked { get; set; } = false;
 	int[] numbers = new int[4];  // 사용자가 조절하는 숫자 배열
 	[SerializeField] TextMeshProUGUI[] numberTexts = new TextMeshProUGUI[4];  // 숫자를 표시하는 UI 컴포넌트
 	[SerializeField] int[] correctAnswer = new int[4] {1, 2, 3, 4};  // 정답 설정
 
 	[SerializeField] GameObject unlockedGO;
 	[SerializeField] GameObject lockedGO;
-	private void Awake()
+	
+	public override void InitAwake()
 	{
+		base.InitAwake();
+		
 		for (int i = 0; i < numberTexts.Length; i++)
 		{
 			numberTexts[i].text = numbers[i].ToString();
@@ -47,10 +50,12 @@ public class NumberLock : MonoBehaviour
 	{
 		if (IsCorrectAnswer())
 		{
-			isCollected = true;
+			IsUnlocked = true;
 			
 			unlockedGO.SetActive(true);
 			lockedGO.SetActive(false);
+			
+			currentTrack.UpdateMissionState();
 		}
 	}
 

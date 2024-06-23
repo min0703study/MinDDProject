@@ -107,7 +107,7 @@ RectTransform:
   m_Children:
   - {fileID: 390597070704783323}
   - {fileID: 3733945859910546911}
-  m_Father: {fileID: 3730807853115356216}
+  m_Father: {fileID: 5624127377289410660}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -677,7 +677,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6547182100808842831, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2816672376237748755, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
       insertIndex: 0
       addedObject: {fileID: 8584958786304911998}
     m_AddedComponents:
@@ -685,22 +685,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2279266735486326225}
   m_SourcePrefab: {fileID: 100100000, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
---- !u!114 &2478976327267553100 stripped
+--- !u!114 &3284581260990392287 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5439549290757129531, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4940189127393979816, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
   m_PrefabInstance: {fileID: 7573434543461108343}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3946520573019070739}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6547d03fc2fc4442a0bd49cdf2ff4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &3730807853115356216 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6547182100808842831, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
-  m_PrefabInstance: {fileID: 7573434543461108343}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3946520573019070739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6908210779762109284, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
@@ -718,6 +713,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeac34c794392d49a29121540837b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  common: {fileID: 2478976327267553100}
+  commonPanel: {fileID: 3284581260990392287}
   roomIamge: {fileID: 5953710547506783387}
   roomNextButton: {fileID: 8625362321128225529}
+--- !u!224 &5624127377289410660 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2816672376237748755, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
+  m_PrefabInstance: {fileID: 7573434543461108343}
+  m_PrefabAsset: {fileID: 0}

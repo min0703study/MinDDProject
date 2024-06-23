@@ -20,9 +20,6 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 	[Header("Room")]
 	[SerializeField] Image roomImage;
 
-	[Header("GameUI")]
-	[SerializeField] TextMeshProUGUI missionText;
-
 	protected override void InitAwake()
 	{
 		base.InitAwake();

@@ -24,8 +24,11 @@ public class GameManager : BaseManager<GameManager>
 
 	public const int INVENTORY_SIZE = 9;
 	public InventorySlot[] Inventory { get; private set; } = new InventorySlot[INVENTORY_SIZE];
+	public int SelectedInventoryIndex { get; set; } = 0;
 	public Action OnChangedStep;
-
+	public Action OnUseInventoryItem;
+	public Action<string> OnAddInventoryItem;
+	
 	protected override void init()
 	{
 		base.init();
@@ -41,7 +44,7 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentGameFlowIndex = 13;
+		CurrentGameFlowIndex = 1;
 		
 		CurrentDetailFlowIndex = 1;
 		CurrentDetailFlowId = "1";
@@ -141,12 +144,26 @@ public class GameManager : BaseManager<GameManager>
 				break;
 			};
 		}
+		
+		OnAddInventoryItem?.Invoke(itemTextId);
 	}
 
 	public void UseItem(int index)
 	{
 		Inventory[index].IsBlank = true;
 		Inventory[index].ItemTextId = string.Empty;
+		
+		OnUseInventoryItem?.Invoke();
 	}
 
+	public string GetSelectedInventoryItemId()
+	{
+		if(SelectedInventoryIndex != -1) 
+		{
+			InventorySlot slot = Inventory[SelectedInventoryIndex];
+			return slot.ItemTextId;
+		}	
+		
+		return string.Empty;
+	}
 }

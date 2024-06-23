@@ -8,13 +8,9 @@ using System;
 
 public class UI_MiniTrack_0103 : UI_MainTrackBase
 {
-	[Header("GameUI")]
-	[SerializeField] TextMeshProUGUI missionText;
 	[SerializeField] Button backButton;
 	
 	Dictionary<string, bool> objectClickMissionDict = new Dictionary<string, bool>();
-	
-	
 
 	protected override void InitAwake()
 	{
