@@ -16,9 +16,9 @@ public class UI_MiniTrack_0103 : UI_MainTrackBase
 	
 	
 
-	protected override void Init()
+	protected override void InitAwake()
 	{
-		base.Init();
+		base.InitAwake();
 
 		scriptNextButton.onClick.AddListener(OnClickScriptButton);
 		popupNextButton.onClick.AddListener(OnClickPopupNextButton);

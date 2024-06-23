@@ -4,52 +4,27 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum Room
-{
-	SunRoomA,
-	LivingRoomA,
-	LivingRoomB,
-	LivingRoomDrawer,
-	Kitchen,
-}
-
 public class UI_MainTrack_0101 : UI_MainTrackBase
 {
-	[Header("Module")]
-	[Header("GameUI")]
-	[SerializeField] TextMeshProUGUI missionText;
-	[SerializeField] GameObject inventoryListGO;
-
-	[Header("GetItem")]
-	[SerializeField] GameObject getItemPanel;
-	[SerializeField] Image getItemImage;
-	[SerializeField] TextMeshProUGUI getItemText;
-	[SerializeField] Button getItemNextButton;
-	
-
 	[Header("Room GameObjects")]
-	[SerializeField] GameObject livingRoomA;
-	[SerializeField] GameObject sunRoomA;
-	[SerializeField] GameObject kitchen;
-	[SerializeField] GameObject livingRoomB;
-	[SerializeField] GameObject livingRoomDrawer;
 	[SerializeField] Image livingRoomAImage;
 	[SerializeField] Action clickEventCallback;
 
 	InventoryCell SelectedInventoryCell;
-	protected override void Init()
+	protected override void InitAwake()
 	{
-		base.Init();
+		base.InitAwake();
+		
 		scriptNextButton.onClick.AddListener(OnClickScriptButton);
 		popupNextButton.onClick.AddListener(OnClickPopupButton);
 		getItemNextButton.onClick.AddListener(OnClickGetItemNextButton);
 		popupPanel.SetActive(false);
-
-		Bind();
 	}
 
 	void Start()
 	{
+		Bind();
+				
 		Refresh();
 		RefreshInventoryList();
 	}
@@ -111,8 +86,9 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 				scriptPanel.SetActive(false);
 				characterPanel.SetActive(false);
 				missionText.text = dialog.MissionText;
-
-				Move(dialog.MissionStartRoom);
+				
+				RoomType startRoom = Enum.Parse<RoomType>(dialog.MissionStartRoom);
+				MoveTo(startRoom);
 			}
 			else if (dialog.Type == "talking_to_myself")
 			{
@@ -146,54 +122,6 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 				scriptPanel.SetActive(false);
 				characterImage.gameObject.SetActive(false);
 			}
-		}
-	}
-
-	public void Move(string to)
-	{
-		livingRoomA.SetActive(false);
-		livingRoomB.SetActive(false);
-		livingRoomDrawer.SetActive(false);
-		sunRoomA.SetActive(false);
-		kitchen.SetActive(false);
-
-		switch (to)
-		{
-			case "Living_A":
-				livingRoomA.SetActive(true);
-				break;
-			case "Living_B":
-				livingRoomB.SetActive(true);
-				break;
-			case "Living_Drawer":
-				livingRoomDrawer.SetActive(true);
-				break;
-			case "Sun_A":
-				sunRoomA.SetActive(true);
-				break;
-			case "Kitchen":
-				kitchen.SetActive(true);
-				break;
-		}
-	}
-
-	public void OnClickArrowButton(string arrowTextId)
-	{
-		if (arrowTextId == "to_living_room_a_arrow")
-		{
-			Move("Living_A");
-		}
-		else if (arrowTextId == "to_living_room_b_arrow")
-		{
-			Move("Living_B");
-		}
-		else if (arrowTextId == "to_living_room_drawer")
-		{
-			Move("Living_Drawer");
-		}
-		else if (arrowTextId == "to_kitchen_arrow")
-		{
-			Move("Kitchen");
 		}
 	}
 

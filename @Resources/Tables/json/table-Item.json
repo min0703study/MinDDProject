@@ -75,5 +75,19 @@
         "ItemDesc": "",
         "ItemImageAsset": "Item_Long_Tool",
         "R_Desc": ""
+    },
+    {
+        "ItemTextId": "block_b",
+        "ItemName": "블록 B",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Key_Block_B",
+        "R_Desc": ""
+    },
+    {
+        "ItemTextId": "block_a",
+        "ItemName": "블록 A",
+        "ItemDesc": "",
+        "ItemImageAsset": "Item_Key_Block_A",
+        "R_Desc": ""
     }
 ]

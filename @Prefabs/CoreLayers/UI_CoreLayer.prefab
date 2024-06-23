@@ -182,52 +182,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &1304301413391254902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6547182100808842831}
-  - component: {fileID: 8808422538342868453}
-  m_Layer: 5
-  m_Name: ContentPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6547182100808842831
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304301413391254902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5527082499336903984}
-  m_Father: {fileID: 2816672376237748755}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1080, y: 1920}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8808422538342868453
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304301413391254902}
-  m_CullTransparentMesh: 1
 --- !u!1 &1318035634085675876
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5527082499336903984}
   - component: {fileID: 3353230496734081550}
+  - component: {fileID: 4940189127393979816}
   m_Layer: 5
   m_Name: CommonPanel
   m_TagString: Untagged
@@ -521,13 +476,13 @@ RectTransform:
   - {fileID: 5450656785723822913}
   - {fileID: 8359993267147192933}
   - {fileID: 196924631644240214}
-  m_Father: {fileID: 6547182100808842831}
+  m_Father: {fileID: 2816672376237748755}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3353230496734081550
 CanvasRenderer:
@@ -537,6 +492,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584238402120026440}
   m_CullTransparentMesh: 1
+--- !u!114 &4940189127393979816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584238402120026440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6547d03fc2fc4442a0bd49cdf2ff4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptPanel: {fileID: 6285910942539596091}
+  nameText: {fileID: 1389532173251148290}
+  scriptText: {fileID: 6223517638782415802}
+  scriptNextButton: {fileID: 7046145790791790609}
+  thinkingPanel: {fileID: 6571744938665546328}
+  visualSoundEffectPanel: {fileID: 5225259771033118027}
+  visualSoundEffectImage: {fileID: 1313892236720659349}
+  visualSoundEffectNextButton: {fileID: 4956141739482569264}
+  popupPanel: {fileID: 4780774967747909539}
+  popupTextPanel: {fileID: 6925875441069694660}
+  popupImage: {fileID: 5013573640683160114}
+  popupText: {fileID: 4600716254713661824}
+  popupNextButton: {fileID: 8983724901131989534}
+  characterPanel: {fileID: 3616144310624715775}
+  characterImage: {fileID: 2486378924581092662}
+  characterMaskImage: {fileID: 445808474386884429}
+  choicePanel: {fileID: 339359438693580143}
+  choiceListPanel: {fileID: 6279137385534803792}
+  choiceItemHolderPrefab: {fileID: 7640695515978767049, guid: 6c95b8eeeddfc4c4da533f897f398523, type: 3}
 --- !u!1 &1921962613307167999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,7 +2269,6 @@ GameObject:
   - component: {fileID: 8795736184897227480}
   - component: {fileID: 5186729078899989147}
   - component: {fileID: 1851294169262327897}
-  - component: {fileID: 5439549290757129531}
   m_Layer: 5
   m_Name: UI_CoreLayer
   m_TagString: Untagged
@@ -2303,7 +2288,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6547182100808842831}
+  - {fileID: 5527082499336903984}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2374,37 +2359,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5439549290757129531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6908210779762109284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6547d03fc2fc4442a0bd49cdf2ff4c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptPanel: {fileID: 6285910942539596091}
-  nameText: {fileID: 1389532173251148290}
-  scriptText: {fileID: 6223517638782415802}
-  scriptNextButton: {fileID: 7046145790791790609}
-  thinkingPanel: {fileID: 6571744938665546328}
-  visualSoundEffectPanel: {fileID: 5225259771033118027}
-  visualSoundEffectImage: {fileID: 1313892236720659349}
-  visualSoundEffectNextButton: {fileID: 4956141739482569264}
-  popupPanel: {fileID: 4780774967747909539}
-  popupTextPanel: {fileID: 6925875441069694660}
-  popupImage: {fileID: 5013573640683160114}
-  popupText: {fileID: 4600716254713661824}
-  popupNextButton: {fileID: 8983724901131989534}
-  characterPanel: {fileID: 3616144310624715775}
-  characterImage: {fileID: 2486378924581092662}
-  characterMaskImage: {fileID: 445808474386884429}
-  choicePanel: {fileID: 339359438693580143}
-  choiceListPanel: {fileID: 6279137385534803792}
-  choiceItemHolderPrefab: {fileID: 7640695515978767049, guid: 6c95b8eeeddfc4c4da533f897f398523, type: 3}
 --- !u!1 &6925875441069694660
 GameObject:
   m_ObjectHideFlags: 0

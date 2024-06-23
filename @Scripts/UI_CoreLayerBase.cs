@@ -11,45 +11,47 @@ public class UI_CoreLayerBase : MonoBehaviour
 	protected bool isInitOver = false;
 	public Action OnClosedPopup { get; set; }
 	
-	[SerializeField] private UI_CommonPanel common;
+	[SerializeField] private UI_CommonPanel commonPanel;
 
-	protected GameObject scriptPanel => common.scriptPanel;
-	protected TextMeshProUGUI nameText => common.nameText;
-	protected TextMeshProUGUI scriptText => common.scriptText;
-	protected Button scriptNextButton => common.scriptNextButton;
-	protected GameObject popupPanel => common.popupPanel;
+	#region UI
+	protected GameObject scriptPanel => commonPanel.scriptPanel;
+	protected TextMeshProUGUI nameText => commonPanel.nameText;
+	protected TextMeshProUGUI scriptText => commonPanel.scriptText;
+	protected Button scriptNextButton => commonPanel.scriptNextButton;
+	protected GameObject popupPanel => commonPanel.popupPanel;
 
-	protected GameObject choicePanel => common.choicePanel;
-	protected GameObject choiceListPanel => common.choiceListPanel;
-	protected GameObject choiceItemHolderPrefab => common.choiceItemHolderPrefab;
-	protected GameObject popupTextPanel => common.popupTextPanel;
-	protected Image popupImage => common.popupImage;
-	protected TextMeshProUGUI popupText => common.popupText;
-	protected Button popupNextButton => common.popupNextButton;
-	protected GameObject characterPanel => common.characterPanel;
-	protected Image characterImage => common.characterImage;
-	protected Image characterMaskImage => common.characterMaskImage;
-	protected GameObject thinkingPanel => common.thinkingPanel;
-	protected GameObject visualSoundEffectPanel => common.visualSoundEffectPanel;
-	protected Image visualSoundEffectImage =>  common.visualSoundEffectImage;
-	protected Button visualSoundEffectNextButton => common.visualSoundEffectNextButton;
-
+	protected GameObject choicePanel => commonPanel.choicePanel;
+	protected GameObject choiceListPanel => commonPanel.choiceListPanel;
+	protected GameObject choiceItemHolderPrefab => commonPanel.choiceItemHolderPrefab;
+	protected GameObject popupTextPanel => commonPanel.popupTextPanel;
+	protected Image popupImage => commonPanel.popupImage;
+	protected TextMeshProUGUI popupText => commonPanel.popupText;
+	protected Button popupNextButton => commonPanel.popupNextButton;
+	protected GameObject characterPanel => commonPanel.characterPanel;
+	protected Image characterImage => commonPanel.characterImage;
+	protected Image characterMaskImage => commonPanel.characterMaskImage;
+	protected GameObject thinkingPanel => commonPanel.thinkingPanel;
+	protected GameObject visualSoundEffectPanel => commonPanel.visualSoundEffectPanel;
+	protected Image visualSoundEffectImage =>  commonPanel.visualSoundEffectImage;
+	protected Button visualSoundEffectNextButton => commonPanel.visualSoundEffectNextButton;
+	#endregion
+	
 	Action popupOnClosed;
 
 	private Tween typingTween;
 	private void Awake()
 	{
-		Init();
+		InitAwake();
 	}
 
-	protected virtual void Init()
+	protected virtual void InitAwake()
 	{
 		if (isInitOver)
 			return;
 
 		isInitOver = true;
 
-		if(common != null) 
+		if(commonPanel != null) 
 		{
 			scriptPanel.SetActive(false);
 			popupPanel.SetActive(false);

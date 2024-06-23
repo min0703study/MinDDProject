@@ -23,9 +23,9 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 	[Header("GameUI")]
 	[SerializeField] TextMeshProUGUI missionText;
 
-	protected override void Init()
+	protected override void InitAwake()
 	{
-		base.Init();
+		base.InitAwake();
 
 		scriptNextButton.onClick.AddListener(OnClickScriptButton);
 		popupNextButton.onClick.AddListener(OnClickPopupNextButton);

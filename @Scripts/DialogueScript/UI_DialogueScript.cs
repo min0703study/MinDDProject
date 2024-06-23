@@ -11,9 +11,9 @@ public class UI_DialogueScript : UI_CoreLayerBase
 	[SerializeField] Image roomIamge;
 	[SerializeField] Button roomNextButton;
 
-	protected override void Init()
+	protected override void InitAwake()
 	{
-		base.Init();
+		base.InitAwake();
 		scriptText.text = string.Empty;
 
 		scriptNextButton.onClick.AddListener(OnClickNextButton);

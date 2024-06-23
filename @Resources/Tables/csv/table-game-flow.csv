@@ -11,3 +11,4 @@ ChapterIndex,SectionIndex,SectionType,SectionAsset,R_SectionDesc
 2,10,ChapterTitle,UI_ChapterTitle_02,
 2,11,MiniGame,UI_0201_MiniGame,
 2,12,Dialogue,UI_DialogueScript,
+2,13,MainTrack,UI_MainTrack_0201,

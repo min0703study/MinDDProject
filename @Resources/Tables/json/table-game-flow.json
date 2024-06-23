@@ -82,5 +82,12 @@
         "SectionType": "Dialogue",
         "SectionAsset": "UI_DialogueScript",
         "R_SectionDesc": ""
+    },
+    {
+        "ChapterIndex": "2",
+        "SectionIndex": "13",
+        "SectionType": "MainTrack",
+        "SectionAsset": "UI_MainTrack_0201",
+        "R_SectionDesc": ""
     }
 ]

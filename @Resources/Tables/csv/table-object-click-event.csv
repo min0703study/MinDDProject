@@ -30,3 +30,7 @@ entrance_lock_c,자물쇠 C,Explain,네 자리 숫자 자물쇠. 비밀번호가 뭘까?,Room_Deta
 entrance_door_view,현관문 구멍,Explain,복도가 보인다.<br>딱히 특별한 건 없어 보인다.,Room_Detail_Entrance_Door_View,,
 entrance_leaflet,중국집 전단지,Explain,중국집 전단지. 역시 여기 있었네.<br>하지만 지금은 밥 먹을 때가 아닌 것 같아.,Room_Detail_Entrance_Door_Leaflet,,
 entrance_photo,사진,Explain,내 대학교 입학식 날 형이랑 찍은 사진.<br>내가 찍지 말라고 했는데…….,Room_Detail_Entrance_Door_Photo,,
+track_5_entrance_photo,중국집 전단지,FocusZone,EntranceDoor_Photo,,,
+track_5_entrance_lock_a,자물쇠 A,FocusZone,EntranceDoor_LockA,,,
+track_5_entrance_lock_b,자물쇠 B,FocusZone,EntranceDoor_LockB,,,
+track_5_entrance_lock_c,자물쇠 C,FocusZone,EntranceDoor_LockC,,,

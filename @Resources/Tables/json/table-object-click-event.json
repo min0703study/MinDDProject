@@ -277,5 +277,68 @@
         "ObjectImageAsset": "Room_Detail_Entrance_Door_Photo",
         "ItemTextId": "",
         "SectionId": ""
+    },
+    {
+        "ObjectTextId": "track_5_entrance_photo",
+        "ObjectName": "중국집 전단지",
+        "EventType": "FocusZone",
+        "Text": "EntranceDoor_Photo",
+        "ObjectImageAsset": "",
+        "ItemTextId": "",
+        "SectionId": ""
+    },
+    {
+        "ObjectTextId": "track_5_entrance_lock_a",
+        "ObjectName": "자물쇠 A",
+        "EventType": "FocusZone",
+        "Text": "EntranceDoor_LockA",
+        "ObjectImageAsset": "",
+        "ItemTextId": "",
+        "SectionId": ""
+    },
+    {
+        "ObjectTextId": "track_5_entrance_lock_b",
+        "ObjectName": "자물쇠 B",
+        "EventType": "FocusZone",
+        "Text": "EntranceDoor_LockB",
+        "ObjectImageAsset": "",
+        "ItemTextId": "",
+        "SectionId": ""
+    },
+    {
+        "ObjectTextId": "track_5_entrance_lock_c",
+        "ObjectName": "자물쇠 C",
+        "EventType": "FocusZone",
+        "Text": "EntranceDoor_LockC",
+        "ObjectImageAsset": "",
+        "ItemTextId": "",
+        "SectionId": ""
+    },
+    {
+        "ObjectTextId": "entrance_block_b",
+        "ObjectName": "싱크대 아래 서랍장",
+        "EventType": "GetItem",
+        "Text": "써니의 사료. 여기에 있었네.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer_Cat_Food",
+        "ItemTextId": "block_b",
+        "SectionId": "4"
+    },
+    {
+        "ObjectTextId": "block_lock_block_a",
+        "ObjectName": "써니 밥그릇",
+        "EventType": "UseItem",
+        "Text": "써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl",
+        "ItemTextId": "block_b",
+        "SectionId": "4"
+    },
+    {
+        "ObjectTextId": "block_lock_block_c",
+        "ObjectName": "써니 밥그릇",
+        "EventType": "UseItem",
+        "Text": "써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl",
+        "ItemTextId": "block_b",
+        "SectionId": "4"
     }
 ]
