@@ -4,6 +4,7 @@ public enum RoomType
 	LivingRoomA,
 	LivingRoomB,
 	Kitchen,
+	KitchenRefrigerator,
 	EntranceDoor,
 	EntranceHallway,
 	None,
@@ -19,7 +20,7 @@ public enum FocusZone
 	LivingRoomB_Full,
 	//
 	Kitchen_Full,
-	Kitchen_Refrigerator,
+	Kitchen_Refrigerator_Full,
 	
 	EntranceHallway_Full,
 	//
@@ -29,5 +30,14 @@ public enum FocusZone
 	EntranceDoor_LockC,
 	EntranceDoor_Photo,
 	
+	Kitchen_Refrigerator_Photo,
+	
 	None,
+}
+
+public enum ItemState
+{
+	LocatedInRoom,
+	StoredInInventory,
+	AlreadyUsed,
 }

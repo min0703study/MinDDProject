@@ -10,6 +10,7 @@ public class ClickableRoomObject : MonoBehaviour
 	[SerializeField] protected string objectTextId;
 	
 	public string ObjectTextId { get => objectTextId; private set { objectTextId = value; }} 
+	[SerializeField] public GameObject UsedItemPanel;
 	
 	public void Awake()
 	{
@@ -30,5 +31,13 @@ public class ClickableRoomObject : MonoBehaviour
 	public void ChangeObjectTextId(string id)
 	{
 		ObjectTextId = id;
+	}
+	
+	public void ChangeImageForUsedItem()
+	{
+		if(UsedItemPanel != null) 
+		{
+			UsedItemPanel.SetActive(true);
+		}
 	}
 }

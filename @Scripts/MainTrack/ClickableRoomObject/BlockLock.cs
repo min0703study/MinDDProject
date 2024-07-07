@@ -6,28 +6,28 @@ public class BlockLock : ClickableRoomObject
 {
 	public bool[] MathedBlocks { get; set; } = new bool[4];
 	
- 	[SerializeField] GameObject BlockAGO;
-	[SerializeField] GameObject BlockBGO;
+ 	[SerializeField] GameObject MatchBlockWGO;
+	[SerializeField] GameObject MatchBlockGGO;
 
 	public override void InitAwake()
 	{
 		base.InitAwake();
 		
-		BlockBGO.SetActive(false);
-		BlockAGO.SetActive(false);
+		MatchBlockGGO.SetActive(false);
+		MatchBlockWGO.SetActive(false);
 	}
 	
 	public override void OnClickRoomObjectButton()
 	{
-		if(GameManager.Instance.GetSelectedInventoryItemId() == "block_a") 
+		if(GameManager.Instance.GetSelectedInventoryItemId() == "block_w") 
 		{
-			BlockAGO.SetActive(true);
+			MatchBlockWGO.SetActive(true);
 			GameManager.Instance.UseItem(GameManager.Instance.SelectedInventoryIndex);
 			
 			currentTrack.UpdateMissionState();
-		} else if (GameManager.Instance.GetSelectedInventoryItemId() == "block_b") 
+		} else if (GameManager.Instance.GetSelectedInventoryItemId() == "block_g") 
 		{
-			BlockBGO.SetActive(true);
+			MatchBlockGGO.SetActive(true);
 			GameManager.Instance.UseItem(GameManager.Instance.SelectedInventoryIndex);
 			
 			currentTrack.UpdateMissionState();

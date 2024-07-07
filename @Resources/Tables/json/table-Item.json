@@ -77,15 +77,15 @@
         "R_Desc": ""
     },
     {
-        "ItemTextId": "block_b",
-        "ItemName": "블록 B",
+        "ItemTextId": "block_w",
+        "ItemName": "하얀색 블록",
         "ItemDesc": "",
         "ItemImageAsset": "Item_Key_Block_B",
         "R_Desc": ""
     },
     {
-        "ItemTextId": "block_a",
-        "ItemName": "블록 A",
+        "ItemTextId": "block_g",
+        "ItemName": "초록색 블록",
         "ItemDesc": "",
         "ItemImageAsset": "Item_Key_Block_A",
         "R_Desc": ""

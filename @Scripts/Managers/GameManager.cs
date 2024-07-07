@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TableData;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class InventorySlot
@@ -29,6 +30,8 @@ public class GameManager : BaseManager<GameManager>
 	public Action OnUseInventoryItem;
 	public Action<string> OnAddInventoryItem;
 	
+	public Dictionary<string, string> AllItems;
+	
 	protected override void init()
 	{
 		base.init();
@@ -44,7 +47,7 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentGameFlowIndex = 1;
+		CurrentGameFlowIndex = 13;
 		
 		CurrentDetailFlowIndex = 1;
 		CurrentDetailFlowId = "1";

@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4cb37aa70f71e46bacf3100715f23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveToRoom: 4
+  moveToRoom: 5
   moveToFocusZone: 7
 --- !u!1 &3426052543359900244
 GameObject:
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9508df8109ef2c45a6986b024fe453b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 5
+  room: 6
   focusZones:
   - FocusZone: 6
     FocusZoneGO: {fileID: 1118864695339595314}
@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 1734151636179485650}
   - component: {fileID: 840980114244356129}
   - component: {fileID: 862367012141500272}
+  - component: {fileID: 7164872858999644982}
   m_Layer: 5
   m_Name: ToKithchenArrow
   m_TagString: Untagged
@@ -491,19 +492,21 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 840980114244356129}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_MainTrack_0101, Assembly-CSharp
-        m_MethodName: OnClickArrowButton
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: to_kitchen_arrow
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &7164872858999644982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4946803929278720518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4cb37aa70f71e46bacf3100715f23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveToRoom: 3
+  moveToFocusZone: 4
 --- !u!1 &5010846941921323384
 GameObject:
   m_ObjectHideFlags: 0

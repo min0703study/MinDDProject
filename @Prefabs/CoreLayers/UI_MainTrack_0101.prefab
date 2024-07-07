@@ -88,6 +88,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8066564217115852668}
     m_Modifications:
+    - target: {fileID: 590799675691539089, guid: f0159270cf212624dbc9bbc472f55c2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1980837672166510387, guid: f0159270cf212624dbc9bbc472f55c2b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -205,6 +209,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3755004487491771396}
     m_Modifications:
+    - target: {fileID: 48335896730891042, guid: 5d54d51cee3afb340ac8199a4e1cca83, type: 3}
+      propertyPath: itemTextId
+      value: cat_food
+      objectReference: {fileID: 0}
     - target: {fileID: 3786063445992218990, guid: 5d54d51cee3afb340ac8199a4e1cca83, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -849,9 +857,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3562766011074207966, guid: bd1976a581e489a439f3b976bb4b9e82, type: 3}
+      propertyPath: itemTextId
+      value: key_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817510509471157898, guid: bd1976a581e489a439f3b976bb4b9e82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8509074731185059674, guid: bd1976a581e489a439f3b976bb4b9e82, type: 3}
       propertyPath: m_Name
       value: LivingRoomA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509074731185059674, guid: bd1976a581e489a439f3b976bb4b9e82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

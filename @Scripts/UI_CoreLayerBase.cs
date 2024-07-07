@@ -14,6 +14,10 @@ public class UI_CoreLayerBase : MonoBehaviour
 	[SerializeField] private UI_CommonPanel commonPanel;
 
 	#region UI
+	protected GameObject characterPanel => commonPanel.characterPanel;
+	protected Image characterImage => commonPanel.characterImage;
+	protected Image characterMaskImage => commonPanel.characterMaskImage;
+	
 	protected GameObject scriptPanel => commonPanel.scriptPanel;
 	protected TextMeshProUGUI nameText => commonPanel.nameText;
 	protected TextMeshProUGUI scriptText => commonPanel.scriptText;
@@ -27,9 +31,6 @@ public class UI_CoreLayerBase : MonoBehaviour
 	protected Image popupImage => commonPanel.popupImage;
 	protected TextMeshProUGUI popupText => commonPanel.popupText;
 	protected Button popupNextButton => commonPanel.popupNextButton;
-	protected GameObject characterPanel => commonPanel.characterPanel;
-	protected Image characterImage => commonPanel.characterImage;
-	protected Image characterMaskImage => commonPanel.characterMaskImage;
 	protected GameObject thinkingPanel => commonPanel.thinkingPanel;
 	protected GameObject visualSoundEffectPanel => commonPanel.visualSoundEffectPanel;
 	protected Image visualSoundEffectImage =>  commonPanel.visualSoundEffectImage;
@@ -53,9 +54,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 
 		if(commonPanel != null) 
 		{
-			scriptPanel.SetActive(false);
-			popupPanel.SetActive(false);
-			characterPanel.SetActive(false);
+			AllPanelDisable();
 		}
 	}
 
@@ -82,5 +81,72 @@ public class UI_CoreLayerBase : MonoBehaviour
 		script = script.Replace("<br>", "\n");
 		typingTween = DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f)
 			.OnComplete(() => scriptText.text = script);
+	}
+	
+	protected void ShowCharacter(string imageAsset) 
+	{
+		if(imageAsset != null && imageAsset != string.Empty) 
+		{
+			characterPanel.SetActive(true);
+			characterImage.gameObject.SetActive(true);
+			
+			var characterSprite = ResourceManager.Instance.Load<Sprite>(imageAsset);
+			characterImage.sprite = characterSprite;
+		}
+	}
+	
+	protected void ShowVisualSoundEffectPanel(string imageAsset) 
+	{
+		visualSoundEffectPanel.SetActive(true);
+		visualSoundEffectImage.sprite =  ResourceManager.Instance.Load<Sprite>(imageAsset);
+	}
+	
+	protected void ShowDialogueBox(string text, string name = null, bool useTypingAni = true) 
+	{
+		scriptPanel.SetActive(true);
+		if(name != null && name != string.Empty) 
+		{
+			nameText.text = name;
+		}
+		
+		if(useTypingAni) 
+		{
+			StartTypingAnimation(text);
+		} else 
+		{
+			scriptText.text = text;
+		}
+	}
+	
+	
+	public void ShowPopup(string imageAssetKey, string text = null) 
+	{
+		popupPanel.SetActive(true);
+		
+		if(text != null && text != string.Empty) 
+		{
+			popupTextPanel.SetActive(true);
+			popupText.text = text;
+		}
+		
+		var popupSprite = ResourceManager.Instance.Load<Sprite>(imageAssetKey);
+		popupImage.sprite = popupSprite;
+	}
+	
+	public void OnClickNextButton() 
+	{
+		
+	}
+	
+	protected void AllPanelDisable() 
+	{
+		choicePanel.SetActive(false);
+		popupPanel.SetActive(false);
+		popupTextPanel.SetActive(false);
+		scriptPanel.SetActive(false);
+		thinkingPanel.SetActive(false);
+		characterImage.gameObject.SetActive(false);
+		characterMaskImage.enabled = false;
+		visualSoundEffectPanel.SetActive(false);
 	}
 }

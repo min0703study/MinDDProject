@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class UI_MainTrack_0201 : UI_MainTrackBase
 {
-	[SerializeField] NumberLock lockA;
+	[SerializeField] KeyLock lockA;
 	[SerializeField] BlockLock lockB;
 	[SerializeField] NumberLock lockC;
 

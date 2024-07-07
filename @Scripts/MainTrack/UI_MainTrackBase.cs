@@ -22,7 +22,7 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	[SerializeField] List<RoomController> rooms = new ();
 	public Dictionary<RoomType, RoomController> RoomDict = new ();
 	
-	[SerializeField] protected Action clickEventCallback;
+	[SerializeField] public Action OnClickPopupNextButton;
 	
 	InventoryCell SelectedInventoryCell;
 		
@@ -94,14 +94,11 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 
 		if (dialogues != null && dialogues.Count > 0)
 		{
-			visualSoundEffectPanel.SetActive(false);
+			AllPanelDisable();
 			
 			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 			if (dialog.Type == "mission")
 			{
-				popupPanel.SetActive(false);
-				scriptPanel.SetActive(false);
-				characterPanel.SetActive(false);
 				missionText.text = dialog.MissionText;
 				
 				RoomType startRoom = Enum.Parse<RoomType>(dialog.MissionStartRoom);
@@ -109,16 +106,11 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 			}
 			else if (dialog.Type == "popup")
 			{
-				popupPanel.SetActive(true);
-				popupTextPanel.SetActive(false);
-				scriptPanel.SetActive(false);
-				var popupSprite = ResourceManager.Instance.Load<Sprite>(dialog.PopupImageAsset);
-				popupImage.sprite = popupSprite;
-
-				clickEventCallback = () =>
+				ShowPopup(dialog.PopupImageAsset, dialog.Text);
+				OnClickPopupNextButton = () =>
 				{
 					GameManager.Instance.ToNextStep();
-					clickEventCallback = null;
+					OnClickPopupNextButton = null;
 				};
 			}
 		}
@@ -174,7 +166,6 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 		
 		if(SelectedInventoryCell != null) 
 		{
-			bool isUsedItem = false;
 			if(clickEvent.EventType == "UseItem") 
 			{
 				var index = SelectedInventoryCell.Index;
@@ -183,39 +174,17 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 				if (inventorySlot.ItemTextId == clickEvent.ItemTextId)
 				{
 					GameManager.Instance.UseItem(index);
-
-					var usedItem = GameFlowTable.Instance.GetObjectClickEvent("use_item_" + objectTextId);
-					var imageSprite = ResourceManager.Instance.Load<Sprite>(usedItem.ObjectImageAsset);
-					
-					popupImage.sprite = imageSprite;
-					popupText.text = usedItem.Text;
-					
-					popupPanel.SetActive(true);
-					popupTextPanel.SetActive(false);
-
-					isUsedItem = true;
-					clickableRoomObject.ChangeObjectTextId("used_item_" + objectTextId);
-					clickEventCallback = () =>
+					clickableRoomObject.ChangeImageForUsedItem();
+					ShowPopup("Room_Detail_Living_Cat_Bowl_Full");
+					OnClickPopupNextButton = () =>
 					{
 						GameManager.Instance.ToNextStep();
-						clickEventCallback = null;
+						OnClickPopupNextButton = null;
 					};
-					
-					return;
+				} else 
+				{
+					ShowPopup(clickEvent.ObjectImageAsset, clickEvent.Text);
 				}
-			}
-			
-			if(isUsedItem == false) 
-			{
-				popupPanel.SetActive(false);
-				scriptPanel.SetActive(true);
-				characterImage.gameObject.SetActive(false);
-				nameText.text = "선";
-
-				scriptText.text = "여기에 사용하는게 아닌가봐.";
-				
-				SelectedInventoryCell.SetSelected(false);
-				SelectedInventoryCell = null;
 			}
 		}
 		
@@ -228,71 +197,18 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 		}
 		else if (clickEvent.EventType == "Explain")
 		{
-			popupPanel.SetActive(true);
-			popupTextPanel.SetActive(true);
-			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
-			popupImage.sprite = imageSprite;
-			popupText.text = clickEvent.Text;
-		}
-		else if (clickEvent.EventType == "GetItem")
-		{
-			popupPanel.SetActive(true);
-			popupTextPanel.SetActive(true);
-			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
-			popupImage.sprite = imageSprite;
-			popupText.text = clickEvent.Text;
-
-			clickEventCallback = () =>
-			{
-				var getItemClickEvent = GameFlowTable.Instance.GetObjectClickEvent("get_item_" + objectTextId);
-				if (getItemClickEvent != null)
-				{
-					popupPanel.SetActive(true);
-					popupTextPanel.SetActive(true);
-					var imageSprite = ResourceManager.Instance.Load<Sprite>(getItemClickEvent.ObjectImageAsset);
-					popupImage.sprite = imageSprite;
-					popupText.text = getItemClickEvent.Text;
-
-					clickEventCallback = () =>
-					{
-						clickableRoomObject.ChangeObjectTextId("got_item_" + objectTextId);
-						ShowGetItemPopup(clickEvent.ItemTextId);
-						GameManager.Instance.AddItem(clickEvent.ItemTextId);
-						RefreshInventoryList();
-						clickEventCallback = null;
-					};
-				}
-				else
-				{
-					clickableRoomObject.ChangeObjectTextId("got_item_" + objectTextId);
-					ShowGetItemPopup(clickEvent.ItemTextId);
-					GameManager.Instance.AddItem(clickEvent.ItemTextId);
-					RefreshInventoryList();
-					clickEventCallback = null;
-				}
-			};
-		}
-		else if (clickEvent.EventType == "UseItem")
-		{
-			popupPanel.SetActive(true);
-			popupTextPanel.SetActive(true);
-			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
-			popupImage.sprite = imageSprite;
-			popupText.text = clickEvent.Text;
+			ShowPopup(clickEvent.ObjectImageAsset, clickEvent.Text);
 		}
 		else if (clickEvent.EventType == "talking_to_myself")
 		{
+			
+			ShowDialogueBox(clickEvent.Text, "선", false);
 			popupPanel.SetActive(false);
 			scriptPanel.SetActive(true);
 			characterImage.gameObject.SetActive(false);
 			nameText.text = "선";
 
 			scriptText.text = clickEvent.Text;
-		}
-		else if (clickEvent.EventType == "FocusZone")
-		{
-			FocusZone focusZone = Enum.Parse<FocusZone>(clickEvent.Text);
-			MoveTo(CurrentRoom, focusZone);
 		}
 	}
 
@@ -332,6 +248,12 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 		CurrentFocusZone = moveToFocusZone;
 	}
 	
+	public void PerformClickInRoomItem(LocatedInRoomItem roomItem) 
+	{
+		GameManager.Instance.AddItem(roomItem.ItemTextId);
+	}
+	
+	
 	public virtual void OnClickMoveArrow(RoomType moveToRoom, FocusZone moveToFocusZone) 
 	{
 		MoveTo(moveToRoom, moveToFocusZone);
@@ -340,7 +262,7 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	public void OnClickPopupButton()
 	{
 		popupPanel.SetActive(false);
-		clickEventCallback?.Invoke();
+		OnClickPopupNextButton?.Invoke();
 	}
 	
 	public void OnClickScriptButton()
@@ -355,15 +277,5 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	
 	public virtual void UpdateMissionState() 
 	{
-	}
-	
-	public void ShowPopup(string imageAssetKey) 
-	{
-		popupPanel.SetActive(true);
-		popupTextPanel.SetActive(false);
-		scriptPanel.SetActive(false);
-		
-		var popupSprite = ResourceManager.Instance.Load<Sprite>(imageAssetKey);
-		popupImage.sprite = popupSprite;
 	}
 }

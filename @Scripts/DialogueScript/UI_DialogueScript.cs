@@ -39,118 +39,61 @@ public class UI_DialogueScript : UI_CoreLayerBase
 		var dialogues = GameManager.Instance.CurrentSection.Dialogues;
 
 		if (dialogues != null && dialogues.Count > 0)
-		{
-			choicePanel.SetActive(false);
-			popupPanel.SetActive(false);
-			scriptPanel.SetActive(false);
-			thinkingPanel.SetActive(false);
-			characterImage.gameObject.SetActive(false);
-			characterMaskImage.enabled = false;
-			visualSoundEffectPanel.SetActive(false);
-				
+		{		
 			var dialog = dialogues[GameManager.Instance.CurrentDetailFlowId];
 
-			var roomSprite = ResourceManager.Instance.Load<Sprite>(dialog.RoomImageAsset);
-			roomIamge.sprite = roomSprite;
-			
+
 			if( dialog.SoundEffectAsset != null &&  dialog.SoundEffectAsset != string.Empty) 
 			{
 				SoundManager.Instance.Play(SoundManager.SoundType.Effect, dialog.SoundEffectAsset, 0.5f);
 			}
-
-
+			
+			AllPanelDisable();
+			var roomSprite = ResourceManager.Instance.Load<Sprite>(dialog.RoomImageAsset);
+			roomIamge.sprite = roomSprite;
+			
 			if (dialog.Type == "show_background")
 			{
 			}
 			else if (dialog.Type == "show_character")
 			{
-				characterPanel.SetActive(true);
-				characterImage.gameObject.SetActive(true);
-
-				nameText.text = dialog.CharacterKey;
-				
-				var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
-				characterImage.sprite = characterSprite;
+				ShowCharacter(dialog.CharacterImageAsset);
 			}
 			else if (dialog.Type == "visual_sound_effect")
 			{
-				visualSoundEffectPanel.SetActive(true);
-
-				nameText.text = dialog.CharacterKey;
-				visualSoundEffectImage.sprite =  ResourceManager.Instance.Load<Sprite>(dialog.VisualSoundEffectAsset);
-				
-				if(dialog.CharacterKey != null && dialog.CharacterKey != string.Empty) 
-				{
-					characterPanel.SetActive(true);
-					characterImage.gameObject.SetActive(true);
-
-					nameText.text = "선";
-					
-					var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
-					characterImage.sprite = characterSprite;
-				}
+				ShowVisualSoundEffectPanel(dialog.VisualSoundEffectAsset);
+				ShowCharacter(dialog.CharacterImageAsset);
 			}
 			else if (dialog.Type == "talking_to_myself")
 			{
-				scriptPanel.SetActive(true);
-				nameText.text = dialog.CharacterKey;
-
-				StartTypingAnimation(dialog.Text);
+				ShowDialogueBox(dialog.Text, dialog.CharacterKey);
 			}
 			else if (dialog.Type == "thinking")
 			{
-				scriptPanel.SetActive(true);
+				//scriptPanel.SetActive(true);
 				thinkingPanel.SetActive(true);
-				
-				if(dialog.CharacterKey != null && dialog.CharacterKey != string.Empty) 
-				{
-					characterPanel.SetActive(true);
-					characterImage.gameObject.SetActive(true);
-
-					nameText.text = "선";
-					
-					var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
-					characterImage.sprite = characterSprite;
-				}
-
-				StartTypingAnimation(dialog.Text);
+				ShowDialogueBox(dialog.Text, dialog.CharacterKey);
+				ShowCharacter(dialog.CharacterImageAsset);
 			}
 			else if (dialog.Type == "talk")
 			{
-				scriptPanel.SetActive(true);
-				characterPanel.SetActive(true);
-
-				nameText.text = dialog.CharacterKey;
-
-				characterImage.gameObject.SetActive(true);
 				characterMaskImage.enabled = true;
-				var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
-				characterImage.sprite = characterSprite;
-
-				StartTypingAnimation(dialog.Text);
+				ShowDialogueBox(dialog.Text, dialog.CharacterKey);
+				ShowCharacter(dialog.CharacterImageAsset);
 			}
 			else if (dialog.Type == "listen")
 			{
-				scriptPanel.SetActive(true);
-				characterPanel.SetActive(true);
-				characterImage.gameObject.SetActive(true);
-				
-				nameText.text = dialog.CharacterKey;
-
 				characterMaskImage.enabled = false;
-				var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
-				characterImage.sprite = characterSprite;
-
-				StartTypingAnimation(dialog.Text);
+				ShowDialogueBox(dialog.Text, dialog.CharacterKey);
+				ShowCharacter(dialog.CharacterImageAsset);
 			}
 			else if (dialog.Type == "popup")
 			{
-				popupPanel.SetActive(true);
-				var popupSprite = ResourceManager.Instance.Load<Sprite>(dialog.PopupImageAsset);
-				popupImage.sprite = popupSprite;
+				ShowPopup(dialog.PopupImageAsset);
 			}
 			else if (dialog.Type == "choice")
 			{
+				ShowCharacter(dialog.CharacterImageAsset);
 				choicePanel.SetActive(true);
 				
 				Util.DestroyChilds(choiceListPanel);
@@ -169,15 +112,6 @@ public class UI_DialogueScript : UI_CoreLayerBase
 					});
 					
 					index++;
-				}
-				
-				if(dialog.CharacterKey != null && dialog.CharacterKey != string.Empty) 
-				{
-					characterPanel.SetActive(true);
-					characterImage.gameObject.SetActive(true);
-
-					var characterSprite = ResourceManager.Instance.Load<Sprite>(dialog.CharacterImageAsset);
-					characterImage.sprite = characterSprite;
 				}
 			}
 		}

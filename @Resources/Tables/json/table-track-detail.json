@@ -1,0 +1,17 @@
+﻿[
+    {
+        "TrackTextId": "MainTrack_0101",
+        "TrackType": "Main",
+        "UseRoom": "SunRoomA,\nLivingRoomA,\nLivingRoomB,\nKitchen"
+    },
+    {
+        "TrackTextId": "MiniTrack_0101",
+        "TrackType": "Mini",
+        "UseRoom": ""
+    },
+    {
+        "TrackTextId": "MiniTrack_0102",
+        "TrackType": "Mini",
+        "UseRoom": ""
+    }
+]

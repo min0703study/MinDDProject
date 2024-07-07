@@ -1,158 +1,6 @@
 ﻿[
     {
-        "ObjectTextId": "sun_room_door",
-        "ObjectName": "선이 방문",
-        "EventType": "Event",
-        "Text": "",
-        "ObjectImageAsset": "",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "living_room_desk",
-        "ObjectName": "책상 위 물병",
-        "EventType": "Explain",
-        "Text": "누가 물을 꺼내 놨지?<br>내가 마시고 올려놨나?",
-        "ObjectImageAsset": "Room_Detail_Living_Desk",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "living_room_drawer_first",
-        "ObjectName": "첫번째 칸",
-        "EventType": "Explain",
-        "Text": "그냥 평범한 옷이다.",
-        "ObjectImageAsset": "Room_Detail_Living_Drawer_First",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "living_room_drawer_second",
-        "ObjectName": "두번째 칸",
-        "EventType": "talking_to_myself",
-        "Text": "잠긴 건가?<br>그냥은 열리지 않을 것 같다.",
-        "ObjectImageAsset": "",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "living_room_drawer_third",
-        "ObjectName": "세번째 칸",
-        "EventType": "talking_to_myself",
-        "Text": "잠긴 건가?<br>그냥은 열리지 않을 것 같다.",
-        "ObjectImageAsset": "",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "living_room_cat_bowl",
-        "ObjectName": "써니 밥그릇",
-        "EventType": "UseItem",
-        "Text": "써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl",
-        "ItemTextId": "cat_food",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "use_item_living_room_cat_bowl",
-        "ObjectName": "써니 밥그릇",
-        "EventType": "UseItem",
-        "Text": "",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl_Full",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "used_item_living_room_cat_bowl",
-        "ObjectName": "써니 밥그릇",
-        "EventType": "Explain",
-        "Text": "",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl_Full",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "living_room_cat_booth",
-        "ObjectName": "숨숨집",
-        "EventType": "GetItem",
-        "Text": "써니의 숨숨집.<br>하지만 써니는 택배 상자를 더 좋아한다.",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Booth_Key",
-        "ItemTextId": "key_a",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "get_item_living_room_cat_booth",
-        "ObjectName": "숨숨집",
-        "EventType": "GetItem",
-        "Text": "엇, 그런데 저기 안에 반짝이는 건 뭐지?",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Booth_Key",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "got_item_living_room_cat_booth",
-        "ObjectName": "숨숨집",
-        "EventType": "Explain",
-        "Text": "써니의 숨숨집.<br>하지만 써니는 택배 상자를 더 좋아한다.",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Booth",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "living_room_ho_room_door",
-        "ObjectName": "호의 방문",
-        "EventType": "talking_to_myself",
-        "Text": "형의 방이다.<br>형은 방에 있나?",
-        "ObjectImageAsset": "",
-        "ItemTextId": "",
-        "SectionId": ""
-    },
-    {
-        "ObjectTextId": "living_room_tv",
-        "ObjectName": "\bTV",
-        "EventType": "Explain",
-        "Text": "켜지지 않는다.",
-        "ObjectImageAsset": "Room_Detail_Living_TV",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "living_room_cat_tower",
-        "ObjectName": "캣타워",
-        "EventType": "Explain",
-        "Text": "써니의 캣타워이다.",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Tower",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "kitchen_cupboard",
-        "ObjectName": "싱크대 위 찬장",
-        "EventType": "Explain",
-        "Text": "여러 약들이 있다.",
-        "ObjectImageAsset": "Room_Detail_Kitchen_Cupboard",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "kitchen_under_drawer",
-        "ObjectName": "싱크대 아래 서랍장",
-        "EventType": "GetItem",
-        "Text": "써니의 사료. 여기에 있었네.",
-        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer_Cat_Food",
-        "ItemTextId": "cat_food",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "got_item_kitchen_under_drawer",
-        "ObjectName": "싱크대 아래 서랍장",
-        "EventType": "Explain",
-        "Text": "비어있다.",
-        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer",
-        "ItemTextId": "",
-        "SectionId": "4"
-    },
-    {
+        "TrackTextId": "MiniTrack_0101",
         "ObjectTextId": "sun_desk",
         "ObjectName": "선의 책상 위",
         "EventType": "Explain",
@@ -162,6 +10,7 @@
         "SectionId": "2"
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "sun_desk_drawer",
         "ObjectName": "책상 옆 서랍",
         "EventType": "Explain",
@@ -171,6 +20,7 @@
         "SectionId": "2"
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "sun_cellphone",
         "ObjectName": "휴대폰",
         "EventType": "Event",
@@ -180,6 +30,147 @@
         "SectionId": "2"
     },
     {
+        "TrackTextId": "",
+        "ObjectTextId": "sun_room_door",
+        "ObjectName": "선이 방문",
+        "EventType": "Event",
+        "Text": "",
+        "ObjectImageAsset": "",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_desk",
+        "ObjectName": "책상 위 물병",
+        "EventType": "Explain",
+        "Text": "누가 물을 꺼내 놨지?<br>내가 마시고 올려놨나?",
+        "ObjectImageAsset": "Room_Detail_Living_Desk",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_drawer_first",
+        "ObjectName": "첫번째 칸",
+        "EventType": "Explain",
+        "Text": "그냥 평범한 옷이다.",
+        "ObjectImageAsset": "Room_Detail_Living_Drawer_First",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_drawer_second",
+        "ObjectName": "두번째 칸",
+        "EventType": "talking_to_myself",
+        "Text": "잠긴 건가?<br>그냥은 열리지 않을 것 같다.",
+        "ObjectImageAsset": "",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_drawer_third",
+        "ObjectName": "세번째 칸",
+        "EventType": "talking_to_myself",
+        "Text": "잠긴 건가?<br>그냥은 열리지 않을 것 같다.",
+        "ObjectImageAsset": "",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_cat_bowl",
+        "ObjectName": "써니 밥그릇",
+        "EventType": "UseItem",
+        "Text": "써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl",
+        "ItemTextId": "cat_food",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "use_item_living_room_cat_bowl",
+        "ObjectName": "써니 밥그릇",
+        "EventType": "UseItem",
+        "Text": "",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl_Full",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "used_item_living_room_cat_bowl",
+        "ObjectName": "써니 밥그릇",
+        "EventType": "Explain",
+        "Text": "",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl_Full",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_cat_booth",
+        "ObjectName": "숨숨집",
+        "EventType": "Explain",
+        "Text": "써니의 숨숨집.<br>하지만 써니는 택배 상자를 더 좋아한다.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Booth",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_ho_room_door",
+        "ObjectName": "호의 방문",
+        "EventType": "talking_to_myself",
+        "Text": "형의 방이다.<br>형은 방에 있나?",
+        "ObjectImageAsset": "",
+        "ItemTextId": "",
+        "SectionId": ""
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_tv",
+        "ObjectName": "\bTV",
+        "EventType": "Explain",
+        "Text": "켜지지 않는다.",
+        "ObjectImageAsset": "Room_Detail_Living_TV",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "living_room_cat_tower",
+        "ObjectName": "캣타워",
+        "EventType": "Explain",
+        "Text": "써니의 캣타워이다.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Tower",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "kitchen_cupboard",
+        "ObjectName": "싱크대 위 찬장",
+        "EventType": "Explain",
+        "Text": "여러 약들이 있다.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Cupboard",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
+        "ObjectTextId": "kitchen_under_drawer",
+        "ObjectName": "싱크대 아래 서랍장",
+        "EventType": "Explain",
+        "Text": "비어있다.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer",
+        "ItemTextId": "",
+        "SectionId": "4"
+    },
+    {
+        "TrackTextId": "",
         "ObjectTextId": "kitchen_buy_list",
         "ObjectName": "생필품 목록 메모",
         "EventType": "Explain",
@@ -189,6 +180,7 @@
         "SectionId": "2"
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "kitchen_family_photo",
         "ObjectName": "가족사진",
         "EventType": "Explain",
@@ -198,6 +190,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "kitchen_gas_bill",
         "ObjectName": "도시가스비 고지서",
         "EventType": "talking_to_myself",
@@ -207,6 +200,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "kitchen_refrigerator_top",
         "ObjectName": "냉장고 냉동실",
         "EventType": "Explain",
@@ -216,6 +210,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "kitchen_refrigerator_bottom",
         "ObjectName": "냉장고 냉장실",
         "EventType": "Explain",
@@ -225,6 +220,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "entrance_lock_a",
         "ObjectName": "자물쇠 A",
         "EventType": "Explain",
@@ -234,6 +230,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "entrance_lock_b",
         "ObjectName": "자물쇠 B",
         "EventType": "Explain",
@@ -243,6 +240,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "entrance_lock_c",
         "ObjectName": "자물쇠 C",
         "EventType": "Explain",
@@ -252,6 +250,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "entrance_door_view",
         "ObjectName": "현관문 구멍",
         "EventType": "Explain",
@@ -261,6 +260,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "entrance_leaflet",
         "ObjectName": "중국집 전단지",
         "EventType": "Explain",
@@ -270,6 +270,7 @@
         "SectionId": ""
     },
     {
+        "TrackTextId": "",
         "ObjectTextId": "entrance_photo",
         "ObjectName": "사진",
         "EventType": "Explain",
@@ -277,68 +278,5 @@
         "ObjectImageAsset": "Room_Detail_Entrance_Door_Photo",
         "ItemTextId": "",
         "SectionId": ""
-    },
-    {
-        "ObjectTextId": "track_5_entrance_photo",
-        "ObjectName": "중국집 전단지",
-        "EventType": "FocusZone",
-        "Text": "EntranceDoor_Photo",
-        "ObjectImageAsset": "",
-        "ItemTextId": "",
-        "SectionId": ""
-    },
-    {
-        "ObjectTextId": "track_5_entrance_lock_a",
-        "ObjectName": "자물쇠 A",
-        "EventType": "FocusZone",
-        "Text": "EntranceDoor_LockA",
-        "ObjectImageAsset": "",
-        "ItemTextId": "",
-        "SectionId": ""
-    },
-    {
-        "ObjectTextId": "track_5_entrance_lock_b",
-        "ObjectName": "자물쇠 B",
-        "EventType": "FocusZone",
-        "Text": "EntranceDoor_LockB",
-        "ObjectImageAsset": "",
-        "ItemTextId": "",
-        "SectionId": ""
-    },
-    {
-        "ObjectTextId": "track_5_entrance_lock_c",
-        "ObjectName": "자물쇠 C",
-        "EventType": "FocusZone",
-        "Text": "EntranceDoor_LockC",
-        "ObjectImageAsset": "",
-        "ItemTextId": "",
-        "SectionId": ""
-    },
-    {
-        "ObjectTextId": "entrance_block_b",
-        "ObjectName": "싱크대 아래 서랍장",
-        "EventType": "GetItem",
-        "Text": "써니의 사료. 여기에 있었네.",
-        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer_Cat_Food",
-        "ItemTextId": "block_b",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "block_lock_block_a",
-        "ObjectName": "써니 밥그릇",
-        "EventType": "UseItem",
-        "Text": "써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl",
-        "ItemTextId": "block_b",
-        "SectionId": "4"
-    },
-    {
-        "ObjectTextId": "block_lock_block_c",
-        "ObjectName": "써니 밥그릇",
-        "EventType": "UseItem",
-        "Text": "써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.",
-        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl",
-        "ItemTextId": "block_b",
-        "SectionId": "4"
     }
 ]
