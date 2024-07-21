@@ -1177,7 +1177,7 @@
     },
     {
         "SectionIndex": "9",
-        "StepId": "15-01-01",
+        "StepId": "2015-01-01",
         "Type": "listen",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -1191,7 +1191,7 @@
     },
     {
         "SectionIndex": "9",
-        "StepId": "15-02-01",
+        "StepId": "2015-02-01",
         "Type": "listen",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -1205,7 +1205,7 @@
     },
     {
         "SectionIndex": "9",
-        "StepId": "15-03-01",
+        "StepId": "2015-03-01",
         "Type": "listen",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -1219,7 +1219,7 @@
     },
     {
         "SectionIndex": "9",
-        "StepId": "15-01-02",
+        "StepId": "2015-01-02",
         "Type": "talk",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -1233,7 +1233,7 @@
     },
     {
         "SectionIndex": "9",
-        "StepId": "15-02-02",
+        "StepId": "2015-02-02",
         "Type": "talk",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -1247,7 +1247,7 @@
     },
     {
         "SectionIndex": "9",
-        "StepId": "15-03-02",
+        "StepId": "2015-03-02",
         "Type": "talk",
         "MissionText": "",
         "MissionStartRoom": "",
@@ -2192,7 +2192,7 @@
         "Text": "",
         "CharacterKey": "",
         "CharacterImageAsset": "",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "Popup_Hana_Sitting_In_A_Chair",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2206,7 +2206,7 @@
         "Text": "(어라, 그런데…….)",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Smile",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2220,7 +2220,7 @@
         "Text": "(분명 현관문이 안에서 잠겨 있었는데.)",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Smile",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2231,10 +2231,10 @@
         "Type": "thinking",
         "MissionText": "",
         "MissionStartRoom": "",
-        "Text": "(쟤는 어떻게 들어온 거지?)",
+        "Text": "<color=red>(쟤는 어떻게 들어온 거지?)</color>",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Smile",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2248,7 +2248,7 @@
         "Text": "너, 어떻게 들어왔어?",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Normal",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2262,7 +2262,7 @@
         "Text": "응? 무슨 질문이 그래?",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Frown",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2276,7 +2276,7 @@
         "Text": "아니, 문 말이야. 형이 직접 열어준 거야?",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Frown",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2290,7 +2290,7 @@
         "Text": "그렇지?",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Frown",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2304,7 +2304,7 @@
         "Text": "그리고 다시 나갔고?",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Frown",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2318,7 +2318,7 @@
         "Text": "응.",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Frown",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2332,7 +2332,7 @@
         "Text": "(그럼 지금 현관문은 열려 있겠네?)",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Frown",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
@@ -2346,7 +2346,7 @@
         "Text": "(확인해 봐야겠어.)",
         "CharacterKey": "Hana",
         "CharacterImageAsset": "Hana_Frown",
-        "RoomImageAsset": "Room_Kitchen",
+        "RoomImageAsset": "Room_Kitchen_Back_View_02",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""

@@ -47,7 +47,7 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentGameFlowIndex = 13;
+		CurrentGameFlowIndex = 12;
 		
 		CurrentDetailFlowIndex = 1;
 		CurrentDetailFlowId = "1";
