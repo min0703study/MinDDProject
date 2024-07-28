@@ -113,20 +113,20 @@ public class UI_MiniTrack_0102 : UI_MainTrackBase
 
 	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
-		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(clickableRoomObject.ObjectTextId);
+		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(clickableRoomObject.ObjectTextId);
 		CheckObjectClickMission(clickableRoomObject.ObjectTextId);
 		
-		if (clickEvent.EventType == "Event")
+		if (clickEvent.ActionType == "Event")
 		{
 		}
-		else if (clickEvent.EventType == "Explain")
+		else if (clickEvent.ActionType == "Explain")
 		{
 			popupPanel.SetActive(true);
 			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
 			popupImage.sprite = imageSprite;
 			popupText.text = clickEvent.Text;
 		}
-		else if (clickEvent.EventType == "talking_to_myself")
+		else if (clickEvent.ActionType == "talking_to_myself")
 		{
 			popupPanel.SetActive(false);
 			scriptPanel.SetActive(true);

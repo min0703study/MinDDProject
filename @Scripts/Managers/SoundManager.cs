@@ -18,7 +18,7 @@ public class SoundManager : BaseManager<SoundManager>
 
 	private GameObject soundRoot = null;
 
-	protected override void init()
+	protected override void initAwake()
 	{
 		if (soundRoot == null)
 		{

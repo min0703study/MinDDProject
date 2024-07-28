@@ -2,92 +2,92 @@
     {
         "ItemTextId": "cat_food",
         "ItemName": "써니의 사료",
-        "ItemDesc": "",
         "ItemImageAsset": "Item_Cat_Food",
-        "R_Desc": ""
+        "ItemDesc": "",
+        "UseItemImageAsset": "Room_Detail_Living_Cat_Bowl_Full"
     },
     {
         "ItemTextId": "key_a",
         "ItemName": "열쇠1",
-        "ItemDesc": "",
         "ItemImageAsset": "Item_Key_A",
-        "R_Desc": ""
+        "ItemDesc": "",
+        "UseItemImageAsset": "Room_Detail_Entrance_Lock_A_Unlock"
     },
     {
         "ItemTextId": "key_b",
         "ItemName": "열쇠2",
-        "ItemDesc": "",
         "ItemImageAsset": "Item_Key_B",
-        "R_Desc": ""
-    },
-    {
-        "ItemTextId": "note",
-        "ItemName": "쪽지",
         "ItemDesc": "",
-        "ItemImageAsset": "Item_Note",
-        "R_Desc": ""
-    },
-    {
-        "ItemTextId": "ho_room_key",
-        "ItemName": "호의 방 열쇠",
-        "ItemDesc": "",
-        "ItemImageAsset": "Item_Ho_Room_Key",
-        "R_Desc": ""
-    },
-    {
-        "ItemTextId": "recorder",
-        "ItemName": "녹음기",
-        "ItemDesc": "",
-        "ItemImageAsset": "Item_Recorder",
-        "R_Desc": ""
-    },
-    {
-        "ItemTextId": "back_scratcher",
-        "ItemName": "효자손",
-        "ItemDesc": "",
-        "ItemImageAsset": "Item_Back_Scratcher",
-        "R_Desc": ""
-    },
-    {
-        "ItemTextId": "secret_note",
-        "ItemName": "주원의 수수께끼가 적힌 종이",
-        "ItemDesc": "",
-        "ItemImageAsset": "Item_Secret_Note",
-        "R_Desc": ""
-    },
-    {
-        "ItemTextId": "ho_diary",
-        "ItemName": "호의 일기장",
-        "ItemDesc": "",
-        "ItemImageAsset": "Item_Ho_Diary",
-        "R_Desc": ""
-    },
-    {
-        "ItemTextId": "key_c",
-        "ItemName": "열쇠3",
-        "ItemDesc": "",
-        "ItemImageAsset": "Item_Key_C",
-        "R_Desc": ""
-    },
-    {
-        "ItemTextId": "long_tool",
-        "ItemName": "긴 공구",
-        "ItemDesc": "",
-        "ItemImageAsset": "Item_Long_Tool",
-        "R_Desc": ""
+        "UseItemImageAsset": "Room_Detail_Entrance_Lock_A_Unlock"
     },
     {
         "ItemTextId": "block_w",
         "ItemName": "하얀색 블록",
+        "ItemImageAsset": "Item_Key_Block_W",
         "ItemDesc": "",
-        "ItemImageAsset": "Item_Key_Block_B",
-        "R_Desc": ""
+        "UseItemImageAsset": ""
     },
     {
         "ItemTextId": "block_g",
         "ItemName": "초록색 블록",
+        "ItemImageAsset": "Item_Key_Block_G",
         "ItemDesc": "",
-        "ItemImageAsset": "Item_Key_Block_A",
-        "R_Desc": ""
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "note",
+        "ItemName": "쪽지",
+        "ItemImageAsset": "Item_Note",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "ho_room_key",
+        "ItemName": "호의 방 열쇠",
+        "ItemImageAsset": "Item_Ho_Room_Key",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "recorder",
+        "ItemName": "녹음기",
+        "ItemImageAsset": "Item_Recorder",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "back_scratcher",
+        "ItemName": "효자손",
+        "ItemImageAsset": "Item_Back_Scratcher",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "secret_note",
+        "ItemName": "주원의 수수께끼가 적힌 종이",
+        "ItemImageAsset": "Item_Secret_Note",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "ho_diary",
+        "ItemName": "호의 일기장",
+        "ItemImageAsset": "Item_Ho_Diary",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "key_c",
+        "ItemName": "열쇠3",
+        "ItemImageAsset": "Item_Key_C",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "long_tool",
+        "ItemName": "긴 공구",
+        "ItemImageAsset": "Item_Long_Tool",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
     }
 ]

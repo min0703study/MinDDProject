@@ -438,19 +438,31 @@ MonoBehaviour:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b0665c3a43e2ba7478c0970a0aa689d4
-    m_Address: Item_Key_Block_A.sprite
+    m_Address: Item_Key_Block_G.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f9e843e878f363d4dbce1bc4fb264aee
-    m_Address: Item_Key_Block_B.sprite
+    m_Address: Item_Key_Block_W.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b384863a5673f3c41830b42c9d5fb4d6
     m_Address: UI_MainTrack_0201
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48bd0a7944bc7e34faba545f03f82c1a
+    m_Address: Room_Kitchen_Under_Drawer.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c693d27feb3389f448228974ea26090c
+    m_Address: Room_Living_Cat_Booth.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

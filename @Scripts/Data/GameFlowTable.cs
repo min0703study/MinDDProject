@@ -55,14 +55,21 @@ namespace TableData
 		public string ItemDesc { get; set; }
 	}
 
-	public class ObjectClickEvent
+	public class ObjectEvent
 	{
+		public string TrackTextId { get; set; }
 		public string ObjectTextId { get; set; }
-		public int SectionIndex { get; set; }
+		public string ObjectName { get; set; }
+		public string ActionType { get; set; }
+		public string EventTriggerType { get; set; }
 		public string Text { get; set; }
 		public string ObjectImageAsset { get; set; }
-		public string EventType { get; set; }
-		public string ItemTextId { get; set; }
+	}
+	
+	public class RoomObject
+	{
+		public string ObjectTextId { get; set; }
+		public string ObjectName { get; set; }
 	}
 }
 
@@ -70,15 +77,16 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 {
 	public List<TableData.Section> Sections { get; private set; } = new List<TableData.Section>();
 	public Dictionary<int, TableData.Section> SectionDict { get; private set; } = new Dictionary<int, TableData.Section>();
-	public Dictionary<string, TableData.ObjectClickEvent> ObjectClickEventDict { get; private set; } = new Dictionary<string, TableData.ObjectClickEvent>();
+	public List<TableData.ObjectEvent> RoomObjectEvents { get; private set; } = new();
 	public Dictionary<string, TableData.Item> ItemDict { get; private set; } = new Dictionary<string, TableData.Item>();
+	public Dictionary<string, TableData.RoomObject> RoomObjectDict { get; private set; } = new();
 
 	protected override void init()
 	{
 		base.init();
 	}
 
-	public void Load(string gameFlowAssetLabel, string gameFlowDetailLabel, string objectClickEventLabel, string itemAssetLabel)
+	public void Load(string gameFlowAssetLabel, string gameFlowDetailLabel, string objectClickEventLabel, string itemAssetLabel, string roomObjectAssetLabel)
 	{
 		TextAsset textAsset = ResourceManager.Instance.Load<TextAsset>(gameFlowAssetLabel);
 		Sections = JsonConvert.DeserializeObject<List<TableData.Section>>(textAsset.text);
@@ -99,13 +107,20 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 			SectionDict.Add(section.SectionIndex, section);
 		}
 
-
 		TextAsset objectClickEventAsset = ResourceManager.Instance.Load<TextAsset>(objectClickEventLabel);
-		var objectClickEvents = JsonConvert.DeserializeObject<List<TableData.ObjectClickEvent>>(objectClickEventAsset.text);
+		var objectClickEvents = JsonConvert.DeserializeObject<List<TableData.ObjectEvent>>(objectClickEventAsset.text);
 
 		foreach (var objectClickEvent in objectClickEvents)
 		{
-			ObjectClickEventDict.Add(objectClickEvent.ObjectTextId, objectClickEvent);
+			RoomObjectEvents.Add(objectClickEvent);
+		}
+
+		TextAsset roomObjectAsset = ResourceManager.Instance.Load<TextAsset>(roomObjectAssetLabel);
+		var roomObjects = JsonConvert.DeserializeObject<List<TableData.RoomObject>>(roomObjectAsset.text);
+
+		foreach (var roomObject in roomObjects)
+		{
+			RoomObjectDict.Add(roomObject.ObjectTextId, roomObject);
 		}
 
 		TextAsset itemAsset = ResourceManager.Instance.Load<TextAsset>(itemAssetLabel);
@@ -128,13 +143,16 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 		return null;
 	}
 
-	public TableData.ObjectClickEvent GetObjectClickEvent(string objectTextId)
+	public TableData.ObjectEvent GetRoomObjectEvent(string objectTextId, RoomObjectEventTriggerType triggerType = RoomObjectEventTriggerType.Click)
 	{
-		if (ObjectClickEventDict.TryGetValue(objectTextId, out var objectClickEvent))
+		foreach(var objectEvent in RoomObjectEvents) 
 		{
-			return objectClickEvent;
-		};
-
+			if(objectEvent.ObjectTextId == objectTextId && objectEvent.EventTriggerType == triggerType.ToString()) 
+			{
+				return objectEvent;
+			}
+		}
+		
 		return null;
 	}
 

@@ -1,0 +1,102 @@
+﻿[
+    {
+        "ObjectTextId": "sun_desk",
+        "ObjectName": "선의 책상 위"
+    },
+    {
+        "ObjectTextId": "sun_desk_drawer",
+        "ObjectName": "책상 옆 서랍"
+    },
+    {
+        "ObjectTextId": "sun_cellphone",
+        "ObjectName": "휴대폰"
+    },
+    {
+        "ObjectTextId": "sun_room_door",
+        "ObjectName": "선이 방문"
+    },
+    {
+        "ObjectTextId": "living_room_desk",
+        "ObjectName": "책상 위 물병"
+    },
+    {
+        "ObjectTextId": "living_room_drawer_first",
+        "ObjectName": "첫번째 칸"
+    },
+    {
+        "ObjectTextId": "living_room_drawer_second",
+        "ObjectName": "두번째 칸"
+    },
+    {
+        "ObjectTextId": "living_room_drawer_third",
+        "ObjectName": "세번째 칸"
+    },
+    {
+        "ObjectTextId": "living_room_cat_bowl",
+        "ObjectName": "써니 밥그릇"
+    },
+    {
+        "ObjectTextId": "living_room_ho_room_door",
+        "ObjectName": "호의 방문"
+    },
+    {
+        "ObjectTextId": "living_room_tv",
+        "ObjectName": "\bTV"
+    },
+    {
+        "ObjectTextId": "living_room_cat_tower",
+        "ObjectName": "캣타워"
+    },
+    {
+        "ObjectTextId": "kitchen_cupboard",
+        "ObjectName": "싱크대 위 찬장"
+    },
+    {
+        "ObjectTextId": "kitchen_under_drawer",
+        "ObjectName": "싱크대 아래 서랍장"
+    },
+    {
+        "ObjectTextId": "kitchen_buy_list",
+        "ObjectName": "생필품 목록 메모"
+    },
+    {
+        "ObjectTextId": "kitchen_family_photo",
+        "ObjectName": "가족사진"
+    },
+    {
+        "ObjectTextId": "kitchen_gas_bill",
+        "ObjectName": "도시가스비 고지서"
+    },
+    {
+        "ObjectTextId": "kitchen_refrigerator_top",
+        "ObjectName": "냉장고 냉동실"
+    },
+    {
+        "ObjectTextId": "kitchen_refrigerator_bottom",
+        "ObjectName": "냉장고 냉장실"
+    },
+    {
+        "ObjectTextId": "entrance_lock_a",
+        "ObjectName": "자물쇠 A"
+    },
+    {
+        "ObjectTextId": "entrance_lock_b",
+        "ObjectName": "자물쇠 B"
+    },
+    {
+        "ObjectTextId": "entrance_lock_c",
+        "ObjectName": "자물쇠 C"
+    },
+    {
+        "ObjectTextId": "entrance_door_view",
+        "ObjectName": "현관문 구멍"
+    },
+    {
+        "ObjectTextId": "entrance_leaflet",
+        "ObjectName": "중국집 전단지"
+    },
+    {
+        "ObjectTextId": "entrance_photo",
+        "ObjectName": "사진"
+    }
+]

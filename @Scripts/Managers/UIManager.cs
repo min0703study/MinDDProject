@@ -22,9 +22,9 @@ public class UIManager : BaseManager<UIManager>
 	}
 
 
-	protected override void init()
+	protected override void initAwake()
 	{
-		base.init();
+		base.initAwake();
 	}
 
 	public T ShowPopupUI<T>(string name = null) where T : UI_PopupBase

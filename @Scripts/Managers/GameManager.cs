@@ -30,11 +30,12 @@ public class GameManager : BaseManager<GameManager>
 	public Action OnUseInventoryItem;
 	public Action<string> OnAddInventoryItem;
 	
-	public Dictionary<string, string> AllItems;
+	public Dictionary<string, ItemState> AllItemStates = new();
+	public Dictionary<string, RoomObjectState> RoomObjectStates = new();
 	
-	protected override void init()
+	protected override void initAwake()
 	{
-		base.init();
+		base.initAwake();
 
 		DOTween.Init();
 
@@ -47,7 +48,17 @@ public class GameManager : BaseManager<GameManager>
 
 	public void StartNewGame()
 	{
-		CurrentGameFlowIndex = 12;
+		foreach (var itemTextId in GameFlowTable.Instance.ItemDict.Keys) 
+		{
+			AllItemStates.Add(itemTextId, ItemState.LocatedInRoom);
+		}
+		
+		foreach (var objectTextId in GameFlowTable.Instance.RoomObjectDict.Keys) 
+		{
+			RoomObjectStates.Add(objectTextId, RoomObjectState.LocatedInRoom);
+		}
+		
+		CurrentGameFlowIndex = 1;
 		
 		CurrentDetailFlowIndex = 1;
 		CurrentDetailFlowId = "1";
@@ -139,7 +150,6 @@ public class GameManager : BaseManager<GameManager>
 	{
 		for (int i = 0; i < GameManager.INVENTORY_SIZE; i++)
 		{
-
 			if (Inventory[i].IsBlank)
 			{
 				Inventory[i].IsBlank = false;
@@ -148,15 +158,32 @@ public class GameManager : BaseManager<GameManager>
 			};
 		}
 		
+		AllItemStates[itemTextId] = ItemState.StoredInInventory;
 		OnAddInventoryItem?.Invoke(itemTextId);
 	}
-
-	public void UseItem(int index)
+	
+	public void UseSelectedItem(string objectTextId = null)
 	{
+		UseItem(SelectedInventoryIndex, objectTextId);
+	}
+
+
+	public void UseItem(int index, string objectTextId = null)
+	{			
 		Inventory[index].IsBlank = true;
 		Inventory[index].ItemTextId = string.Empty;
 		
+		// if(objectTextId != null) 
+		// {
+		// 	RoomObjectStates[objectTextId] = RoomObjectState.UsedItem;
+		// }
+		
 		OnUseInventoryItem?.Invoke();
+	}
+	
+	public void ChangeRoomObjectState(string objectTextId, RoomObjectState roomObjectState)
+	{			
+		RoomObjectStates[objectTextId] = roomObjectState;
 	}
 
 	public string GetSelectedInventoryItemId()

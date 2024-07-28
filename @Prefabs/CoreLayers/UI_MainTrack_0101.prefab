@@ -572,6 +572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_MainTrack_0101
       objectReference: {fileID: 0}
+    - target: {fileID: 6908210779762109284, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7808381306414224469, guid: 49edcff6f2f1948b2bda572b6e6aa7e4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

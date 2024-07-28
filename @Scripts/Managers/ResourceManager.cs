@@ -12,9 +12,9 @@ public class ResourceManager : BaseManager<ResourceManager>
 	// 실제 로드한 리소스.
 	private Dictionary<string, UnityEngine.Object> resources = new Dictionary<string, UnityEngine.Object>();
 
-	protected override void init()
+	protected override void initAwake()
 	{
-		base.init();
+		base.initAwake();
 	}
 
 #region 리소스 로드

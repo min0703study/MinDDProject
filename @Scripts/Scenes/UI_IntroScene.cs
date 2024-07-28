@@ -36,8 +36,6 @@ public class UI_IntroScene : MonoBehaviour
 
 	private void CompleteLoading()
 	{
-		//SoundManager.Instance.Play(SoundManager.SoundType.Effect, "Sound_IntroOkButton");
-
 		TableLoader.Instance.Load();
 	}
 }

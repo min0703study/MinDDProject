@@ -14,7 +14,7 @@ public abstract class BaseManager<T> : MonoBehaviour where T : BaseManager<T>
 		if (Instance == null)
 		{
 			Instance = this as T;
-			init();
+			initAwake();
 		}
 		else
 		{
@@ -22,7 +22,7 @@ public abstract class BaseManager<T> : MonoBehaviour where T : BaseManager<T>
 		}
 	}
 
-	protected virtual void init()
+	protected virtual void initAwake()
 	{
 		if (isInit == true)
 			return;

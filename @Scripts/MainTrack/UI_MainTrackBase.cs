@@ -33,6 +33,7 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	protected Image getItemImage => trackPanel.getItemImage;
 	protected TextMeshProUGUI getItemText => trackPanel.getItemText;
 	protected Button getItemNextButton => trackPanel.getItemNextButton;
+	
 	#endregion
 	
 	void Start()
@@ -161,45 +162,20 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 
 	public virtual void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
-		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(clickableRoomObject.ObjectTextId);
-		var objectTextId = clickableRoomObject.ObjectTextId;
-		
-		if(SelectedInventoryCell != null) 
-		{
-			if(clickEvent.EventType == "UseItem") 
-			{
-				var index = SelectedInventoryCell.Index;
-				InventorySlot inventorySlot = GameManager.Instance.Inventory[index];
-				
-				if (inventorySlot.ItemTextId == clickEvent.ItemTextId)
-				{
-					GameManager.Instance.UseItem(index);
-					clickableRoomObject.ChangeImageForUsedItem();
-					ShowPopup("Room_Detail_Living_Cat_Bowl_Full");
-					OnClickPopupNextButton = () =>
-					{
-						GameManager.Instance.ToNextStep();
-						OnClickPopupNextButton = null;
-					};
-				} else 
-				{
-					ShowPopup(clickEvent.ObjectImageAsset, clickEvent.Text);
-				}
-			}
-		}
-		
-		if (clickEvent.EventType == "Event")
+		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(clickableRoomObject.ObjectTextId);
+		UpdateMissionState(clickableRoomObject.ObjectTextId, RoomObjectEventTriggerType.Click);
+		if (clickEvent.ActionType == "Event")
 		{
 			if (clickEvent.ObjectTextId == "sun_room_door")
 			{
 				GameManager.Instance.ToNextStep();
 			}
 		}
-		else if (clickEvent.EventType == "Explain")
+		else if (clickEvent.ActionType == "Popup")
 		{
 			ShowPopup(clickEvent.ObjectImageAsset, clickEvent.Text);
 		}
-		else if (clickEvent.EventType == "talking_to_myself")
+		else if (clickEvent.ActionType == "talking_to_myself")
 		{
 			
 			ShowDialogueBox(clickEvent.Text, "선", false);
@@ -275,7 +251,8 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 		getItemPanel.SetActive(false);
 	}
 	
-	public virtual void UpdateMissionState() 
+	public virtual void UpdateMissionState(string objectTextId, RoomObjectEventTriggerType eventState) 
 	{
+		
 	}
 }

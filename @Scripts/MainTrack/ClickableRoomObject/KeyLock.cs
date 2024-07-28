@@ -13,7 +13,7 @@ public class KeyLock : ClickableRoomObject
 			IsUnlocked = true;
 			GameManager.Instance.UseItem(GameManager.Instance.SelectedInventoryIndex);
 			
-			currentTrack.UpdateMissionState();
+			currentTrack.UpdateMissionState(objectTextId, RoomObjectEventTriggerType.UseItem);
 		}
 	}
 }

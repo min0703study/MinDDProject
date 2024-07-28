@@ -31,7 +31,8 @@ public enum FocusZone
 	EntranceDoor_Photo,
 	
 	Kitchen_Refrigerator_Photo,
-	
+	LivingRoomA_CatBooth,
+	Kitchen_UnderDrawer,
 	None,
 }
 
@@ -40,4 +41,18 @@ public enum ItemState
 	LocatedInRoom,
 	StoredInInventory,
 	AlreadyUsed,
+}
+
+public enum RoomObjectState
+{
+	LocatedInRoom,
+	UsedItem,
+	RemoveRoomObject
+}
+
+public enum RoomObjectEventTriggerType
+{
+	Click,
+	UseItem,
+	Unlock
 }

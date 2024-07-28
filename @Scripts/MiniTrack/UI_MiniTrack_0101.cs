@@ -91,9 +91,9 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 
 	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
-		var clickEvent = GameFlowTable.Instance.GetObjectClickEvent(clickableRoomObject.ObjectTextId);
+		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(clickableRoomObject.ObjectTextId);
 		
-		if (clickEvent.EventType == "Event")
+		if (clickEvent.ActionType == "Event")
 		{
 			if (clickEvent.ObjectTextId == "sun_cellphone")
 			{
@@ -102,7 +102,7 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 				cellphonePanel.SetActive(true);
 			}
 		}
-		else if (clickEvent.EventType == "Explain")
+		else if (clickEvent.ActionType == "Explain")
 		{
 			popupPanel.SetActive(true);
 			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
