@@ -250,5 +250,23 @@
         "ActionType": "Popup",
         "Text": "",
         "ObjectImageAsset": "Room_Detail_Entrance_Lock_B_Unlock"
+    },
+    {
+        "TrackTextId": "MiniTrack_0101",
+        "ObjectTextId": "door_view_close",
+        "ObjectName": "",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "왜 창문이 막혀 있지?<br>형이 가린 걸까?",
+        "ObjectImageAsset": "Room_Detail_Entrance_Door_View_Close"
+    },
+    {
+        "TrackTextId": "MiniTrack_0101",
+        "ObjectTextId": "curtain",
+        "ObjectName": "",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "이게 왜 막혀 있지?<br>누가 일부러 붙여 놓은 것 같은데.",
+        "ObjectImageAsset": "Room_Detail_Living_Curtain"
     }
 ]

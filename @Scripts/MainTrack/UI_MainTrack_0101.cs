@@ -11,6 +11,11 @@ public class UI_MainTrack_0101 : UI_MainTrackBase
 	{
 		base.UpdateMissionState(objectTextId, eventState);
 		
+		if(objectTextId == "sun_room_door") 
+		{
+			GameManager.Instance.ToNextStep();
+		}
+		
 		if(objectTextId == "living_room_cat_bowl" && eventState == RoomObjectEventTriggerType.UseItem) 
 		{
 			GameManager.Instance.ToNextStep();

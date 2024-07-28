@@ -155,8 +155,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f69123f14463cd0468375fc05b81c4bb
-    m_Address: Room_Detail_Living_Cat_Booth_Key.sprite
+  - m_GUID: e1a477ea0196efd4eb41628e53e77ca0
+    m_Address: Room_Detail_Living_Curtain.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
@@ -463,6 +463,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c693d27feb3389f448228974ea26090c
     m_Address: Room_Living_Cat_Booth.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14c19fbea503cd349b316f4743ec9873
+    m_Address: Room_Kitchen_Back_View_02.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

@@ -59,7 +59,6 @@ namespace TableData
 	{
 		public string TrackTextId { get; set; }
 		public string ObjectTextId { get; set; }
-		public string ObjectName { get; set; }
 		public string ActionType { get; set; }
 		public string EventTriggerType { get; set; }
 		public string Text { get; set; }

@@ -22,8 +22,6 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	[SerializeField] List<RoomController> rooms = new ();
 	public Dictionary<RoomType, RoomController> RoomDict = new ();
 	
-	[SerializeField] public Action OnClickPopupNextButton;
-	
 	InventoryCell SelectedInventoryCell;
 		
 	#region UI Components
@@ -107,12 +105,11 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 			}
 			else if (dialog.Type == "popup")
 			{
-				ShowPopup(dialog.PopupImageAsset, dialog.Text);
-				OnClickPopupNextButton = () =>
+				ShowPopup(dialog.PopupImageAsset, dialog.Text, () =>
 				{
 					GameManager.Instance.ToNextStep();
 					OnClickPopupNextButton = null;
-				};
+				});
 			}
 		}
 	}
@@ -163,13 +160,15 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	public virtual void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
 		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(clickableRoomObject.ObjectTextId);
+		
 		UpdateMissionState(clickableRoomObject.ObjectTextId, RoomObjectEventTriggerType.Click);
+		
 		if (clickEvent.ActionType == "Event")
 		{
-			if (clickEvent.ObjectTextId == "sun_room_door")
-			{
-				GameManager.Instance.ToNextStep();
-			}
+			// if (clickEvent.ObjectTextId == "sun_room_door")
+			// {
+			// 	GameManager.Instance.ToNextStep();
+			// }
 		}
 		else if (clickEvent.ActionType == "Popup")
 		{
@@ -238,6 +237,7 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	public void OnClickPopupButton()
 	{
 		popupPanel.SetActive(false);
+		
 		OnClickPopupNextButton?.Invoke();
 	}
 	

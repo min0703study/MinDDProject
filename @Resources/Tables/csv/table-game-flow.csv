@@ -1,14 +1,16 @@
 ChapterIndex,SectionIndex,SectionType,SectionAsset,R_SectionDesc
 1,1,Dialogue,UI_DialogueScript,
-1,2,MiniTrack,UI_MiniTrack_0101,
+1,2,MiniTrack,UI_MiniTrack_0101,핸드폰 찾는 트랙
 1,3,Dialogue,UI_DialogueScript,
-1,4,MainTrack,UI_MainTrack_0101,
-1,5,Dialogue,UI_DialogueScript,
-1,6,MiniTrack,UI_MiniTrack_0102,
+1,4,MainTrack,UI_MainTrack_0101,사료 찾기 트랙
+1,5,Dialogue,UI_DialogueScript, 
+1,6,MiniTrack,UI_MiniTrack_0102,냉장고 확인 트랙
 1,7,Dialogue,UI_DialogueScript,
-1,8,MiniTrack,UI_MiniTrack_0103,
+1,8,MiniTrack,UI_MiniTrack_0103,현관문 확인 트랙
 1,9,Dialogue,UI_DialogueScript,
 2,10,ChapterTitle,UI_ChapterTitle_02,
-2,11,MiniGame,UI_0201_MiniGame,
+2,11,MiniGame,UI_0201_MiniGame,사탕 피하기 미니 게임
 2,12,Dialogue,UI_DialogueScript,
-2,13,MainTrack,UI_MainTrack_0201,
+2,13,MainTrack,UI_MainTrack_0201,현관문 잠긴 열쇠 풀기 트랙
+2,14,Dialogue,UI_DialogueScript,
+2,15,MainTrack,UI_MainTrack_0202,핸드폰 트랙

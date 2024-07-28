@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class UI_CoreLayerBase : MonoBehaviour
 {
 	protected bool isInitOver = false;
-	public Action OnClosedPopup { get; set; }
 	
 	[SerializeField] private UI_CommonPanel commonPanel;
 
@@ -37,8 +36,8 @@ public class UI_CoreLayerBase : MonoBehaviour
 	protected Button visualSoundEffectNextButton => commonPanel.visualSoundEffectNextButton;
 	#endregion
 	
-	Action popupOnClosed;
-
+	public Action OnClickPopupNextButton;
+	
 	private Tween typingTween;
 	private void Awake()
 	{
@@ -119,7 +118,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 	}
 	
 	
-	public void ShowPopup(string imageAssetKey, string text = null) 
+	public void ShowPopup(string imageAssetKey, string text = null, Action onCloseCallBack = null) 
 	{
 		popupPanel.SetActive(true);
 		
@@ -127,6 +126,11 @@ public class UI_CoreLayerBase : MonoBehaviour
 		{
 			popupTextPanel.SetActive(true);
 			popupText.text = text;
+		}
+		
+		if(onCloseCallBack != null) 
+		{
+			OnClickPopupNextButton = onCloseCallBack;
 		}
 		
 		var popupSprite = ResourceManager.Instance.Load<Sprite>(imageAssetKey);

@@ -102,12 +102,9 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 				cellphonePanel.SetActive(true);
 			}
 		}
-		else if (clickEvent.ActionType == "Explain")
+		else if (clickEvent.ActionType == "Popup")
 		{
-			popupPanel.SetActive(true);
-			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
-			popupImage.sprite = imageSprite;
-			popupText.text = clickEvent.Text;
+			ShowPopup(clickEvent.ObjectImageAsset, clickEvent.Text);
 		}
 	}
 

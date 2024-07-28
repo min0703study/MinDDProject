@@ -34,13 +34,17 @@ public class NumberLock : BaseRoomObject
 			IsUnlocked = true;
 			
 			GameManager.Instance.ChangeRoomObjectState(ObjectTextId, RoomObjectState.RemoveRoomObject);
-			var roomObjectData = GameFlowTable.Instance.GetRoomObjectEvent(objectTextId, RoomObjectEventTriggerType.Unlock);
+			var roomObjectData = GameFlowTable.Instance.GetRoomObjectEvent(objectTextId, RoomObjectEventTriggerType.UseItem);
 			if(roomObjectData != null) 
 			{
-				currentTrack.ShowPopup(roomObjectData.ObjectImageAsset, roomObjectData.Text);
+				currentTrack.ShowPopup(roomObjectData.ObjectImageAsset, roomObjectData.Text, ()=> 
+				{
+					currentTrack.UpdateMissionState(objectTextId, RoomObjectEventTriggerType.UseItem);
+				});
+			} else 
+			{
+				currentTrack.UpdateMissionState(objectTextId, RoomObjectEventTriggerType.UseItem);
 			}
-			
-			currentTrack.UpdateMissionState(objectTextId, RoomObjectEventTriggerType.Unlock);
 		}
 	}
 

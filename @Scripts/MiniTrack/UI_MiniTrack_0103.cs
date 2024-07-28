@@ -120,12 +120,9 @@ public class UI_MiniTrack_0103 : UI_MainTrackBase
 		if (clickEvent.ActionType == "Event")
 		{
 		}
-		else if (clickEvent.ActionType == "Explain")
+		else if (clickEvent.ActionType == "Popup")
 		{
-			popupPanel.SetActive(true);
-			var imageSprite = ResourceManager.Instance.Load<Sprite>(clickEvent.ObjectImageAsset);
-			popupImage.sprite = imageSprite;
-			popupText.text = clickEvent.Text;
+			ShowPopup(clickEvent.ObjectImageAsset, clickEvent.Text);
 		}
 		else if (clickEvent.ActionType == "talking_to_myself")
 		{

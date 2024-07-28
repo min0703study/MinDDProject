@@ -47,12 +47,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6ae4596163d604a33a8400972eb2482f
-    m_Address: Room_Detail_Living_Cat_Booth.sprite
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9e2d4d59470734c60bfc6b142ab77cdd
     m_Address: Room_Detail_Living_Desk.sprite
     m_ReadOnly: 0

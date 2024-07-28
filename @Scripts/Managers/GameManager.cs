@@ -58,7 +58,7 @@ public class GameManager : BaseManager<GameManager>
 			RoomObjectStates.Add(objectTextId, RoomObjectState.LocatedInRoom);
 		}
 		
-		CurrentGameFlowIndex = 1;
+		CurrentGameFlowIndex = 4;
 		
 		CurrentDetailFlowIndex = 1;
 		CurrentDetailFlowId = "1";
