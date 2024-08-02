@@ -98,5 +98,13 @@
     {
         "ObjectTextId": "entrance_photo",
         "ObjectName": "사진"
+    },
+    {
+        "ObjectTextId": "curtain",
+        "ObjectName": "커튼"
+    },
+    {
+        "ObjectTextId": "door_view_close",
+        "ObjectName": "막힌 현관문 구멍"
     }
 ]

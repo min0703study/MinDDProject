@@ -113,7 +113,7 @@ public class UI_MiniTrack_0102 : UI_MainTrackBase
 
 	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
-		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(clickableRoomObject.ObjectTextId);
+		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(GameManager.Instance.CurrentSection.SectionAsset, clickableRoomObject.ObjectTextId);
 		CheckObjectClickMission(clickableRoomObject.ObjectTextId);
 		
 		if (clickEvent.ActionType == "Event")
@@ -133,6 +133,12 @@ public class UI_MiniTrack_0102 : UI_MainTrackBase
 			scriptText.text = clickEvent.Text;
 		}
 		
+	}
+	
+	public override void UpdateMissionState(string objectTextId, RoomObjectEventTriggerType eventState)
+	{
+		base.UpdateMissionState(objectTextId, eventState);
+		CheckObjectClickMission(objectTextId);
 	}
 	
 	public override void Clear()

@@ -3,35 +3,35 @@
         "ItemTextId": "cat_food",
         "ItemName": "써니의 사료",
         "ItemImageAsset": "Item_Cat_Food",
-        "ItemDesc": "",
+        "ItemDesc": "써니의 사료<br>주방 서랍에서 찾은 써니의 사료.",
         "UseItemImageAsset": "Room_Detail_Living_Cat_Bowl_Full"
     },
     {
         "ItemTextId": "key_a",
         "ItemName": "열쇠1",
         "ItemImageAsset": "Item_Key_A",
-        "ItemDesc": "",
+        "ItemDesc": "금색 열쇠<br>써니의 숨숨집 안에서 찾은 열쇠.",
         "UseItemImageAsset": "Room_Detail_Entrance_Lock_A_Unlock"
     },
     {
         "ItemTextId": "key_b",
         "ItemName": "열쇠2",
         "ItemImageAsset": "Item_Key_B",
-        "ItemDesc": "",
+        "ItemDesc": "은색 열쇠<br>언제 생겼지?",
         "UseItemImageAsset": "Room_Detail_Entrance_Lock_A_Unlock"
     },
     {
         "ItemTextId": "block_w",
         "ItemName": "하얀색 블록",
         "ItemImageAsset": "Item_Key_Block_W",
-        "ItemDesc": "",
+        "ItemDesc": "하얀색 블록<br>현관 사진에서 찾은 블록. 어디에 쓰는 물건일까.",
         "UseItemImageAsset": ""
     },
     {
         "ItemTextId": "block_g",
         "ItemName": "초록색 블록",
         "ItemImageAsset": "Item_Key_Block_G",
-        "ItemDesc": "",
+        "ItemDesc": "초록색 블록<br>냉장고 사진에서 찾은 블록. 어디에 쓰는 물건일까.",
         "UseItemImageAsset": ""
     },
     {

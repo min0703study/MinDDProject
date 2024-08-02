@@ -24,8 +24,6 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 	{
 		base.InitAwake();
 
-		scriptNextButton.onClick.AddListener(OnClickScriptButton);
-		popupNextButton.onClick.AddListener(OnClickPopupNextButton);
 		lockButton.onClick.AddListener(OnClickLockButton);
 
 		cellphonePanel.SetActive(false);
@@ -79,35 +77,23 @@ public class UI_MiniTrack_0101 : UI_MainTrackBase
 		StartCoroutine(StartCellphoneAnimation());
 	}
 
-	private void OnClickScriptButton()
+	public override void UpdateMissionState(string objectTextId, RoomObjectEventTriggerType eventState)
 	{
-		GameManager.Instance.ToNextStep();
-	}
-
-	private void OnClickPopupNextButton()
-	{
-		popupPanel.SetActive(false);
-	}
-
-	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
-	{
-		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(clickableRoomObject.ObjectTextId);
+		base.UpdateMissionState(objectTextId, eventState);
 		
-		if (clickEvent.ActionType == "Event")
+		if (objectTextId == "sun_cellphone")
 		{
-			if (clickEvent.ObjectTextId == "sun_cellphone")
+			Sprite sprite = ResourceManager.Instance.Load<Sprite>("Room_Sun_A_Open");
+			roomImage.sprite = sprite;
+			cellphonePanel.SetActive(true);
+			
+			OnClickScriptNextButton = () => 
 			{
-				Sprite sprite = ResourceManager.Instance.Load<Sprite>("Room_Sun_A_Open");
-				roomImage.sprite = sprite;
-				cellphonePanel.SetActive(true);
-			}
-		}
-		else if (clickEvent.ActionType == "Popup")
-		{
-			ShowPopup(clickEvent.ObjectImageAsset, clickEvent.Text);
+				GameManager.Instance.ToNextSection();
+			};
 		}
 	}
-
+	
 	public IEnumerator StartCellphoneAnimation()
 	{
 		mainScreen.SetActive(true);

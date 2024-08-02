@@ -142,11 +142,11 @@ public class GameFlowTable : BaseTable<GameFlowTable>
 		return null;
 	}
 
-	public TableData.ObjectEvent GetRoomObjectEvent(string objectTextId, RoomObjectEventTriggerType triggerType = RoomObjectEventTriggerType.Click)
+	public TableData.ObjectEvent GetRoomObjectEvent(string trackTextId, string objectTextId, RoomObjectEventTriggerType triggerType = RoomObjectEventTriggerType.Click)
 	{
 		foreach(var objectEvent in RoomObjectEvents) 
 		{
-			if(objectEvent.ObjectTextId == objectTextId && objectEvent.EventTriggerType == triggerType.ToString()) 
+			if(objectEvent.TrackTextId == trackTextId && objectEvent.ObjectTextId == objectTextId && objectEvent.EventTriggerType == triggerType.ToString()) 
 			{
 				return objectEvent;
 			}

@@ -112,28 +112,10 @@ public class UI_MiniTrack_0103 : UI_MainTrackBase
 		popupPanel.SetActive(false);
 	}
 
-	public override void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
+	public override void UpdateMissionState(string objectTextId, RoomObjectEventTriggerType eventState)
 	{
-		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(clickableRoomObject.ObjectTextId);
-		CheckObjectClickMission(clickableRoomObject.ObjectTextId);
-		
-		if (clickEvent.ActionType == "Event")
-		{
-		}
-		else if (clickEvent.ActionType == "Popup")
-		{
-			ShowPopup(clickEvent.ObjectImageAsset, clickEvent.Text);
-		}
-		else if (clickEvent.ActionType == "talking_to_myself")
-		{
-			popupPanel.SetActive(false);
-			scriptPanel.SetActive(true);
-			characterImage.gameObject.SetActive(false);
-			nameText.text = "선";
-
-			scriptText.text = clickEvent.Text;
-		}
-		
+		base.UpdateMissionState(objectTextId, eventState);
+		CheckObjectClickMission(objectTextId);
 	}
 	
 	public override void Clear()

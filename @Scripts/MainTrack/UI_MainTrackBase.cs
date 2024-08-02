@@ -159,10 +159,11 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 
 	public virtual void OnClickRoomObject(ClickableRoomObject clickableRoomObject)
 	{
-		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(clickableRoomObject.ObjectTextId);
-		
+		var clickEvent = GameFlowTable.Instance.GetRoomObjectEvent(GameManager.Instance.CurrentSection.SectionAsset, clickableRoomObject.ObjectTextId);	
+		if(clickEvent == null) 
+			return;
+			
 		UpdateMissionState(clickableRoomObject.ObjectTextId, RoomObjectEventTriggerType.Click);
-		
 		if (clickEvent.ActionType == "Event")
 		{
 			// if (clickEvent.ObjectTextId == "sun_room_door")
@@ -244,6 +245,8 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	public void OnClickScriptButton()
 	{
 		scriptPanel.SetActive(false);
+		
+		OnClickScriptNextButton?.Invoke();
 	}
 
 	private void OnClickGetItemNextButton()

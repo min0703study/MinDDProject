@@ -37,6 +37,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 	#endregion
 	
 	public Action OnClickPopupNextButton;
+	public Action OnClickScriptNextButton;
 	
 	private Tween typingTween;
 	private void Awake()

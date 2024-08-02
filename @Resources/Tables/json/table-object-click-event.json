@@ -1,272 +1,378 @@
 ﻿[
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0101",
         "ObjectTextId": "sun_desk",
-        "ObjectName": "선의 책상 위",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "책상에 전공책이 올려져 있다.<br>최악의 학점을 받은 전공.<br>재수강할 생각을 하니 벌써 머리가 아프다.",
         "ObjectImageAsset": "Room_Detail_Sun_Desk"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0101",
         "ObjectTextId": "sun_desk_drawer",
-        "ObjectName": "책상 옆 서랍",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "내가 휴대폰을 서랍에 넣어놨을 리는 없지.",
         "ObjectImageAsset": "Room_Detail_Sun_Desk_Drawer"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0101",
         "ObjectTextId": "sun_cellphone",
-        "ObjectName": "휴대폰",
         "EventTriggerType": "Click",
         "ActionType": "Event",
         "Text": "",
         "ObjectImageAsset": ""
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "sun_room_door",
-        "ObjectName": "선이 방문",
         "EventTriggerType": "Click",
         "ActionType": "Event",
         "Text": "",
         "ObjectImageAsset": ""
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_desk",
-        "ObjectName": "책상 위 물병",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "누가 물을 꺼내 놨지?<br>내가 마시고 올려놨나?",
         "ObjectImageAsset": "Room_Detail_Living_Desk"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_drawer_first",
-        "ObjectName": "첫번째 칸",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "그냥 평범한 옷이다.",
         "ObjectImageAsset": "Room_Detail_Living_Drawer_First"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_drawer_second",
-        "ObjectName": "두번째 칸",
         "EventTriggerType": "Click",
         "ActionType": "talking_to_myself",
         "Text": "잠긴 건가?<br>그냥은 열리지 않을 것 같다.",
         "ObjectImageAsset": ""
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_drawer_third",
-        "ObjectName": "세번째 칸",
         "EventTriggerType": "Click",
         "ActionType": "talking_to_myself",
         "Text": "잠긴 건가?<br>그냥은 열리지 않을 것 같다.",
         "ObjectImageAsset": ""
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_cat_bowl",
-        "ObjectName": "써니 밥그릇",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.",
         "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_cat_bowl",
-        "ObjectName": "써니 밥그릇",
         "EventTriggerType": "UseItem",
         "ActionType": "Popup",
         "Text": "",
         "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl_Full"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_ho_room_door",
-        "ObjectName": "호의 방문",
         "EventTriggerType": "Click",
         "ActionType": "talking_to_myself",
         "Text": "형의 방이다.<br>형은 방에 있나?",
         "ObjectImageAsset": ""
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_tv",
-        "ObjectName": "\bTV",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "켜지지 않는다.",
         "ObjectImageAsset": "Room_Detail_Living_TV"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "living_room_cat_tower",
-        "ObjectName": "캣타워",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "써니의 캣타워이다.",
         "ObjectImageAsset": "Room_Detail_Living_Cat_Tower"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "kitchen_cupboard",
-        "ObjectName": "싱크대 위 찬장",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "여러 약들이 있다.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Cupboard"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0101",
         "ObjectTextId": "kitchen_under_drawer",
-        "ObjectName": "싱크대 아래 서랍장",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "비어있다.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0102",
         "ObjectTextId": "kitchen_buy_list",
-        "ObjectName": "생필품 목록 메모",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "사야 할 것? 내 글씨인데…….<br>내가 이걸 적어뒀었나?<br>음…… 뭔가 이상해.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Buy_List"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0102",
         "ObjectTextId": "kitchen_family_photo",
-        "ObjectName": "가족사진",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "형의 고등학교 졸업식 날 찍었던 가족사진.<br>이것도 엄청 옛날이네.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Family_Photo"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0102",
         "ObjectTextId": "kitchen_gas_bill",
-        "ObjectName": "도시가스비 고지서",
         "EventTriggerType": "Click",
         "ActionType": "talking_to_myself",
         "Text": "도시가스비 고지서.<br>이번 달엔 왜 이렇게 적게 나왔지.<br>",
         "ObjectImageAsset": ""
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0102",
         "ObjectTextId": "kitchen_refrigerator_top",
-        "ObjectName": "냉장고 냉동실",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "얼음이랑……. 무슨 봉투가 있네.<br>보나 마나 음식물 쓰레기겠지.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Refrigerator_Top"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0102",
         "ObjectTextId": "kitchen_refrigerator_bottom",
-        "ObjectName": "냉장고 냉장실",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "물이랑 엄마가 보내준 김치.<br>냉장고가 아주 텅 비었네.",
         "ObjectImageAsset": "Room_Detail_Kitchen_Refrigerator_Bottom"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0103",
         "ObjectTextId": "entrance_lock_a",
-        "ObjectName": "자물쇠 A",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "열쇠 자물쇠. 잠겨 있다.",
         "ObjectImageAsset": "Room_Detail_Entrance_Lock_A_Lock"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0103",
         "ObjectTextId": "entrance_lock_b",
-        "ObjectName": "자물쇠 B",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "네 자리 숫자 자물쇠. 비밀번호가 뭘까?",
         "ObjectImageAsset": "Room_Detail_Entrance_Lock_B_Lock"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0103",
         "ObjectTextId": "entrance_lock_c",
-        "ObjectName": "자물쇠 C",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "네 자리 숫자 자물쇠. 비밀번호가 뭘까?",
         "ObjectImageAsset": "Room_Detail_Entrance_Lock_C_Lock"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0103",
         "ObjectTextId": "entrance_door_view",
-        "ObjectName": "현관문 구멍",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "복도가 보인다.<br>딱히 특별한 건 없어 보인다.",
         "ObjectImageAsset": "Room_Detail_Entrance_Door_View"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0103",
         "ObjectTextId": "entrance_leaflet",
-        "ObjectName": "중국집 전단지",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "중국집 전단지. 역시 여기 있었네.<br>하지만 지금은 밥 먹을 때가 아닌 것 같아.",
         "ObjectImageAsset": "Room_Detail_Entrance_Door_Leaflet"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MiniTrack_0103",
         "ObjectTextId": "entrance_photo",
-        "ObjectName": "사진",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "내 대학교 입학식 날 형이랑 찍은 사진.<br>내가 찍지 말라고 했는데…….",
         "ObjectImageAsset": "Room_Detail_Entrance_Door_Photo"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0201",
         "ObjectTextId": "entrance_lock_a",
-        "ObjectName": "자물쇠 A",
         "EventTriggerType": "UseItem",
         "ActionType": "Popup",
         "Text": "",
         "ObjectImageAsset": "Room_Detail_Entrance_Lock_A_Unlock"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0201",
         "ObjectTextId": "entrance_lock_b",
-        "ObjectName": "자물쇠 B",
         "EventTriggerType": "Unlock",
         "ActionType": "Popup",
         "Text": "",
         "ObjectImageAsset": "Room_Detail_Entrance_Lock_B_Unlock"
     },
     {
-        "TrackTextId": "MiniTrack_0101",
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "living_room_drawer_first",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "그냥 평범한 옷이다.",
+        "ObjectImageAsset": "Room_Detail_Living_Drawer_First"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "living_room_drawer_second",
+        "EventTriggerType": "Click",
+        "ActionType": "talking_to_myself",
+        "Text": "잠긴 건가?<br>그냥은 열리지 않을 것 같다.",
+        "ObjectImageAsset": ""
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "living_room_drawer_third",
+        "EventTriggerType": "Click",
+        "ActionType": "talking_to_myself",
+        "Text": "잠긴 건가?<br>그냥은 열리지 않을 것 같다.",
+        "ObjectImageAsset": ""
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "living_room_cat_bowl",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "써니의 밥그릇. 비어있다.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Bowl"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "living_room_cat_tower",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "써니의 캣타워이다.",
+        "ObjectImageAsset": "Room_Detail_Living_Cat_Tower"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "living_room_ho_room_door",
+        "EventTriggerType": "Click",
+        "ActionType": "talking_to_myself",
+        "Text": "형의 방이다.<br>형은 도대체 뭘 꾸미고 있는 걸까?",
+        "ObjectImageAsset": ""
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "living_room_tv",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "켜지지 않는다.",
+        "ObjectImageAsset": "Room_Detail_Living_TV"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "curtain",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "왜 창문이 막혀 있지?<br>형이 가린 걸까?",
+        "ObjectImageAsset": "Room_Detail_Living_Curtain"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "kitchen_cupboard",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "여러 약들이 있다.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Cupboard"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "kitchen_under_drawer",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "비어있다.<br>써니의 사료는 어디 있지?",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Under_Drawer"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "kitchen_buy_list",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "사야 할 것? 내 글씨인데…….<br>수상해. 잘 살펴봐야겠는 걸.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Buy_List"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "kitchen_family_photo",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "형의 고등학교 졸업식 날 찍었던 가족사진.<br>이것도 엄청 옛날이네.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Family_Photo"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "kitchen_gas_bill",
+        "EventTriggerType": "Click",
+        "ActionType": "talking_to_myself",
+        "Text": "도시가스비 고지서.<br>이번 달엔 왜 이렇게 적게 나왔지.<br>",
+        "ObjectImageAsset": ""
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "kitchen_refrigerator_top",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "얼음이랑……. 무슨 봉투가 있네.<br>보나 마나 음식물 쓰레기겠지.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Refrigerator_Top"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "kitchen_refrigerator_bottom",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "하나한테 물 밖에 줄 게 없네.<br>하지만 일단은 현관 먼저 살펴보고.",
+        "ObjectImageAsset": "Room_Detail_Kitchen_Refrigerator_Bottom"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "entrance_door_view",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "복도가 보인다.<br>딱히 특별한 건 없어 보인다.",
+        "ObjectImageAsset": "Room_Detail_Entrance_Door_View"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "entrance_leaflet",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "중국집 전단지.<br>뭔가 이상한 것 같기도 하고.",
+        "ObjectImageAsset": "Room_Detail_Entrance_Door_Leaflet"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
+        "ObjectTextId": "entrance_photo",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "내 대학교 입학식 날 형이랑 찍은 사진.<br>내가 찍지 말라고 했는데…….",
+        "ObjectImageAsset": "Room_Detail_Entrance_Door_Photo"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0201",
         "ObjectTextId": "door_view_close",
-        "ObjectName": "",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "왜 창문이 막혀 있지?<br>형이 가린 걸까?",
         "ObjectImageAsset": "Room_Detail_Entrance_Door_View_Close"
-    },
-    {
-        "TrackTextId": "MiniTrack_0101",
-        "ObjectTextId": "curtain",
-        "ObjectName": "",
-        "EventTriggerType": "Click",
-        "ActionType": "Popup",
-        "Text": "이게 왜 막혀 있지?<br>누가 일부러 붙여 놓은 것 같은데.",
-        "ObjectImageAsset": "Room_Detail_Living_Curtain"
     }
 ]

@@ -34,7 +34,7 @@ public class NumberLock : BaseRoomObject
 			IsUnlocked = true;
 			
 			GameManager.Instance.ChangeRoomObjectState(ObjectTextId, RoomObjectState.RemoveRoomObject);
-			var roomObjectData = GameFlowTable.Instance.GetRoomObjectEvent(objectTextId, RoomObjectEventTriggerType.UseItem);
+			var roomObjectData = GameFlowTable.Instance.GetRoomObjectEvent(GameManager.Instance.CurrentSection.SectionAsset, objectTextId);
 			if(roomObjectData != null) 
 			{
 				currentTrack.ShowPopup(roomObjectData.ObjectImageAsset, roomObjectData.Text, ()=> 

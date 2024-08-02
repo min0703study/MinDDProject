@@ -1,31 +1,48 @@
-TrackTextId,ObjectTextId,ObjectName,EventTriggerType,ActionType,Text,ObjectImageAsset
-MiniTrack_0101,sun_desk,선의 책상 위,Click,Popup,책상에 전공책이 올려져 있다.<br>최악의 학점을 받은 전공.<br>재수강할 생각을 하니 벌써 머리가 아프다.,Room_Detail_Sun_Desk
-MiniTrack_0101,sun_desk_drawer,책상 옆 서랍,Click,Popup,내가 휴대폰을 서랍에 넣어놨을 리는 없지.,Room_Detail_Sun_Desk_Drawer
-MiniTrack_0101,sun_cellphone,휴대폰,Click,Event,,
-UI_MainTrack_0101,sun_room_door,선이 방문,Click,Event,,
-UI_MainTrack_0101,living_room_desk,책상 위 물병,Click,Popup,누가 물을 꺼내 놨지?<br>내가 마시고 올려놨나?,Room_Detail_Living_Desk
-UI_MainTrack_0101,living_room_drawer_first,첫번째 칸,Click,Popup,그냥 평범한 옷이다.,Room_Detail_Living_Drawer_First
-UI_MainTrack_0101,living_room_drawer_second,두번째 칸,Click,talking_to_myself,잠긴 건가?<br>그냥은 열리지 않을 것 같다.,
-UI_MainTrack_0101,living_room_drawer_third,세번째 칸,Click,talking_to_myself,잠긴 건가?<br>그냥은 열리지 않을 것 같다.,
-UI_MainTrack_0101,living_room_cat_bowl,써니 밥그릇,Click,Popup,써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.,Room_Detail_Living_Cat_Bowl
-UI_MainTrack_0101,living_room_cat_bowl,써니 밥그릇,UseItem,Popup,,Room_Detail_Living_Cat_Bowl_Full
-UI_MainTrack_0101,living_room_ho_room_door,호의 방문,Click,talking_to_myself,형의 방이다.<br>형은 방에 있나?,
-UI_MainTrack_0101,living_room_tv,TV,Click,Popup,켜지지 않는다.,Room_Detail_Living_TV
-UI_MainTrack_0101,living_room_cat_tower,캣타워,Click,Popup,써니의 캣타워이다.,Room_Detail_Living_Cat_Tower
-UI_MainTrack_0101,kitchen_cupboard,싱크대 위 찬장,Click,Popup,여러 약들이 있다.,Room_Detail_Kitchen_Cupboard
-UI_MainTrack_0101,kitchen_under_drawer,싱크대 아래 서랍장,Click,Popup,비어있다.,Room_Detail_Kitchen_Under_Drawer
-UI_MiniTrack_0102,kitchen_buy_list,생필품 목록 메모,Click,Popup,사야 할 것? 내 글씨인데…….<br>내가 이걸 적어뒀었나?<br>음…… 뭔가 이상해.,Room_Detail_Kitchen_Buy_List
-UI_MiniTrack_0102,kitchen_family_photo,가족사진,Click,Popup,형의 고등학교 졸업식 날 찍었던 가족사진.<br>이것도 엄청 옛날이네.,Room_Detail_Kitchen_Family_Photo
-UI_MiniTrack_0102,kitchen_gas_bill,도시가스비 고지서,Click,talking_to_myself,도시가스비 고지서.<br>이번 달엔 왜 이렇게 적게 나왔지.<br>,
-UI_MiniTrack_0102,kitchen_refrigerator_top,냉장고 냉동실,Click,Popup,얼음이랑……. 무슨 봉투가 있네.<br>보나 마나 음식물 쓰레기겠지.,Room_Detail_Kitchen_Refrigerator_Top
-UI_MiniTrack_0102,kitchen_refrigerator_bottom,냉장고 냉장실,Click,Popup,물이랑 엄마가 보내준 김치.<br>냉장고가 아주 텅 비었네.,Room_Detail_Kitchen_Refrigerator_Bottom
-UI_MiniTrack_0103,entrance_lock_a,자물쇠 A,Click,Popup,열쇠 자물쇠. 잠겨 있다.,Room_Detail_Entrance_Lock_A_Lock
-UI_MiniTrack_0103,entrance_lock_b,자물쇠 B,Click,Popup,네 자리 숫자 자물쇠. 비밀번호가 뭘까?,Room_Detail_Entrance_Lock_B_Lock
-UI_MiniTrack_0103,entrance_lock_c,자물쇠 C,Click,Popup,네 자리 숫자 자물쇠. 비밀번호가 뭘까?,Room_Detail_Entrance_Lock_C_Lock
-UI_MiniTrack_0103,entrance_door_view,현관문 구멍,Click,Popup,복도가 보인다.<br>딱히 특별한 건 없어 보인다.,Room_Detail_Entrance_Door_View
-UI_MiniTrack_0103,entrance_leaflet,중국집 전단지,Click,Popup,중국집 전단지. 역시 여기 있었네.<br>하지만 지금은 밥 먹을 때가 아닌 것 같아.,Room_Detail_Entrance_Door_Leaflet
-UI_MiniTrack_0103,entrance_photo,사진,Click,Popup,내 대학교 입학식 날 형이랑 찍은 사진.<br>내가 찍지 말라고 했는데…….,Room_Detail_Entrance_Door_Photo
-UI_MainTrack_0201,entrance_lock_a,자물쇠 A,UseItem,Popup,,Room_Detail_Entrance_Lock_A_Unlock
-UI_MainTrack_0201,entrance_lock_b,자물쇠 B,Unlock,Popup,,Room_Detail_Entrance_Lock_B_Unlock
-UI_MainTrack_0201,door_view_close,,Click,Popup,왜 창문이 막혀 있지?<br>형이 가린 걸까?,Room_Detail_Entrance_Door_View_Close
-UI_MainTrack_0201,curtain,,Click,Popup,이게 왜 막혀 있지?<br>누가 일부러 붙여 놓은 것 같은데.,Room_Detail_Living_Curtain
+TrackTextId,ObjectTextId,EventTriggerType,ActionType,Text,ObjectImageAsset
+UI_MiniTrack_0101,sun_desk,Click,Popup,책상에 전공책이 올려져 있다.<br>최악의 학점을 받은 전공.<br>재수강할 생각을 하니 벌써 머리가 아프다.,Room_Detail_Sun_Desk
+UI_MiniTrack_0101,sun_desk_drawer,Click,Popup,내가 휴대폰을 서랍에 넣어놨을 리는 없지.,Room_Detail_Sun_Desk_Drawer
+UI_MiniTrack_0101,sun_cellphone,Click,Event,,
+UI_MainTrack_0101,sun_room_door,Click,Event,,
+UI_MainTrack_0101,living_room_desk,Click,Popup,누가 물을 꺼내 놨지?<br>내가 마시고 올려놨나?,Room_Detail_Living_Desk
+UI_MainTrack_0101,living_room_drawer_first,Click,Popup,그냥 평범한 옷이다.,Room_Detail_Living_Drawer_First
+UI_MainTrack_0101,living_room_drawer_second,Click,talking_to_myself,잠긴 건가?<br>그냥은 열리지 않을 것 같다.,
+UI_MainTrack_0101,living_room_drawer_third,Click,talking_to_myself,잠긴 건가?<br>그냥은 열리지 않을 것 같다.,
+UI_MainTrack_0101,living_room_cat_bowl,Click,Popup,써니의 밥그릇. 비어있다.<br>얼른 사료를 찾아서 그릇에 부어줘야겠어.,Room_Detail_Living_Cat_Bowl
+UI_MainTrack_0101,living_room_cat_bowl,UseItem,Popup,,Room_Detail_Living_Cat_Bowl_Full
+UI_MainTrack_0101,living_room_ho_room_door,Click,talking_to_myself,형의 방이다.<br>형은 방에 있나?,
+UI_MainTrack_0101,living_room_tv,Click,Popup,켜지지 않는다.,Room_Detail_Living_TV
+UI_MainTrack_0101,living_room_cat_tower,Click,Popup,써니의 캣타워이다.,Room_Detail_Living_Cat_Tower
+UI_MainTrack_0101,kitchen_cupboard,Click,Popup,여러 약들이 있다.,Room_Detail_Kitchen_Cupboard
+UI_MainTrack_0101,kitchen_under_drawer,Click,Popup,비어있다.,Room_Detail_Kitchen_Under_Drawer
+UI_MiniTrack_0102,kitchen_buy_list,Click,Popup,사야 할 것? 내 글씨인데…….<br>내가 이걸 적어뒀었나?<br>음…… 뭔가 이상해.,Room_Detail_Kitchen_Buy_List
+UI_MiniTrack_0102,kitchen_family_photo,Click,Popup,형의 고등학교 졸업식 날 찍었던 가족사진.<br>이것도 엄청 옛날이네.,Room_Detail_Kitchen_Family_Photo
+UI_MiniTrack_0102,kitchen_gas_bill,Click,talking_to_myself,도시가스비 고지서.<br>이번 달엔 왜 이렇게 적게 나왔지.<br>,
+UI_MiniTrack_0102,kitchen_refrigerator_top,Click,Popup,얼음이랑……. 무슨 봉투가 있네.<br>보나 마나 음식물 쓰레기겠지.,Room_Detail_Kitchen_Refrigerator_Top
+UI_MiniTrack_0102,kitchen_refrigerator_bottom,Click,Popup,물이랑 엄마가 보내준 김치.<br>냉장고가 아주 텅 비었네.,Room_Detail_Kitchen_Refrigerator_Bottom
+UI_MiniTrack_0103,entrance_lock_a,Click,Popup,열쇠 자물쇠. 잠겨 있다.,Room_Detail_Entrance_Lock_A_Lock
+UI_MiniTrack_0103,entrance_lock_b,Click,Popup,네 자리 숫자 자물쇠. 비밀번호가 뭘까?,Room_Detail_Entrance_Lock_B_Lock
+UI_MiniTrack_0103,entrance_lock_c,Click,Popup,네 자리 숫자 자물쇠. 비밀번호가 뭘까?,Room_Detail_Entrance_Lock_C_Lock
+UI_MiniTrack_0103,entrance_door_view,Click,Popup,복도가 보인다.<br>딱히 특별한 건 없어 보인다.,Room_Detail_Entrance_Door_View
+UI_MiniTrack_0103,entrance_leaflet,Click,Popup,중국집 전단지. 역시 여기 있었네.<br>하지만 지금은 밥 먹을 때가 아닌 것 같아.,Room_Detail_Entrance_Door_Leaflet
+UI_MiniTrack_0103,entrance_photo,Click,Popup,내 대학교 입학식 날 형이랑 찍은 사진.<br>내가 찍지 말라고 했는데…….,Room_Detail_Entrance_Door_Photo
+UI_MainTrack_0201,entrance_lock_a,UseItem,Popup,,Room_Detail_Entrance_Lock_A_Unlock
+UI_MainTrack_0201,entrance_lock_b,Unlock,Popup,,Room_Detail_Entrance_Lock_B_Unlock
+UI_MainTrack_0201,living_room_drawer_first,Click,Popup,그냥 평범한 옷이다.,Room_Detail_Living_Drawer_First
+UI_MainTrack_0201,living_room_drawer_second,Click,talking_to_myself,잠긴 건가?<br>그냥은 열리지 않을 것 같다.,
+UI_MainTrack_0201,living_room_drawer_third,Click,talking_to_myself,잠긴 건가?<br>그냥은 열리지 않을 것 같다.,
+UI_MainTrack_0201,living_room_cat_bowl,Click,Popup,써니의 밥그릇. 비어있다.,Room_Detail_Living_Cat_Bowl
+UI_MainTrack_0201,living_room_cat_tower,Click,Popup,써니의 캣타워이다.,Room_Detail_Living_Cat_Tower
+UI_MainTrack_0201,living_room_ho_room_door,Click,talking_to_myself,형의 방이다.<br>형은 도대체 뭘 꾸미고 있는 걸까?,
+UI_MainTrack_0201,living_room_tv,Click,Popup,켜지지 않는다.,Room_Detail_Living_TV
+UI_MainTrack_0201,curtain,Click,Popup,왜 창문이 막혀 있지?<br>형이 가린 걸까?,Room_Detail_Living_Curtain
+UI_MainTrack_0201,kitchen_cupboard,Click,Popup,여러 약들이 있다.,Room_Detail_Kitchen_Cupboard
+UI_MainTrack_0201,kitchen_under_drawer,Click,Popup,비어있다.<br>써니의 사료는 어디 있지?,Room_Detail_Kitchen_Under_Drawer
+UI_MainTrack_0201,kitchen_buy_list,Click,Popup,사야 할 것? 내 글씨인데…….<br>수상해. 잘 살펴봐야겠는 걸.,Room_Detail_Kitchen_Buy_List
+UI_MainTrack_0201,kitchen_family_photo,Click,Popup,형의 고등학교 졸업식 날 찍었던 가족사진.<br>이것도 엄청 옛날이네.,Room_Detail_Kitchen_Family_Photo
+UI_MainTrack_0201,kitchen_gas_bill,Click,talking_to_myself,도시가스비 고지서.<br>이번 달엔 왜 이렇게 적게 나왔지.<br>,
+UI_MainTrack_0201,kitchen_refrigerator_top,Click,Popup,얼음이랑……. 무슨 봉투가 있네.<br>보나 마나 음식물 쓰레기겠지.,Room_Detail_Kitchen_Refrigerator_Top
+UI_MainTrack_0201,kitchen_refrigerator_bottom,Click,Popup,하나한테 물 밖에 줄 게 없네.<br>하지만 일단은 현관 먼저 살펴보고.,Room_Detail_Kitchen_Refrigerator_Bottom
+UI_MainTrack_0201,entrance_door_view,Click,Popup,복도가 보인다.<br>딱히 특별한 건 없어 보인다.,Room_Detail_Entrance_Door_View
+UI_MainTrack_0201,entrance_leaflet,Click,Popup,중국집 전단지.<br>뭔가 이상한 것 같기도 하고.,Room_Detail_Entrance_Door_Leaflet
+UI_MainTrack_0201,entrance_photo,Click,Popup,내 대학교 입학식 날 형이랑 찍은 사진.<br>내가 찍지 말라고 했는데…….,Room_Detail_Entrance_Door_Photo
+UI_MainTrack_0201,door_view_close,Click,Popup,왜 창문이 막혀 있지?<br>형이 가린 걸까?,Room_Detail_Entrance_Door_View_Close
