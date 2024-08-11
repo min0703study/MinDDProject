@@ -2877,8 +2877,8 @@
         "MissionStartRoom": "",
         "Text": "형을 추궁한다.,하나를 추궁한다.",
         "CharacterKey": "",
-        "CharacterImageAsset": "",
-        "RoomImageAsset": "",
+        "CharacterImageAsset": "Ho_Normal,Hana_Normal",
+        "RoomImageAsset": "Room_Living_A",
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""

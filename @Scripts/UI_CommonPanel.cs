@@ -29,6 +29,9 @@ public class UI_CommonPanel : MonoBehaviour
 	public Image characterImage;
 	public Image characterMaskImage;
 	
+	[Header("Two Character GameObjects")]
+	public GameObject twoCharacterPanel;
+	
 	[Header("Choice GameObjects")]
 	public GameObject choicePanel;
 	public GameObject choiceListPanel;

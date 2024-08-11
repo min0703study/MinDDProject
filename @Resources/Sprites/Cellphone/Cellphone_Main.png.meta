@@ -1,22 +1,7 @@
 fileFormatVersion: 2
-guid: 85e81f6d7e3bf40a9907fa2336784915
+guid: ab575a7df95cb9947a2cf3e5bd696475
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -5346795138581710022
-    second: Cellphone_Main_0
-  - first:
-      213: -2398045716637752450
-    second: Cellphone_Main_1
-  - first:
-      213: 5908816827748102922
-    second: Cellphone_Main_2
-  - first:
-      213: 7641011703440058459
-    second: Cellphone_Main_3
-  - first:
-      213: -7959006187776006545
-    second: Cellphone_Main_4
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -107,31 +92,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -144,112 +117,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Cellphone_Main_0
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 1183
-        width: 12
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3b3d06662e5cc5b0800000000000000
-      internalID: -5346795138581710022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cellphone_Main_1
-      rect:
-        serializedVersion: 2
-        x: 519
-        y: 1185
-        width: 12
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e73e8a8402e68bed0800000000000000
-      internalID: -2398045716637752450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cellphone_Main_2
-      rect:
-        serializedVersion: 2
-        x: 533
-        y: 1184
-        width: 11
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a03b6cc3995500250800000000000000
-      internalID: 5908816827748102922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cellphone_Main_3
-      rect:
-        serializedVersion: 2
-        x: 552
-        y: 1181
-        width: 55
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b58a52419a35a0a60800000000000000
-      internalID: 7641011703440058459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cellphone_Main_4
-      rect:
-        serializedVersion: 2
-        x: 218
-        y: 680
-        width: 7
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f66a9747a0eeb8190800000000000000
-      internalID: -7959006187776006545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -260,12 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Cellphone_Main_4: -7959006187776006545
-      Cellphone_Main_1: -2398045716637752450
-      Cellphone_Main_0: -5346795138581710022
-      Cellphone_Main_3: 7641011703440058459
-      Cellphone_Main_2: 5908816827748102922
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

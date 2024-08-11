@@ -14,6 +14,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 
 	#region UI
 	protected GameObject characterPanel => commonPanel.characterPanel;
+	protected GameObject twoCharacterPanel => commonPanel.twoCharacterPanel;
 	protected Image characterImage => commonPanel.characterImage;
 	protected Image characterMaskImage => commonPanel.characterMaskImage;
 	
@@ -93,11 +94,17 @@ public class UI_CoreLayerBase : MonoBehaviour
 	{
 		if(imageAsset != null && imageAsset != string.Empty) 
 		{
-			characterPanel.SetActive(true);
-			characterImage.gameObject.SetActive(true);
-			
-			var characterSprite = ResourceManager.Instance.Load<Sprite>(imageAsset);
-			characterImage.sprite = characterSprite;
+			if(imageAsset.Contains(",")) 
+			{
+				twoCharacterPanel.SetActive(true);
+			} else 
+			{
+				characterPanel.SetActive(true);
+				characterImage.gameObject.SetActive(true);
+				
+				var characterSprite = ResourceManager.Instance.Load<Sprite>(imageAsset);
+				characterImage.sprite = characterSprite;
+			}
 		}
 	}
 	
@@ -155,6 +162,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 	
 	protected void AllPanelDisable() 
 	{
+		twoCharacterPanel.SetActive(false);
 		choicePanel.SetActive(false);
 		popupPanel.SetActive(false);
 		popupTextPanel.SetActive(false);
