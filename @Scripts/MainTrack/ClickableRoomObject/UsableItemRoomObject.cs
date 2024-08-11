@@ -14,12 +14,12 @@ public class UsableItemRoomObject : ClickableRoomObject
 		var itemId = GameManager.Instance.GetSelectedInventoryItemId();
 		if (itemId == useItemTextId)
 		{
-			GameManager.Instance.UseSelectedItem(objectTextId);
+			GameManager.Instance.UseSelectedItem();
 			GameManager.Instance.ChangeRoomObjectState(ObjectTextId, RoomObjectState.UsedItem);
 			
 			UsedItemPanel.SetActive(true);
 			
-			var roomObjectData = GameFlowTable.Instance.GetRoomObjectEvent(GameManager.Instance.CurrentSection.SectionAsset, objectTextId);
+			var roomObjectData = GameFlowTable.Instance.GetRoomObjectEvent(GameManager.Instance.CurrentSection.SectionAsset, objectTextId, RoomObjectEventTriggerType.UseItem);
 			if(roomObjectData != null) 
 			{
 				currentTrack.ShowPopup(roomObjectData.ObjectImageAsset, roomObjectData.Text, ()=> 

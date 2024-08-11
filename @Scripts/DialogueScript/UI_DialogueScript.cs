@@ -66,7 +66,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 			}
 			else if (dialog.Type == "talking_to_myself")
 			{
-				ShowDialogueBox(dialog.Text, dialog.CharacterKey);
+				ShowDialogueBox(dialog.Text, "선");
 			}
 			else if (dialog.Type == "thinking")
 			{
@@ -107,7 +107,7 @@ public class UI_DialogueScript : UI_CoreLayerBase
 					var itemHolder = Util.GetOrAddComponent<ChoiceItemHolder>(itemHolderGO);
 					itemHolder.Init(text, index, (int index) => 
 					{
-						GameManager.Instance.ChoiceIndex(index);
+						GameManager.Instance.SetChoiceIndex(index);
 						GameManager.Instance.ToNextStep();
 					});
 					

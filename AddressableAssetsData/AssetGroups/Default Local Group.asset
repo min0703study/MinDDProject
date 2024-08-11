@@ -185,12 +185,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f50923585dd500646960f58329222054
-    m_Address: Room_Detail_Entrance_Door_Photo.sprite
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ff56da6c16a910b49bfe4306b1a6fa02
     m_Address: Room_Detail_Entrance_Lock_A_Lock.sprite
     m_ReadOnly: 0
@@ -469,6 +463,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 14c19fbea503cd349b316f4743ec9873
     m_Address: Room_Kitchen_Back_View_02.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6ca14ceee183c949ab5dc20f37ce986
+    m_Address: Popup_Ho_Door_Open.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 01ab3c15bf0a3164ab4354f4fca97114
+    m_Address: Popup_Close_Sun_Door.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

@@ -4,45 +4,45 @@ using UnityEngine;
 
 public class UI_MainTrack_0201 : UI_MainTrackBase
 {
-	// [SerializeField] KeyLock lockA;
-	// [SerializeField] BlockLock lockB;
-	// [SerializeField] NumberLock lockC;
+	[SerializeField] BlockLock lockC;
+	[SerializeField] NumberLock lockB;
 
-	// bool isMatch2LockB;
-	// bool isUnlockedLockA;
-	// bool isUnlockedLockC;
+	bool isMatch2LockB;
+	bool isUnlockedLockA;
+	bool isUnlockedLockC;
 	
-	// public override void UpdateMissionState()
-	// {
-	// 	// if(isMatch2LockB == false) 
-	// 	// {
-	// 	// 	if(lockB.MathedBlocks[0] && lockB.MathedBlocks[1]) 
-	// 	// 	{
-	// 	// 		isMatch2LockB = true;
-	// 	// 	}
-	// 	// }
+	public override void UpdateMissionState(string objectTextId, RoomObjectEventTriggerType eventState) 
+	{
+		if(isMatch2LockB == false) 
+		{
+			if(lockC.MatchBlockCount == 2) 
+			{
+				Debug.Log("LockC Clear");
+				isMatch2LockB = true;
+			}
+		}
 		
-	// 	// if(isUnlockedLockA == false) 
-	// 	// {
-	// 	// 	if(lockA.IsUnlocked) 
-	// 	// 	{
-	// 	// 		ShowPopup("Room_Detail_Entrance_Lock_A_Unlock");
-	// 	// 		isUnlockedLockA = true;
-	// 	// 	}
-	// 	// }
+		if(isUnlockedLockA == false) 
+		{
+			if(objectTextId == "entrance_lock_a") 
+			{
+				Debug.Log("lockA Clear");
+				isUnlockedLockA = true;
+			}
+		}
 		
-	// 	// if(isUnlockedLockC == false) 
-	// 	// {
-	// 	// 	if(lockC.IsUnlocked) 
-	// 	// 	{
-	// 	// 		ShowPopup("Room_Detail_Entrance_Lock_C_Unlock");
-	// 	// 		isUnlockedLockC = true;
-	// 	// 	}
-	// 	// }
+		if(isUnlockedLockC == false) 
+		{
+			if(lockB.IsUnlocked) 
+			{
+				Debug.Log("lockB Clear");
+				isUnlockedLockC = true;
+			}
+		}
 		
-	// 	// if(isUnlockedLockA && isMatch2LockB && isUnlockedLockC) 
-	// 	// {
-	// 	// 	GameManager.Instance.ToNextSection();
-	// 	// }
-	// }
+		if(isUnlockedLockA && isMatch2LockB && isUnlockedLockC) 
+		{
+			GameManager.Instance.ToNextSection();
+		}
+	}
 }

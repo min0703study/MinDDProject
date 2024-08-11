@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TableData;
-using UnityEditor.Search;
-using UnityEngine;
 
 public class InventorySlot
 {
@@ -58,7 +55,7 @@ public class GameManager : BaseManager<GameManager>
 			RoomObjectStates.Add(objectTextId, RoomObjectState.LocatedInRoom);
 		}
 		
-		CurrentGameFlowIndex = 1;
+		CurrentGameFlowIndex = 14;
 		
 		CurrentDetailFlowIndex = 1;
 		CurrentDetailFlowId = "1";
@@ -69,7 +66,7 @@ public class GameManager : BaseManager<GameManager>
 		StartSection();
 	}
 
-	public void ChoiceIndex(int index) 
+	public void SetChoiceIndex(int index) 
 	{
 		CurrentChoiceIndex = index;
 		CurrentDetailChoiceIndex = 0;
@@ -162,21 +159,16 @@ public class GameManager : BaseManager<GameManager>
 		OnAddInventoryItem?.Invoke(itemTextId);
 	}
 	
-	public void UseSelectedItem(string objectTextId = null)
+	public void UseSelectedItem()
 	{
-		UseItem(SelectedInventoryIndex, objectTextId);
+		UseItem(SelectedInventoryIndex);
 	}
 
 
-	public void UseItem(int index, string objectTextId = null)
+	public void UseItem(int index)
 	{			
 		Inventory[index].IsBlank = true;
 		Inventory[index].ItemTextId = string.Empty;
-		
-		// if(objectTextId != null) 
-		// {
-		// 	RoomObjectStates[objectTextId] = RoomObjectState.UsedItem;
-		// }
 		
 		OnUseInventoryItem?.Invoke();
 	}

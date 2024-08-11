@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 3120876521667750574}
   - component: {fileID: 4092856289907921431}
   m_Layer: 5
-  m_Name: LockB
+  m_Name: LockC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectTextId: entrance_lock_b
+  objectTextId: entrance_lock_c
 --- !u!1 &5554804184079321777
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +816,7 @@ GameObject:
   - component: {fileID: 7796873001931870868}
   - component: {fileID: 3578056194866464514}
   m_Layer: 5
-  m_Name: LockC
+  m_Name: LockB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0b93db8552645d5bfbe120a08d4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectTextId: entrance_lock_c
+  objectTextId: entrance_lock_b
 --- !u!1 &7342052248457521398
 GameObject:
   m_ObjectHideFlags: 0

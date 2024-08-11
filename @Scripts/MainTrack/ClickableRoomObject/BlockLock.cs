@@ -13,7 +13,7 @@ public class BlockItem
 public class BlockLock : ClickableRoomObject
 {
 	public List<BlockItem> BlockItems = new();
-	public bool[] MathedBlocks { get; set; } = new bool[4];
+	public int MatchBlockCount = 0;
 
 	public override void InitAwake()
 	{
@@ -32,6 +32,7 @@ public class BlockLock : ClickableRoomObject
 		{
 			if(GameManager.Instance.GetSelectedInventoryItemId() == blockItem.BlockItemId) 
 			{
+				MatchBlockCount ++;
 				blockItem.MatchBlockGO.SetActive(true);
 				GameManager.Instance.UseSelectedItem();
 				

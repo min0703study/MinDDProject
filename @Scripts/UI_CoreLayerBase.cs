@@ -79,8 +79,14 @@ public class UI_CoreLayerBase : MonoBehaviour
 		}
 		
 		script = script.Replace("<br>", "\n");
-		typingTween = DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f)
+		if(script.Contains("<color")) 
+		{
+			scriptText.text = script;
+		} else 
+		{
+			typingTween = DOTween.To(() => 0, x => scriptText.text = script.Substring(0, x), script.Length, script.Length * 0.1f)
 			.OnComplete(() => scriptText.text = script);
+		}
 	}
 	
 	protected void ShowCharacter(string imageAsset) 
@@ -127,6 +133,10 @@ public class UI_CoreLayerBase : MonoBehaviour
 		{
 			popupTextPanel.SetActive(true);
 			popupText.text = text;
+		} else 
+		{
+			popupTextPanel.SetActive(false);
+			popupText.text = string.Empty;
 		}
 		
 		if(onCloseCallBack != null) 
