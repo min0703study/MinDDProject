@@ -3274,5 +3274,19 @@
         "PopupImageAsset": "",
         "SoundEffectAsset": "",
         "VisualSoundEffectAsset": ""
+    },
+    {
+        "SectionIndex": "15",
+        "StepId": "1",
+        "Type": "mission",
+        "MissionText": "",
+        "MissionStartRoom": "",
+        "Text": "현관 자물쇠를 풀어보자.",
+        "CharacterKey": "",
+        "CharacterImageAsset": "",
+        "RoomImageAsset": "",
+        "PopupImageAsset": "",
+        "SoundEffectAsset": "",
+        "VisualSoundEffectAsset": ""
     }
 ]

@@ -114,7 +114,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 		visualSoundEffectImage.sprite =  ResourceManager.Instance.Load<Sprite>(imageAsset);
 	}
 	
-	protected void ShowDialogueBox(string text, string name = null, bool useTypingAni = true) 
+	public void ShowDialogueBox(string text, string name = null, bool useTypingAni = true) 
 	{
 		scriptPanel.SetActive(true);
 		if(name != null && name != string.Empty) 

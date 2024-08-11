@@ -35,12 +35,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: eba8fda6d7a8c435095ebbf2376854f0
-    m_Address: UI_GamePopup
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - PreLoad
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 72df1f5c974354417805ea5b8d4ffc29
     m_Address: UI_MiniTrack_0101
     m_ReadOnly: 0
@@ -481,6 +475,30 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 44653f4866e5e5242adc19108e506ed0
     m_Address: Room_Living_B_Hana.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0abbcbe3a9e9bb745b2a184410a8890f
+    m_Address: UI_MainTrack_0202
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af22c8e6c35be1446a97131d0c6012e7
+    m_Address: Cellphone_Gallery_Photo5.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f71cd710553b65649b29a24eefadee8c
+    m_Address: Cellphone_Gallery_Photo4.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 068422d95a2e7484eb55b630b345aa58
+    m_Address: Cellphone_Gallery_Photo3.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

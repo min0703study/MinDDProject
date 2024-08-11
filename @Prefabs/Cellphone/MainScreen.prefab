@@ -77,6 +77,82 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &2580000664403516083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4850244872252370779}
+  - component: {fileID: 3411917916731201694}
+  - component: {fileID: 1926788286796369479}
+  m_Layer: 5
+  m_Name: ScreenFront_StatusBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4850244872252370779
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580000664403516083}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3275978808791237835}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3411917916731201694
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580000664403516083}
+  m_CullTransparentMesh: 1
+--- !u!114 &1926788286796369479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580000664403516083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 85e81f6d7e3bf40a9907fa2336784915, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4063253801162217662
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3275978808791237835}
   - component: {fileID: 3376604877303279272}
+  - component: {fileID: 6774503489536985588}
   m_Layer: 5
   m_Name: MainScreen
   m_TagString: Untagged
@@ -108,6 +185,7 @@ RectTransform:
   m_Children:
   - {fileID: 2406647287026870827}
   - {fileID: 2632173172842761480}
+  - {fileID: 4850244872252370779}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -124,6 +202,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4063253801162217662}
   m_CullTransparentMesh: 1
+--- !u!114 &6774503489536985588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063253801162217662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8d3b2987089bd48909df686c6bdf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScreenKey: Main
 --- !u!1 &5886100889318679783
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +458,50 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1248267567258258206}
     m_Modifications:
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6774503489536985588}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4063253801162217662}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickAppButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CellphoneScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Message
+      objectReference: {fileID: 0}
+    - target: {fileID: 251078158268575684, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2485636473278189492, guid: d8b3f9c387b1b8d46814ef7b58f953d9, type: 3}
       propertyPath: m_Name
       value: AppBtn_Message
@@ -473,6 +608,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1248267567258258206}
     m_Modifications:
+    - target: {fileID: 571687109273611305, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 571687109273611305, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 571687109273611305, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6774503489536985588}
+    - target: {fileID: 571687109273611305, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 571687109273611305, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickAppButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 571687109273611305, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CellphoneScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 571687109273611305, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 571687109273611305, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5722437848308256653, guid: ef170b28e5dcbe3428a951f68d314b50, type: 3}
       propertyPath: m_Name
       value: AppBtn_Phone
@@ -667,6 +834,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppBtn_Contacts
       objectReference: {fileID: 0}
+    - target: {fileID: 5211229003829620823, guid: a62c0e95712411947a66f0bb13d23451, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211229003829620823, guid: a62c0e95712411947a66f0bb13d23451, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211229003829620823, guid: a62c0e95712411947a66f0bb13d23451, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6774503489536985588}
+    - target: {fileID: 5211229003829620823, guid: a62c0e95712411947a66f0bb13d23451, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211229003829620823, guid: a62c0e95712411947a66f0bb13d23451, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickAppButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211229003829620823, guid: a62c0e95712411947a66f0bb13d23451, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CellphoneScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211229003829620823, guid: a62c0e95712411947a66f0bb13d23451, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Contacts
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211229003829620823, guid: a62c0e95712411947a66f0bb13d23451, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -688,6 +887,38 @@ PrefabInstance:
     - target: {fileID: 1893328480662433397, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
       propertyPath: m_Name
       value: AppBtn_Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644344371515611802, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644344371515611802, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644344371515611802, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6774503489536985588}
+    - target: {fileID: 4644344371515611802, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644344371515611802, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644344371515611802, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CellphoneScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644344371515611802, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644344371515611802, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4952481764806060231, guid: cd8414404a1298541a7b766d5f0a5256, type: 3}
       propertyPath: m_Pivot.x
@@ -794,6 +1025,38 @@ PrefabInstance:
     - target: {fileID: 460792761883501272, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
       propertyPath: m_Name
       value: AppBtn_Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196638525060631592, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196638525060631592, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196638525060631592, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6774503489536985588}
+    - target: {fileID: 6196638525060631592, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196638525060631592, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickAppButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196638525060631592, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CellphoneScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196638525060631592, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196638525060631592, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6847654930466122678, guid: 55c2870ce037e204caa0dd3cda7d897f, type: 3}
       propertyPath: m_Pivot.x

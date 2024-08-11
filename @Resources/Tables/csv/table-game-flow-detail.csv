@@ -233,3 +233,4 @@ SectionIndex,StepId,Type,MissionText,MissionStartRoom,Text,CharacterKey,Characte
 14,36,thinking,,,(분명 어젠 배터리가 없었는데…….<br>잠결에 내가 충전해 둔 건가?),,,Room_Kitchen,,,
 14,37,show_background,,,,,,Room_Cellphone_Lockscreen,,,
 14,38,thinking,,,(휴대폰을 좀 봐야겠어.),,,Room_Cellphone_Lockscreen,,,
+15,1,mission,,,현관 자물쇠를 풀어보자.,,,,,,

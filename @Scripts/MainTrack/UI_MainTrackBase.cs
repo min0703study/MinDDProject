@@ -100,8 +100,11 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 			{
 				missionText.text = dialog.MissionText;
 				
-				RoomType startRoom = Enum.Parse<RoomType>(dialog.MissionStartRoom);
-				MoveTo(startRoom);
+				if(dialog.MissionStartRoom != null && dialog.MissionStartRoom != string.Empty) 
+				{
+					RoomType startRoom = Enum.Parse<RoomType>(dialog.MissionStartRoom);
+					MoveTo(startRoom);	
+				}
 			}
 			else if (dialog.Type == "popup")
 			{
