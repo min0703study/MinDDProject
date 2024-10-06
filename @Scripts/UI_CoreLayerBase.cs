@@ -40,9 +40,20 @@ public class UI_CoreLayerBase : MonoBehaviour
 	public Action OnClickPopupNextButton;
 	public Action OnClickScriptNextButton;
 	
+	public Action OnClickScriptNextButtonOneTimeAction;
+	
 	private Tween typingTween;
 	private void Awake()
-	{
+	{	
+		scriptNextButton.onClick.AddListener(()=> 
+		{
+			if(OnClickScriptNextButtonOneTimeAction != null) 
+			{
+				OnClickScriptNextButtonOneTimeAction?.Invoke();
+				OnClickScriptNextButtonOneTimeAction = null;
+			}
+		});
+		
 		InitAwake();
 	}
 
@@ -114,7 +125,7 @@ public class UI_CoreLayerBase : MonoBehaviour
 		visualSoundEffectImage.sprite =  ResourceManager.Instance.Load<Sprite>(imageAsset);
 	}
 	
-	public void ShowDialogueBox(string text, string name = null, bool useTypingAni = true) 
+	public void ShowDialogueBox(string text, string name = null, bool useTypingAni = true, Action onClickDialogueNextButton = null) 
 	{
 		scriptPanel.SetActive(true);
 		if(name != null && name != string.Empty) 
@@ -129,6 +140,8 @@ public class UI_CoreLayerBase : MonoBehaviour
 		{
 			scriptText.text = text;
 		}
+		
+		OnClickScriptNextButtonOneTimeAction = onClickDialogueNextButton;
 	}
 	
 	
@@ -153,11 +166,6 @@ public class UI_CoreLayerBase : MonoBehaviour
 		
 		var popupSprite = ResourceManager.Instance.Load<Sprite>(imageAssetKey);
 		popupImage.sprite = popupSprite;
-	}
-	
-	public void OnClickNextButton() 
-	{
-		
 	}
 	
 	protected void AllPanelDisable() 

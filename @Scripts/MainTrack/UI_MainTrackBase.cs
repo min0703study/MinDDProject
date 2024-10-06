@@ -261,4 +261,9 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 	{
 		
 	}
+	
+	public virtual void UpdateMissionState() 
+	{
+		
+	}
 }

@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_MainTrack_0202 : UI_MainTrackBase
 {
@@ -9,6 +10,8 @@ public class UI_MainTrack_0202 : UI_MainTrackBase
 	
 	private string currentScreenKey;
 	private string openAppKey;
+	
+	[SerializeField] Button exitButton;
 	
 	protected override void InitAwake()
 	{
@@ -47,17 +50,29 @@ public class UI_MainTrack_0202 : UI_MainTrackBase
 	
 	public void OnClickAppButton(string appKey) 
 	{
-		foreach(var appPair in appDict) 
+		if(appDict.TryGetValue(appKey, out var app)) 
 		{
-			appPair.Value.gameObject.SetActive(appPair.Key == appKey);
-		}
+			openAppKey = appKey;
+			app.OpenApp();
+		};
 	}
 	
 	public void CloseApp() 
 	{
-		foreach(var appPair in appDict) 
+		if(appDict.TryGetValue(openAppKey, out var app)) 
 		{
-			appPair.Value.gameObject.SetActive(false);
-		}
+			openAppKey = string.Empty;
+			app.CloseApp();
+		};
+	}
+	
+	public override void UpdateMissionState() 
+	{
+		exitButton.gameObject.SetActive(true);
+	}
+	
+	public void OnClickExitButton() 
+	{
+		GameManager.Instance.ToNextSection();
 	}
 }

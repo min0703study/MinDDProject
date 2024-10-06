@@ -24,4 +24,14 @@ public class CellphoneApp : MonoBehaviour
 	{
 
 	}
+	
+	public virtual void OpenApp() 
+	{
+		this.gameObject.SetActive(true);
+	}
+	
+	public virtual void CloseApp() 
+	{
+		this.gameObject.SetActive(false);
+	}
 }

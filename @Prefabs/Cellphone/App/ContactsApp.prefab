@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1246807874174838055}
   - component: {fileID: 3484303965563923176}
-  - component: {fileID: 2165770537343485007}
+  - component: {fileID: 2823326626771451089}
   m_Layer: 5
   m_Name: ContactsApp
   m_TagString: Untagged
@@ -94,7 +94,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5050343676359304408}
   m_CullTransparentMesh: 1
---- !u!114 &2165770537343485007
+--- !u!114 &2823326626771451089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5050343676359304408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3ca29701f347349810ffad26c49624, type: 3}
+  m_Script: {fileID: 11500000, guid: 8da45fa914581344d9d136963925fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backButton: {fileID: 6205069192044821531}

@@ -503,6 +503,54 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8284543f9a7d7704aa3a370a76237d63
+    m_Address: Cellphone_Gallery_Photo2.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c6c3fcc343ccd143a21a4fc162cca40
+    m_Address: Cellphone_Gallery_Photo1.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b00b349256523e941a9f7fa21271c3b4
+    m_Address: Cellphone_Memo_M2.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 551540d972c135b4e94bb091fe67908c
+    m_Address: Cellphone_Memo_M3.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5de65b70cf63e4240930174f085db7ef
+    m_Address: Cellphone_Memo_M1.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 597fcb2dc92091b4795f5ea09566a3ea
+    m_Address: Cellphone_Memo_M5.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 283dec709d2a32f4b80757dc9c446c30
+    m_Address: Cellphone_Memo_M4.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca2cdc84d5c1fc3439e19bbfadbab6ea
+    m_Address: Cellphone_Gallery_Photo6.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
   m_SchemaSet:
