@@ -7,6 +7,7 @@ public enum RoomType
 	KitchenRefrigerator,
 	EntranceDoor,
 	EntranceHallway,
+	SunRoomB,
 	None,
 }
 
@@ -33,6 +34,12 @@ public enum FocusZone
 	Kitchen_Refrigerator_Photo,
 	LivingRoomA_CatBooth,
 	Kitchen_UnderDrawer,
+	
+	//
+	SunRoomB_Full,
+	SunRoomA_Bookcase,
+	SunRoomA_Drawer,
+	SunRoomA_Desk,
 	None,
 }
 

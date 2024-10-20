@@ -169,10 +169,6 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 		UpdateMissionState(clickableRoomObject.ObjectTextId, RoomObjectEventTriggerType.Click);
 		if (clickEvent.ActionType == "Event")
 		{
-			// if (clickEvent.ObjectTextId == "sun_room_door")
-			// {
-			// 	GameManager.Instance.ToNextStep();
-			// }
 		}
 		else if (clickEvent.ActionType == "Popup")
 		{
