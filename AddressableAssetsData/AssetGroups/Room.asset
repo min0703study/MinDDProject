@@ -84,7 +84,7 @@ MonoBehaviour:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b99f103a6ab2e024ab9c48bf5906a78c
-    m_Address: Popup_Open_Sun_Door_Powerful.sprite.sprite
+    m_Address: Popup_Open_Sun_Door_Outside.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

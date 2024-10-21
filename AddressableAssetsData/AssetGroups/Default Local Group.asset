@@ -552,7 +552,7 @@ MonoBehaviour:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8fe949c911b0efc45bab11836b653d2b
-    m_Address: Assets/@Resources/Sprites/Popup/Popup_Ho_CarAccident.png
+    m_Address: Popup_Ho_CarAccident.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
@@ -560,7 +560,44 @@ MonoBehaviour:
   - m_GUID: 3dc79291c2a49e440a5db38cecbd59cd
     m_Address: Popup_Sun_Noise.sprite
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed1072a58a21b6548af12291bb31d121
+    m_Address: Cellphone_Call_Juwon.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11679eafd54529045ae072e6a6c79ad3
+    m_Address: Cellphone_Call_Juwon_End_Sound.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee2c74261eb69574d9ac1d4fec2f114d
+    m_Address: Cellphone_Call_Juwon_Receive.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae58467d2bd794d45a2ffdfb2dea5861
+    m_Address: Cellphone_Call_Juwon_End.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b33bf23e807e84446ac8ab6d0e7fd26c
+    m_Address: Popup_Sun_Call_Receive.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7388d7d7043f8e499e87a9663744817
+    m_Address: Full_Room_Sun_A_Phone_Vibrate.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}

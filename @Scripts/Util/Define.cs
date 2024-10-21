@@ -8,6 +8,7 @@ public enum RoomType
 	EntranceDoor,
 	EntranceHallway,
 	SunRoomB,
+	SunRoomABookCase,
 	None,
 }
 
@@ -40,6 +41,9 @@ public enum FocusZone
 	SunRoomA_Bookcase,
 	SunRoomA_Drawer,
 	SunRoomA_Desk,
+	
+	SunRoomABookcase_Full,
+	SunRoomABookcase_Photo,
 	None,
 }
 
