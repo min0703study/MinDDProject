@@ -993,6 +993,10 @@ PrefabInstance:
       propertyPath: itemTextId
       value: key_a
       objectReference: {fileID: 0}
+    - target: {fileID: 3778592525738662169, guid: bd1976a581e489a439f3b976bb4b9e82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5817510509471157898, guid: bd1976a581e489a439f3b976bb4b9e82, type: 3}
       propertyPath: m_IsActive
       value: 1

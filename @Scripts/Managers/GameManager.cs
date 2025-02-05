@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using TableData;
 
@@ -159,23 +160,39 @@ public class GameManager : BaseManager<GameManager>
 		OnAddInventoryItem?.Invoke(itemTextId);
 	}
 	
-	public void UseSelectedItem()
+	public bool TryUseSelectedItem()
 	{
-		UseItem(SelectedInventoryIndex);
+		return TryUseItem(SelectedInventoryIndex);
 	}
 
-
-	public void UseItem(int index)
+	public bool TryUseItem(int index)
 	{			
+		if(Inventory.Count() < index || Inventory[index].IsBlank) 
+		{
+			return false;
+		}
+		
 		Inventory[index].IsBlank = true;
 		Inventory[index].ItemTextId = string.Empty;
 		
 		OnUseInventoryItem?.Invoke();
+		return true;
 	}
 	
 	public void ChangeRoomObjectState(string objectTextId, RoomObjectState roomObjectState)
 	{			
 		RoomObjectStates[objectTextId] = roomObjectState;
+	}
+	
+	public RoomObjectState GetRoomObjectState(string objectTextId) 
+	{
+		if(RoomObjectStates.TryGetValue(objectTextId, out RoomObjectState roomObjectState)) 
+		{
+			return roomObjectState;
+		} else 
+		{
+			return RoomObjectState.None;
+		}
 	}
 
 	public string GetSelectedInventoryItemId()

@@ -9,6 +9,8 @@ public enum RoomType
 	EntranceHallway,
 	SunRoomB,
 	SunRoomABookCase,
+	SunRoomADrawer,
+	SunRoomBCloset,
 	None,
 }
 
@@ -44,6 +46,13 @@ public enum FocusZone
 	
 	SunRoomABookcase_Full,
 	SunRoomABookcase_Photo,
+	
+		
+	SunRoomADrawer_Full,
+	SunRoomADrawer_3,
+	
+	SunRoomBCloset_Full,
+	SunRoomBCloset_Jacket,
 	None,
 }
 
@@ -58,7 +67,8 @@ public enum RoomObjectState
 {
 	LocatedInRoom,
 	UsedItem,
-	RemoveRoomObject
+	RemoveRoomObject,
+	None,
 }
 
 public enum RoomObjectEventTriggerType

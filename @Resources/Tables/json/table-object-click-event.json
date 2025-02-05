@@ -1,7 +1,7 @@
 ﻿[
     {
         "TrackTextId": "UI_MiniTrack_0101",
-        "ObjectTextId": "sun_desk",
+        "ObjectTextId": "sun_desk_book",
         "EventTriggerType": "Click",
         "ActionType": "Popup",
         "Text": "책상에 전공책이 올려져 있다.<br>최악의 학점을 받은 전공.<br>재수강할 생각을 하니 벌써 머리가 아프다.",
@@ -374,5 +374,69 @@
         "ActionType": "Popup",
         "Text": "왜 창문이 막혀 있지?<br>형이 가린 걸까?",
         "ObjectImageAsset": "Room_Detail_Entrance_Door_View_Close"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0203",
+        "ObjectTextId": "sun_room_a_drawer_first",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "아, 비상연락망<br>예전에 받아 놓고 여기 넣어 놨구나.<br>완전 \n까먹고 있었네.",
+        "ObjectImageAsset": "Room_Detail_SunA_Drawer_First"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0203",
+        "ObjectTextId": "sun_room_a_drawer_second",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "여긴 별 거 없네.",
+        "ObjectImageAsset": "Room_Detail_SunA_Drawer_Second"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0203",
+        "ObjectTextId": "sun_room_a_drawer_third",
+        "EventTriggerType": "Click",
+        "ActionType": "talking_to_myself",
+        "Text": "내가 잠가 놨었나?<br>열쇠를 어디다 뒀더라…….",
+        "ObjectImageAsset": ""
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0203",
+        "ObjectTextId": "sun_room_a_drawer_third",
+        "EventTriggerType": "UseItem",
+        "ActionType": "Popup",
+        "Text": "",
+        "ObjectImageAsset": "Room_Detail_SunA_Drawer_Third_Candy"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0203",
+        "ObjectTextId": "sun_room_a_bookcase_book",
+        "EventTriggerType": "Click",
+        "ActionType": "talking_to_myself",
+        "Text": "으, 이 전공도 다시 들어야 하는데.",
+        "ObjectImageAsset": ""
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0203",
+        "ObjectTextId": "sun_room_a_bookcase_photo",
+        "EventTriggerType": "Click",
+        "ActionType": "talking_to_myself",
+        "Text": "고등학교 친구들이네.<br>이땐 진짜 좋았었는데.",
+        "ObjectImageAsset": ""
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0203",
+        "ObjectTextId": "sun_room_b_jacket_left_pocket",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "……뭐야. 그냥 쓰레기들이네.",
+        "ObjectImageAsset": "Room_Detail_Sun_Closet_Jacket_Left"
+    },
+    {
+        "TrackTextId": "UI_MainTrack_0203",
+        "ObjectTextId": "sun_desk_book",
+        "EventTriggerType": "Click",
+        "ActionType": "Popup",
+        "Text": "책상에 전공책이 올려져 있다.<br>최악의 학점을 받은 전공.<br>재수강할 생각을 하니 벌써 머리가 아프다.",
+        "ObjectImageAsset": "Room_Detail_Sun_Desk"
     }
 ]

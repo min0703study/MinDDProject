@@ -223,11 +223,10 @@ public class UI_MainTrackBase : UI_CoreLayerBase
 		CurrentFocusZone = moveToFocusZone;
 	}
 	
-	public void PerformClickInRoomItem(LocatedInRoomItem roomItem) 
+	public virtual void PerformClickInRoomItem(LocatedInRoomItem roomItem) 
 	{
 		GameManager.Instance.AddItem(roomItem.ItemTextId);
 	}
-	
 	
 	public virtual void OnClickMoveArrow(RoomType moveToRoom, FocusZone moveToFocusZone) 
 	{

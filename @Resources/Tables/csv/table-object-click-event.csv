@@ -1,5 +1,5 @@
 TrackTextId,ObjectTextId,EventTriggerType,ActionType,Text,ObjectImageAsset
-UI_MiniTrack_0101,sun_desk,Click,Popup,책상에 전공책이 올려져 있다.<br>최악의 학점을 받은 전공.<br>재수강할 생각을 하니 벌써 머리가 아프다.,Room_Detail_Sun_Desk
+UI_MiniTrack_0101,sun_desk_book,Click,Popup,책상에 전공책이 올려져 있다.<br>최악의 학점을 받은 전공.<br>재수강할 생각을 하니 벌써 머리가 아프다.,Room_Detail_Sun_Desk
 UI_MiniTrack_0101,sun_desk_drawer,Click,Popup,내가 휴대폰을 서랍에 넣어놨을 리는 없지.,Room_Detail_Sun_Desk_Drawer
 UI_MiniTrack_0101,sun_cellphone,Click,Event,,
 UI_MainTrack_0101,sun_room_door,Click,Event,,
@@ -46,3 +46,12 @@ UI_MainTrack_0201,entrance_door_view,Click,Popup,복도가 보인다.<br>딱히 특별한 �
 UI_MainTrack_0201,entrance_leaflet,Click,Popup,중국집 전단지.<br>뭔가 이상한 것 같기도 하고.,Room_Detail_Entrance_Door_Leaflet
 UI_MainTrack_0201,entrance_photo,Click,Popup,내 대학교 입학식 날 형이랑 찍은 사진.<br>내가 찍지 말라고 했는데…….,Room_Detail_Entrance_Door_Photo
 UI_MainTrack_0201,door_view_close,Click,Popup,왜 창문이 막혀 있지?<br>형이 가린 걸까?,Room_Detail_Entrance_Door_View_Close
+UI_MainTrack_0203,sun_room_a_drawer_first,Click,Popup,"아, 비상연락망<br>예전에 받아 놓고 여기 넣어 놨구나.<br>완전 
+까먹고 있었네.",Room_Detail_SunA_Drawer_First
+UI_MainTrack_0203,sun_room_a_drawer_second,Click,Popup,여긴 별 거 없네.,Room_Detail_SunA_Drawer_Second
+UI_MainTrack_0203,sun_room_a_drawer_third,Click,talking_to_myself,내가 잠가 놨었나?<br>열쇠를 어디다 뒀더라…….,
+UI_MainTrack_0203,sun_room_a_drawer_third,UseItem,Popup,,Room_Detail_SunA_Drawer_Third_Candy
+UI_MainTrack_0203,sun_room_a_bookcase_book,Click,talking_to_myself,"으, 이 전공도 다시 들어야 하는데.",
+UI_MainTrack_0203,sun_room_a_bookcase_photo,Click,talking_to_myself,고등학교 친구들이네.<br>이땐 진짜 좋았었는데.,
+UI_MainTrack_0203,sun_room_b_jacket_left_pocket,Click,Popup,……뭐야. 그냥 쓰레기들이네.,Room_Detail_Sun_Closet_Jacket_Left
+UI_MainTrack_0203,sun_desk_book,Click,Popup,책상에 전공책이 올려져 있다.<br>최악의 학점을 받은 전공.<br>재수강할 생각을 하니 벌써 머리가 아프다.,Room_Detail_Sun_Desk

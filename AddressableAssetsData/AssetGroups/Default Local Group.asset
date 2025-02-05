@@ -599,6 +599,72 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 290529713fac3a649a1ff409897b65fe
+    m_Address: Room_Detail_SunA_Drawer_Third_Candy.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df882ed68ebaee241b11b4482cef80f6
+    m_Address: Room_Detail_SunA_Drawer_Second.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65cebdeee470cea489159bddbeb506c1
+    m_Address: Room_Detail_SunA_Drawer_First.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 540c2e31af3b5664d86cc1b17dd65d1a
+    m_Address: Assets/@Resources/Sprites/Room/Room_Sun_B_Closet.PNG
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7de88944b3bab941afb2e34637f2694
+    m_Address: UI_MainTrack_0203
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d52e2d209926c24c88680c0ce502eef
+    m_Address: Room_Sun_B_Closet_Jacket.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c116d736a2433a448f996fa6a1e09a4
+    m_Address: Item_Key_Block_Y.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e110dcbad535c94ea09579c25b19964
+    m_Address: Room_Detail_Sun_Closet_Jacket_Left.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ecc487bbb9abf64f871310693b00da1
+    m_Address: Item_Sun_Drawer_Key.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac53a8018a676b144b07e4e4df325ccb
+    m_Address: Visual_Sound_Effect_Cellphone_Car_Sound.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 813336b8f639d9346b990b1225c2b0c3
+    m_Address: Visual_Sound_Effect_Cellphone_Call_Juwon_End.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 02e1eb0c4e34bdf41854ff4a836939ce, type: 2}
   m_SchemaSet:

@@ -34,7 +34,7 @@ public class BlockLock : ClickableRoomObject
 			{
 				MatchBlockCount ++;
 				blockItem.MatchBlockGO.SetActive(true);
-				GameManager.Instance.UseSelectedItem();
+				GameManager.Instance.TryUseSelectedItem();
 				
 				currentTrack.UpdateMissionState(objectTextId, RoomObjectEventTriggerType.UseItem);
 				break;

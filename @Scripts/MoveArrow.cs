@@ -1,5 +1,3 @@
-using System;
-using TableData;
 
 using UnityEngine;
 using UnityEngine.UI;

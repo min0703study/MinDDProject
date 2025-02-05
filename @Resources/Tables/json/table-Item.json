@@ -89,5 +89,19 @@
         "ItemImageAsset": "Item_Long_Tool",
         "ItemDesc": "",
         "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "block_y",
+        "ItemName": "노란색 블록",
+        "ItemImageAsset": "Item_Key_Block_Y",
+        "ItemDesc": "노란색 블록<br>옛날 사진에서 찾은 블록. 어디에 쓰는 물건일까.",
+        "UseItemImageAsset": ""
+    },
+    {
+        "ItemTextId": "key_drawer",
+        "ItemName": "서랍 열쇠",
+        "ItemImageAsset": "Item_Sun_Drawer_Key",
+        "ItemDesc": "",
+        "UseItemImageAsset": ""
     }
 ]
